@@ -1,31 +1,57 @@
 \chapter{Experiments and Results} \label{sec:4}
 
 
-In this chapter are explained the experiments performed in order to
-reach the goal of this thesis.  Every experiment utilizes different
-datasets and context domains.
+In this chapter the results of the experiments described in chapter 4 are 
+presented.
 
-\section{Tijuana Restaurants dataset} 
+\section{EvoDrawings01} 
 
-The context-aware recommender system  
-uses collaborative filtering to find restaurants for the
-user\cite{ramirez2013restaurant}. The ratings of user profiles are
-used to determine the similarity among users using Pearson correlation. \\   
-The similarity between the user and  neighbors is used to calculate a
-weighted average of ratings for each particular item;  the top-N
-ratings are used as a list of recommended restaurants for the active
-user. The output of the collaborative filtering algorithm (top-N list)
-is supplied to the next step of the post-filtering process. \\   The
-restaurants are adjusted to the context in the next step in order to
-make ranking of restaurants in the current context. Post- filtering is
-based on the average of ratings in a specific context, so prediction
-is made with: 1) the average post-filtering a restaurant has in the
-current context (that is the mean of user ratings) and 2) the rating
-predicted by the collaborative filtering algorithm. The top-N list
-contains the restaurants with highest predictions, so each restaurant
-is adjusted for the user’s context and listed in contextual
-recommendations; the process is depicted in figure
-\ref{fig:postfiltering}.
+
+In the experiment EvoDrawings01 the following data are generated,  this data is 
+presented in Table \ref{tab:graph_data_1}.
+
+\begin{table}
+\small
+\caption{Data generated in graph based user modeling.}
+\label{tab:graph_data_1} 
+\centering
+\small
+\begin{tabular}{p{7cm} p{5cm} }
+\hline\noalign{\smallskip}
+ & Data \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Nodes} & \small{595} \\ \hline  
+\small{Relations} & \small{2220} \\ \hline  
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+These data are the total of nodes and relations generated  in EvoDrawings01.
+
+
+The total number of active users who participated voluntarily meners are presented in 
+Table \ref{tab:graph_data_2}.
+
+\begin{table}
+\small
+\caption{Total number of volunteers active users.}
+\label{tab:graph_data_2} 
+\centering
+\small
+\begin{tabular}{p{7cm} p{5cm} }
+\hline\noalign{\smallskip}
+ & Users\\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Total number of users} & \small{54} \\ \hline  
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
 \begin{figure*}
 %\captionsetup{justification=centering,margin=2cm}
 \centering
@@ -46,37 +72,7 @@ questions} and they rate restaurants from a list of 40 restaurants.
 Each restaurant chosen was rated 6 times one per context considered, a
 matrix rating with \textit{1,422 ratings} were collected. The
 questions are shown in the table \ref{tab:questions}.
-\begin{table}
-\small
-\caption{Questionnaire applied to collect contextual dataset.}
-\label{tab:questions} 
-\centering
-\small
-\begin{tabular}{p{7cm} p{5cm} }
-\hline\noalign{\smallskip}
-Question & Answers \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\small{1.What is your occupation?} & \small{1. Student 2.Employee} \\ \hline  
-\small{2.According your priority, order by importance the features 
-you consider when you choose to visit a restaurant.} & 
-\small{1.Installation/decoration 2.Prices 3.Service 4.Dishes
-5.Atmosphere 6.Location} \\ \hline  
-\small{3.What are the devices that you used
-utilizes?} & \small{1.Smartphone 2.Tablet 3.Laptop 4.PC} \\ \hline   
-\small{4.What Operating System do you used?} & 
-\small{1.Android 2.Windows 3.iOS 4.Symbian 5.Blackberry 6.Other}
-\\ \hline  
-\small{5.Did you use an application to search restaurants in Tijuana?} &
-\small{1.Yes 2.No 3.Which one?} \\ \hline   
-\small{6.Would you like to use an application of
-recommender systems of Tijuana?} & \small{1.Yes 2.No} \\ \hline  
-\small{7.Please, rates your favorites restaurants(without context).} & 
-\small{Restaurant list} \\ \hline
-\small{8.Please, rates your favorites restaurants in contextual situations.} & 
-\small{Restaurant list} \\
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
+
 
 The user's answers from question 1 to question 6 are represented in
 the figure \ref{fig:cakeschart}. \textbf{Figure \ref{fig:cakeschart}a}
