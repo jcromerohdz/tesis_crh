@@ -1,225 +1,132 @@
 \chapter{State of the art} \label{}
 
-Recommender system is a technology used by many authors for
-personalization of information. The amount of information in Internet
-is rising quickly and the users every time has less capability to
-search the most relevant information among big databases. Many
-recommender  system are used in several domains. 
-The fundamental is the profit that provides in many of
-these domains that sometimes represents the key of success for the
-application.  Some works utilize social information to recommend such
-as Manca et.al.\cite{manca2014mining} where the friend recommender
-system is applied in the social bookmarking domain, its goal was to
-infer the interest of users from content selecting the available
-information of the user behavior and analyzing the resources and the
-tags bookmarked for each user, therefore the recommendations are
-through mining user behavior in a tagging system, analyzing the
-bookmarks tagged of the user and the frecuency for each used tag. 
-J.Yao et.al.\cite{yao2012product} proposes a new product recommendation
-approach for new users based on the implicit relationships between
-search keywords and products. The relationships between keywords and
-products are represented in a graph and relevance of keywords to
-products is derived from attributes of the graph. The relevance
-information is utilized to predict preferences of new users. J.
-Golbeck et.al.\cite{golbeck2006filmtrust} presents FilmTrust, a
-website that integrates Semantic Web-based social networks, augmented
-with trust, to create prediction movie recommendations. Trust takes on
-the role of a recommender system forming the core of an algorithm to
-predict a rating for recommendations of movies. This is an example of
-how the Semantic Web, and Semantic trust networks in particular, can
-be exploited to refine the user experience. \\  
-Traditional recommender techniques has its pros and cons, for
-instance, the ability to handle data sparsity and cold-start problems
-or considerable ramp-up efforts for knowledge acquisition and
-engineering. Establish hybrid systems that combine the strengths of
-algorithms and models to overcome some of the shortcomings and
-problems has become the properly manner to improve the difficults for
-each algorithm.
-An example is presented by L.Castro et.al.\cite{castro2012prototype} 
-a hybrid recommender system for the province of San Juan, Argentina, 
-to recommend tourist packages  based on preferences and interest 
-of each user, artificial intelligence
-techniques are used to filter and customize the information. The
-prototype of recommender system utilizes three techniques to
-recommend: demographic, collaborative and content-based. The goal is
-to recommend tourist packages that matches with the user profile.
-L. Martinez et al.\cite{martinez2009reja} presents REJA, a hybrid
-recommender system that involves collaborative filtering and
-knowledge-based model, that is able to provide recommendations in some
-situation for user; besides it provides georeferenced information
-about the recommended restaurants.
-Balabanovic et.al.\cite{balabanovic1997fab} presents
-Fab, a hybrid recommender system for automatic recognition of
-emergent issues relevant to various groups of users. It also enables
-two scaling problems, pertaining to the rising number of users and
-documents, to be addressed. Claypool et.al.\cite{claypool1999combining} 
-presents P-Tango system that utilizes content-based and collaborative
-filtering techniques, it makes a prediction through the weighted
-average that includes content-based prediction and collaborative
-filtering prediction. The weights of predictions are determined on a
-per-user basis, allowing the system to determine the optimum mixture
-of content-based and collaborative recommendation for each user.
-Pazzani M.\cite{pazzani1999framework} presents Entree as a hybrid
-recommender system that it does not use numeric scores, but rather
-treats the output of each recommender (collaborative, content-based
-and demographic) as a set of votes, which are then combined in a
-consensus scheme. The recommender system includes information such as
-the content of the page, ratings of users and demographic data about
-users. Others works with hybrid recommender systems are ProfBuilder
-\cite{al1999semantic}, PickAFlick\cite{burke1999integrating}  and
-\cite{tran2000hybrid}, where are presented multiple recommendation
-techniques. Usually, recommendation requires ranking of
-items or selection of a single best recommendation, at this point some
-technique must be employed to recommend. \\ 
-Traditional recommender systems such as above mentioned, tend to use
-simple user models. For example, user-based collaborative filtering
-generally models the user as a vector of item ratings. As additional
-observations are made about users’ preferences, the user models are
-extended, and the user preferences is used to generate
-recommendations. This approach, therefore, ignores the notion of any
-specific situation, the fact that users interact with the system
-within a particular context and  that preferences of items might 
-change in another context.  
-Overall, the context is able to make the recommender system be 
-powerful that is adaptable to the changing user's situation.\\
-The context is defined in the domain of the application and the system
-has a context model that provides the information for the recommender
-system. For instance Ricci et.al. \cite{baltrunas2011incarmusic} uses
-the context in music domain using a model-based paradigm, in this
-context-aware recommender system the context was defined as a set of
-independent contextual factors(independent in order to get a
-mathematical model) such as \textit{driving style, road type,
-landscape, sleepiness, traffic conditions, mood weather and natural
-phenomena} to specifies the relevant context for the music
-recommendation. In order to estimate the relevance of selected
-contextual factor, the users were requested to evaluate music tracks
-in different contextual situations for each genre. The prediction
-takes in account this relevance to recommend music tracks prefered by
-the user according the genre and the contexts mentioned.In
-restaurant domain Chung-Hua et al.\cite{chu2013chinese} presents a
-context-aware recommender system for mobiles using a post-filtering
-paradigm, the architecture involves a model client-server that works
-with a request of data in the client side for the server side.
-Subsequently, taking in account the contextual factors to filter the
-properly restaurants to recommend. The context-aware recommender
-system uses such as contextual factors \textit{location and season}, 
-also utilize the user preferences to personalize the recommendations
-in the user context.
-Baltrunas et.al.\cite{baltrunas2011context} presents ReRex for tourism, 
-a context-aware recommender system based in a model-based paradigm, the system
-recommends and provides explanations about the why the places of
-interest(PoI) are recommended. The proposed model computes a
-personalized context dependent rating estimation. Subsequently, in
-order to generates the explanation of recommendation the system uses
-the factor that in the predictive model has the lasgest positive
-effect on the rating prediction for the point of interest. The set of
-contextual factors considered in ReRex are \textit{distance},
-temperature, weather, season, companion, time day, weekday,
-crowdedness, familiarity, mood, budget, travel length, transport and
-travel goal. The main issue in ReRex system is the low user
-satisfaction because of the explanations not able to be understood,
-however the users recognize that the explanation is a very important
-component that it influence the system acceptance. Noguera et. al.
-\cite{noguera2012mobile} presents a context-aware recommender system
-for tourism based in REJA that utilizes the location through a 3D-GIS
-system, the application uses progressive downloading and rendering of
-3D maps over mobiles networks. It is also in charge of tracking the
-user’s location and speed based on GPS and the requesting. The system
-utilizes pre-filtering and post-filtering paradigm. Pre-filtering is
-used to reduce the number of items considered for the recommendation
-according to the user’s location, and  post-filtering is applied to
-re-rank the previous top-N list according to the physical distance
-from the user for each recommended restaurant. The disadvantage in this
-system is the lack of user reviews, because the recommendations are
-based only in the location point without consider the experience of
-other diners concerning the recommended restaurant. 
-Cena et al.\cite{cena2006integrating} presents a tourist guide for
-context in intelligent content adaptation. UbiquiTO system is a
-tourist guide that integrates different forms of context-related
-adaptation: for media device type, for user characteristics and
-preferences, for the physical context of the interaction. UbiquiTO uses
-a rule-based modeling approach to adapt the content of the provided
-recommendation, such as the amount, type of information and features
-associated with each recommendation. 
-Bulander et.al\cite{bulander2005comparison} presents the MoMa-system that
-offers proactive recommendations using a post-filtering approach for
-matching order specifications with offers. When creating an order, the
-client application will automatically fill in the appropriate physical
-context and profile parameters, for example, \textit{location} and \textit{weather},
-then, for example, the facility should not be too far away from the
-current location of the user and beer should not be
-recommended if it is raining. On the other side, advertisers’
-suppliers put offers into the MoMa-system. These offers are also
-formulated according to the catalogue. When the system detects a pair
-of context matching order and offer, the end user is notified, in the
-preferred manner (for example, SMS, email). At this point, the user
-must decide whether to contact the advertiser to accept the offer.
-Finally, Schifanella et al.\cite{schifanella2008mobhinter} develops
-Mob-Hinter, a \textit{context-dependent} distributed model,where a user device
-can directly connect to other mobile devices that are in \textit{physical
-proximity} through ad-hoc connections, hence relying on a very limited
-portion of the users’ community and just on a subset of all available
-data (pre-filtering). The relationships between users are modeled with
-a similarity graph. MobHinter allows a mobile device to identify the
-affinity network neighbors from random ad-hoc communications. The
-collected information is then used to incrementally refine locally
-calculated predictions, with no need of interacting with a remote
-server or accessing the Internet. The Recommendations are computed
-using the availables rating of the user neighbors.
-Abowd et. al. presents Cyberguide project \cite{abowd1997cyberguide},
-which encompassed several tour guide prototypes for different handheld
-platforms. Cyberguide provided tour guide services to mobile users,
-exploiting the contextual knowledge of the user’s current and past
-locations in the recommendation process. The PECITAS system
-\cite{tumas2009personalized} presented by Thumas offers location-aware
-recommendations for personalized point-to-point paths. The paths are
-illustrated by listing the various connections that the user must take
-to reach the destination using public transportation and walking. An
-interesting aspect of PECITAS is that, although an optimal shortest 
-path facility is incorporated, users may be recommended alternative 
-routes that pass through several attractions, given that
-their specified constraints (e.g. latest arrival time) and travel-related 
-preferences (maximum walking time, maximal number of transport
-transfers, sightseeing preferences, etc) are satisfied. Yu and Chang
-presents LARS \cite{yu2009personalized} which supports personalized
-tour planning using a rule-based recommendation process. This system
-packages ‘where to stay’ and ‘where to eat’ features together with
-‘typical’ tourist recommendations for sightseeing and activities. For
-instance, recommended restaurants (selected based on their location,
-menu, prices, customer rating score, etc) are integral part of the
-tour and the time spent for lunch/dinner is taken into account to
-schedule visits to attractions or to plan other activities.
-Savage et. al. presents  "I'm feeling LoCo" system \cite{savage2012m}
-that proposes a ubiquitous location­ based recommendation algorithm
-that focuses on user experience by considering user preferences, time,
-location and similarity measures automatically, having Foursquare as a
-dataset. We also focus on user experience and aim that user input is
-minimal. The information  om the user's social network, form of
-transportation and phone's sensors is inferred to provide
-recommendation of places  om the dataset.
-Reddy et.al\cite{reddy2006lifetrak} presents LifeTrack system that
-incorporates sensor information into song selection. The songs are
-represented in terms of tags that the user assigns in order to link
-the songs to the appropriate contexts in which they should be played.
-User feedback is incorporated to make a song more or less likely to
-play in a given context. Context considered relevant to song selection
-includes location, time of operation, velocity of the user, weather,
-traffic and sound. User locations and velocity are determined by GPS.
-Location information includes tags based on zip code and whether the
-user is inside or outside (inferred by the presence or absence of a
-GPS signal). The times of the day are divided out into configurable
-parts of the day (morning, evening, etc). The velocity is abstracted
-into one of four states: static, walking, running and driving. Use of
-accelerometers are planned to enable indoor velocity information. If
-the user is driving, an RSS feed on traffic information is used to
-typify the state as calm, moderate or chaotic. If the user is not
-driving, a microphone reading is used for the same purpose.
-Additionally, an RSS feed provides a meteorological condition (frigid,
-cold, temperate, warm or hot).\\ For a better comprehension
-of the context, table \ref{tab:stateoftheart}  describes examples of
-contextual factors in different domains of application, specifies the
-contextual factors considered such as  part of the context, the
-methodology for each application and  kind of devices.
+
+Some 1986's Dawkins's research was the pioneer of a significant addition to the
+1990s IEC algorithms research works\cite{}[Dawkins 1986].
+
+There is two key research approach about his field:
+
+Creative Approach: The Artificial Life (AL) was the base of creative approach.
+AL uses complex algorithms for biological life models emulation. To perform this
+task, it is needed to include some of the different techniques starting from
+right image treatment. Good graphic creation as well as a great music and
+quality sounds, [Sims 1991b], [Sims 1991c], [Sims 1994], [Dawkins 1986], [Disz
+1997], [Unemi 2000]and [Unemi 2003].
+ 
+Humanized technology approach: The concept of humanized technology approach
+comes from the approach that is focused on the IEC algorithms interface, this is
+the research of interaction between humans and computer systems. The main goal
+of this was to reduce the user's fatigue and to promote the inputs and outputs
+of algorithms to improve the efficiency of them. IEC has made his own way in
+practical fields such as engineering, education,etc., [Parmee 1993], [Ventrella
+1994a], [Takagi 1996], [Poli 1997], [Parmee 1998] and [Takagi 1998].
+
+Computer graphics (CG) The Biomorph of Dawkins was the first IEC research, from
+this research comes to many motivated works mostly about the Selfish Gene, come
+of these works are:  [Ochoa 1998], [Mccormack 1993], and [Smith 2003].
+
+In Dawkins work a conventional recursive algorithm was used as a baseline
+maintaining the main target of trees with an L-system Lindenmayer.
+
+Some 1986's Dawkins's research was the pioneer of the significant addition to
+the 1990s IEC algorithms research works[Dawkins 1986].
+
+There is two key research approach about his field:
+
+Creative Approach: The Artificial Life (AL) was the base of creative approach.
+AL uses complex algorithms for biological life models emulation. In order to
+perform this task it is needed to include some of the different techniques
+starting from right image treatment , good graphic creation as well as a great
+music and quality sounds, [Sims 1991b], [Sims 1991c], [Sims 1994], [Dawkins
+1986], [Disz 1997], [Unemi 2000]and [Unemi 2003].
+ 
+Humanized technology approach: The concept of humanized technology approach
+comes from the approach that is focused on the IEC algorithms interface, this is
+the research of interaction between humans and computer systems. The main goal
+of this was to reduce the user's fatigue and to promote the inputs and outputs
+of algorithms to improve the efficiency of them. IEC has made his own way in
+practical fields such as engineering, education,etc., [Parmee 1993], [Ventrella
+1994a], [Takagi 1996], [Poli 1997], [Parmee 1998] and [Takagi 1998].
+
+
+Computer graphics (CG) The Biomorph of Dawkins was the first IEC research, from
+this research comes to many motivated works mostly about the Selfish Gene, come
+of these works are:  [Ochoa 1998], [Mccormack 1993], and [Smith 2003].
+
+In Dawkins work, a conventional recursive algorithm was used as a baseline
+maintaining the main target of trees with an L-system (Lindenmayer). This same
+L-system was the base for another experiment to create 2-D CG forms insects from
+a system called Blind Watchmaker who used L-system angles from L-system output
+intuitively selected; the creation was called biomorphs. These creations reach
+his target with the multiple selections of the users based on their preferences;
+all these selections acted like a natural adaptation filter.
+
+We can find plenty of applications and works for fractal generation [Sims 1991a]
+and [Sims 1992], [Baluja 1993] and [Baluja 1994], [Lund 1995], or [Angeline
+1996],[Raynal 1999] and [Lutton 2003], for rendering in tridimensional, [Todd
+1991],[Broughton 1997], [Das 1994] and [Tam 2002], for generation of virtual
+creatures, [Sims 1994], [Rowland 2000], or aerodynamic surface design (wings),
+[NGuyen 1993], [NGuyen 1994] and [NGuyen 1997].
+
+We can discover more than one additional way to use this research in the
+artistic field with several applications of IEC who are used for cartoon face
+construction and animations matters, like Mutator [Todd 1991], [Todd 1994]
+and[Todd 1999] or [Bentley 1999a].
+
+The genetic programming (GP) applications offers a category called Interactive
+Genetic Programming (IGP) with many examples of successful application in
+tridimensional artwork for artistic animations or construction using
+mathematical equations as CAVE [Das 1994], [Papka 1996] and [Disz 1997], [Sims
+1991], [Sims 1991a], [Sims 1992],[Sims 1993] and [Min 2004]. As this work
+consequence, Panspermia orPrimordial Dance was created.
+
+Imagen
+
+Imagen
+
+The artistic field is only the first step of a great IEC implementation; it is
+important to mention another relevant projects called Galapagos, [Sims 1997],
+and SBART, [Unemi 2000]. The IEC application Galapagos Project is the exhibit in
+Tokio Multimedia Museum, (NTT Intercommunication Center) and this project
+originates engaging images to all visitors based on L-systems.
+
+Imagen
+
+There are created after one selection, to get a good solution through multiple
+repetitions. This action is performed with Genetic Programming (GP), after the
+calculation of each pixel value using trees of equations combining logarithm,
+maximum, and minimum, sine, root, cosine, exponential arithmetic operators.
+AnimationLab is found as an outstanding work who offer figures that can run or
+walk working with the user to receive more opportunities to be picked. A
+particular characteristic of all of the figures is that the figures extremities
+Mentioning open source works, we can find SBART as an IGP [Unemi 2000] tool to
+create graphics. SBART allow to users to evaluate 20 two-dimensional images,
+subsequently twenty new image has direction and angles.
+
+Imagen
+
+There are many examples for this field application as [McKenna 1990], [Ventrella
+1994a], [Ventrella 1994b], or [Ventrella 1995], [Lim 1999] and [Lim 2000].  One
+of the Interactive Evolutionary Programming (IEP)  artistic application was
+created by [Angeline 1996], as a fractal generation where the system allows the
+evolution of animations for the ones who were selected from the user, the
+application initially show only 10 animations to rate.
+
+Music and sound
+
+It is important to know how IEC was implemented in music generation, with
+several applications in this field. We will start mentioning the pioneer
+application GENJAM, [Biles 1994], [Biles 1996] or [Biles 1999] and [Biles 2000].
+Some other attractive works are Sonomorph, [Nelson 1993] and[Nelson 1995], or
+SBEAT, [Unemi 2003], [Horowitz 1994], [Onisawa 2000], [Tokui 2000] and [Fels
+2002]. It is possible to hear a part of the music songs of these previously
+mentioned works broadcasted in the radio station WDYN. (100.1, New York, USA,
+WEBPage:http://www.wdyn.net/).
+
+The IEC algorithms are the base for the functionality of the music generation
+systems, a visual representation of this is given in the below figure:
+
+Imagen
 
 \begin{sidewaystable}[]
   \caption{Comparison of context-aware recommender systems.}
