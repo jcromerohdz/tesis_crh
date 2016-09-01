@@ -1,4 +1,4 @@
-%% La letra n con tilde es: 'n.
+
 
 \chapter{Background}
 
@@ -6,463 +6,330 @@ This chapter present the fundamental concepts related this work. The
 formal definitions referring to fuzzy systems, contextual factors and
 recommender system techniques used in the proposed method.
 %--------------------------------------------------------------
-%Agregue la seccion de logica difusa del articulo que me mando.
-\section{Production systems and fuzzy models}
 
-\subsection{Traditional Production Systems}
+\section{User Modeling}
 
-Production Systems represent knowledge in form of rules, which specify
-actions that will be executed when certain conditions are met. Experts
-in certain domain identify a set of rules based on their experience to
-resolve different kinds of problems. Also known as rule based systems,
-many implementations consist mainly of these three
-components \cite{brachman1992knowledge} \cite{konar2006computational}:
-\begin{enumerate}   
-\item \textbf{Production Rules (PR)}. A set of
-production rules (also known as IF-THEN rules) having a two part
-structure; the antecedent, conformed by a set of conditions and a
-consequent set of actions. 
-\item \textbf{Working Memory (WM)}.
-Represents the current knowledge or facts that are known to be true so
-far. These facts are tested by the antecedent conditions of the rules
-and the consequent part can change them. 
-\item \textbf{Inference Engine (IE)}. 
-This interpreter matches the conditions in the
-production rules with the data/instantiations found in the WM,
-deriving new consequences.
-\end{enumerate}
-The basic operation of these systems is described as a cycle of 
-three steps \cite{brachman1992knowledge}:
-\begin{enumerate}
-\item \textbf{Recognize}: Find which rules are satisfied by 
-the current WM. The antecedent part of the productions consists 
-of a set of clauses connected by AND operators, when all these 
-clauses have matching data on the WM the production has a chance 
-of firing.
-\item \textbf{Conflict Resolution}: Only one production can be 
-fired at a time, so when two or more rules can be fired concurrently 
-a conflict occurs. Among the production rules found in the first 
-step, choose which rules should fire.
-\item \textbf{Actions}: Change the working memory by performing 
-the actions specified in the consequent part of all the rules 
-selected in the second step. Changes occur by adding or 
-deleting elements of the WM.
-\end{enumerate}
+%%\subsection{Traditional Production Systems}
 
-This cycle continues until no further production rules can be fired.
-This control strategy is data driven because whenever the antecedent
-part is satisfied the rule is recognized, this strategy is also named
-chain-forward. Other strategy is chain-backward in this case the work
-is done from the conclusion to the facts, to chain-backward, goals in
-working memory are match against consequents of the production
-rules.\\  A drawback that has been recognized in these traditional
-productions systems, is that some times rules are not fired in the
-Recognize step because no appropriate match exists in the WM. Partial
-matching of rules is not possible and this can be a limitation in some
-systems because premature termination of the cycle is not desired. An
-approach to handle partial matching is using fuzzy logic
-\cite{konar2006computational}. In the next section a review of the
-extension of production systems with fuzzy logic is preasented.\\
+User modeling can be represented as the technique of building a model of the
+user to personalize a system. The user model is commonly created as the user is
+working with the system. An example is an educational application that teaches
+students an individual skill: given the rules and knowledge in the user model,
+the difficulty level of the exercises in the form is altered as the user
+progresses.   Formally definition of user modeling according to McTear (1993, p.
+158): " user modeling is the process of gathering information about the users of
+a computer system and of using the information to provide services or
+information adapted to the specific requirements of individual users (or groups
+of users)". The purpose of the user model is to have a module containing the
+operations that are needed to personalize the system, and the user profile,
+which includes the personal data of the user ( Mohamad et al., 2013).    System
+personalization over user modeling is related to the research field of adaptive
+systems; this subject is beyond the scope of this research work. Focus on the
+human user, user modeling is a very cross-disciplinary research topic,
+comprehending the domains of artificial intelligence, computer science, and
+social science. Ideas have been co‐opted from an extensive range of subdomains,
+such as human–computer interaction, e‐learning, information science, social
+computing, machine learning, data mining, cognitive science, and so on (Kay, et
+al., 2012; Kobsa, 2001). There is interest in user modeling from both a
+scientific and commercial perspective (Razmerita, 2009).
 
-\subsection{Fuzzy Production Rules}
+\subsection{Application Domains for user modeling}
 
-Fuzzy production rules use fuzzy logic sets to characterize the
-variables and terms used in the propositions of the rules. Fuzzy
-production rules or fuzzy \textit{IF-THEN} rules are expressions of
-the form \textit{IF} antecedent \textit{THEN} consequent, where the
-antecedent is a proposition of the form \textit{"x is A"} where
-\textit{x} is a linguistic variable and \textit{A} is a linguistic
-term. The truth value of this proposition is based on the matching
-degree between \textit{x} and \textit{A}. Propositions are connected
-by \textit{AND}, \textit{OR} and \textit{NOT} operators. Some
-implementations of fuzzy rule-based systems also include other kinds
-of data types in their propositions, for example the FLOPS system
-includes fuzzy numbers, hedges, and non fuzzy data types (integers,
-strings and float) \cite{siler2005fuzzy}. Depending on the form of the
-consequent, two main types of fuzzy production systems are
-distinguished \cite{babuvska1996fuzzy}:
-\begin{itemize}  
-\item \textbf{Linguistic fuzzy model}: where both the antecedent 
-and consequent are fuzzy propositions.
-\item \textbf{Takagi-Sugeno fuzzy model}: the antecedent is a fuzzy 
-proposition; the consequent is a crisp function.
-\end{itemize}  
-As before, other non-fuzzy consequents can also be implemented, like
-the execution of commands or the addition of new data.\\
-\textbf{Linguistic Variables (LV)} are variables that can be assigned
-linguistic terms as values, i.e. if we define a linguistic variable
-\textit{SPEED} we can assign it the linguistic terms \textit{SLOW},
-\textit{MEDIUM} or \textit{FAST}. The meaning of these linguistic
-terms is defined by their membership functions (MF). \textit{LV} can
-be defined as a \textit{5-tuple} \textit{LV=}$<v,T,X,g,m>$ where
-\textit{v} is the name of the variable, \textit{T} is the set of
-linguistic terms of \textit{v, X} is the domain (universe) of
-\textit{v,g} is a syntactic rule to generate linguistic terms,
-\textit{m} is a semantic rule that assigns to each term \textit{t} its
-meaning \textit{m(t)}, which is a fuzzy set defined in \textit{X}.
+Amount Research and implementation exist in this domain in which personalization
+and user modeling plays an important role. This section presents several works
+of these domains. To understand this topic, the different objects are divided
+into three general categories: 
+* supporting a user during a task. 
+* giving a user a specific personalized experience. 
+* training and educating a user.  
+The categories especially differ in the kind of user data that is used. For each
+domain, the general purpose of the domain and the more accurate purpose of the
+user model are discussed.
 
-\subsection{Fuzzy Inference Systems}
+\subsection{User models for providing task support}
 
-\textit{Fuzzy Inference Systems} (FISs) also called \textit{Fuzzy
-Models} are fuzzy production systems used for modeling input-output
-relationships. From this input-output view, Babuŝka
-\cite{babuvska1996fuzzy} describes these systems as \textit{"flexible
-mathematical functions which can approximate other functions or just
-data (measurements) with a desired accuracy"}. Fuzzy Productions Rules
-define the relationship between input and output variables. Input
-variables are defined in the antecedent part of the rule and the
-consequent part defines the output variables. These FIS are used
-mainly in control systems, and are basically composed of five
-modules\cite{babuvska1996fuzzy}:
-\begin{enumerate}  
-\item \textbf{Rule Base.} The set of fuzzy production rules.
-\item \textbf{Database.} Where the membership functions are defined.
-\item \textbf{Fuzzy Inference Engine.} This module executes the 
-fuzzy inference operations.
-\item \textbf{Fuzzifier.} This interface transforms the inputs 
-of the systems (numerical data) into linguistic values.
-\item \textbf{Defuzzifier.} This interface transforms the fuzzy 
-results into numerical data.
-\end{enumerate}
-Usually the Rule Base and Data Base modules are collectively 
-called the Knowledge Base module. The steps involved in fuzzy 
-inference in a FIS are \cite{dubois1980fuzzy}:
-\begin{enumerate} 
-\item Compare the input variables with the membership functions 
-in the antecedent, to obtain the membership values of each 
-linguistic term. This step is frequently called fuzzification.
-\item Compose through a specific T-Norm operator (mainly max-min 
-or max-product) the membership values to obtain the degree of 
-support of each rule.
-\item Generate the qualified consequence (fuzzy or numeric) of 
-each rule depending on the degrees of support. These outputs 
-are then aggregated to form a unified output.
-\item Then the output fuzzy set is resolved or defuzzified 
-to a single numeric value.
-\end{enumerate} 
-Three main inference systems can be described:
-\begin{itemize} 
-\item \textbf{Tsakumoto}: The output is the average of the 
-weights of each rule numeric output, induced by the degree of 
-support of each rule, the min-max or min-product with the 
-antecedent and the membership functions of the output. The 
-membership functions used in this method must be 
-non-decrease monotonic. 
-\item \textbf{Mamdani}: The output is calculated by applying 
-the min-max operator to the fuzzy output (each equal to the 
-minimum support degree and the membership function of the rule). 
-Several schemes have been proposed to choose the numeric output 
-based on the fuzzy output; these include the centroid area, 
-area bisection, maximum mean, maximum criteria.
-\item \textbf{Sugeno}: The fuzzy production rules are used. The 
-output of each rule is a linear combination of the input 
-variables plus a constant term, and the output is the average 
-of the support degree of each rule.
-\end{itemize} 
+Task support systems are f systems that help a user during a task by either
+supporting the user perform the task or by completely taking over this task
+(Nurmi et al., 2007; Brun et al., 2010). For instance,  an application that
+automatically categorizes the incoming emails of the user. The goal of the user
+model in these requests is to promote the efficiency of interactions with the
+user, to simplify these interactions and to make complex systems more usable
+(Razmerita, 2009; Fischer,  2001). To perform this personalization, data is
+collected through observations of the user. This information is related to the
+user’s goals and needs, but especially to the task that the user currently is
+accomplished, like the user’s task knowledge and background. Much research has
+been done in this domain, but because many separate research projects are
+focusing on an exact task or subject (Sannes, 2011), it is hard to make
+generalizations or to establish one delimited investigation topic. Commonly
+discussed research subjects are Decision Support Systems,  Adaptive Hypermedia,
+and Adaptive Ubiquitous Systems, each having his or her own specific domain and
+way of personalization.  
 
-\section{Context}
-%%
-%% Escribe aquí una intro general de contexto,
-%% antes de ver especificamente al contexto en SR 
-%% Context y Contextual Information son dos términos distintos
-%% Context es el contexto real y de este se extrae información contextual.
-%% A veces los usas como si fuera lo mismo. 
+\subsection{Decision support systems}
 
-%% También debes definir Contextual Factors, creo que es 
-%% Información Contextual que puede afectar a la recomendación   
+Decision support systems are systems that support a user with making a decision
+in a complex, professional environment (Nurmi et al., 2007). For example,  a
+system used at a pharmacy for automatically checking valid combinations of
+medicine. The method can be used to help the pharmacist in prescribing the right
+combinations and to give information for making a decision when a problem
+occurs.  The purpose of the user model in decision support systems is to present
+the user with the right and appropriate information, giving different feedback
+or applying various decision steps according to the characteristics of the
+user.The data that is used is often associated with the user’s task and
+background knowledge.    The adaptation takes place by adapting the amount and
+the content of the feedback provided by the system.
 
-The application of contextual information in recommender systems, there are %
-previous approaches by assuming the existence of certain contextual         % Mejorar
-factors, such as time, location, and the purchasing purpose, that
-identify the context in which recommendations are provided. An
-assumption for each of these contextual factors can have a structure;
-the time factor, for instance, it can be defined in terms of seconds,
-minutes, hours, days, months, and years. The classification of context 
-%Segura que es la clasificacion de context?
-%Este parrafo es incorrecto
-%La enumeración no es una clasificación 
-that is proposed by Adomavicious\cite{adomavicius2011context} is based on the 
-following two aspects of contextual factors: 1) what a RS may know
-about these contextual factors and, 2) how contextual factors change
-over time.
-\begin{enumerate}
 
-%% Este parrafo repite habla de la clasificación, no es una clasificación
-\item \textbf{What a recommender system may know about these contextual factors.} 
-A recommender system can have different types of knowledge, which may include 
-the exact list of all the relevant factors, their structure, and their values, 
-about the contextual factors. Depending on what exactly the system knows (that 
-is, what is being observed), it can classify the knowledge of a recommender 
-system about the contextual factors into three categories: 
-	%% Entonces se clasifican en tres:
-	\begin{itemize}
-	\item \textbf{Fully observable}: The contextual factors relevant to the 
-	application, as well as their structure and their values at the time when 
-	recommendations are made, are known explicitly. For example, when
-	recommending the purchase of a certain product, like a shirt, the 
-	recommender system may know only the \tt{Time}, PurchasingPurpose, and  %% Ponlos como \tt{}
-	ShoppingCompanion factors matter in this application. Further, the 
-	recommender system may know the structure of all these three contextual 
-	factors, such as having categories of weekday, weekend, and holiday for 
-	Time. Further, the recommender system may also know the values of the 
-	contextual factors at the recommendation time (for example, when this 
-	purchase is made, with whom, and for whom).
-	\item \textbf{Partially observable}: Only some of the information about 
-	the contextual factors described above, is explicitly known. For example, 
-	the recommender system may know all the contextual factors, such as Time, 
-	PurchasingPurpose, and ShoppingCompanion, but not their structure. Note that 
-	there can possibly be different levels of “partial observability.” In this 
-	article we do not differentiate between them and group various cases of 
-	partially observable knowledge into this general category.
-	\item \textbf{Unobservable}: No information about contextual factors is 
-	explicitly available to the recommender system, and it makes recommendations 
-	by utilizing only the latent knowledge of context in an implicit manner. 
-	For example, the recommender system may build a latent predictive model, 
-	such as hierarchical linear or hidden Markov models, to estimate unknown 
-	ratings, where unobservable context is modeled using latent variables.
-	\end{itemize}
-\item \textbf{How contextual factors change over time.} Depending on whether 
-contextual factors change over time or not, there are two categories: 
-	\begin{itemize}
-	\item \textbf{Static}: The relevant contextual factors and their structure
-	remains the same (stable) over time. For example, in case of recommending a
-	purchase of a certain product, such as a shirt, we can include the
-	contextual factors of Time, PurchasingPurpose, ShoppingCompanion and only
-	them during the entire lifespan of the purchasing recommendation
-	application.
-	\item \textbf {Dynamic}: This is the case when the contextual factors change in 
-	some way. For example, the recommender system (or the system designer) may 
-	realize over time that the ShoppingCompanion factor is no longer relevant for 
-	purchasing recommendations and may decide to drop it. Furthermore, the structure 
-	of some of the contextual factors can change over time (for example, new 
-	categories can be added to the PurchasingPurpose contextual factor over time).
-	\end{itemize}
-\end{enumerate} 
-On the other hand, Fling\cite{fling2009mobile} considers four types of context that 
-can be used by different applications:  %Creo que estos pueden ser factores, no contextos 
-\begin{itemize} 
-\item \textbf{Physical context}: representing the time, position, and activity 
-of the user, but also the weather, light, and temperature when the 
-recommendation is supposed to be used. 
-\item \textbf{Social context}: representing the presence
-and role of other people (either using or not using the application) around the
-user and whether the user is alone or in a group when using the application.
-\item \textbf{Interaction media context}: describing the device used to access
-the system (for example, a mobile phone or a kiosk) as well as the type of media
-that are browsed and personalized. The latter can be ordinary text, music,
-images, movies, or queries made to the recommender system. 
-\item \textbf{Modal context}: representing the current state of mind of the user, 
-the user’s goals, mood, experience, and cognitive capabilities.  
-\end{itemize}
-The contexts classification reachs to a general context definition %No se si llamarle clasificacion
-adopted like the most suitable definition proposed by A. K. Dey  and it
-was mentioned in chapter 1.\\ 
+Decision support systems are traditionally ruled ‐ or logic-based systems, in
+which all the relevant information is represented in a knowledge base. This
+means that the content of the user model itself is also highly dependent on the
+way the rules and knowledge are represented.
 
-%% Esta idea es tuya? Creo que yo no llamaría a esto context más bien algo como context factor  
-Then, an example to explain context is considering a context-aware
-application, an indoor mobile tour guide. Here, the
-entities are the user, the application and the tour sites.  We will
-look at two pieces of information – weather and the presence of other
-people – and use the definition to determine if either one is context.
-The weather does not affect the application because it is being used
-indoors. Therefore, it is not context. The presence of other people,
-however, can be used to characterize the user’s situation. If a user
-is traveling with other people, then the sites that they visit may are
-the points of interest for the user. Therefore, the presence of other
-people is context because it can be used to characterize the user’s
-situation. \\ 
-%Falta afinar el siguiente párrafo:
-Previously understanding the context, it is likely to define \textbf
-{context-aware recommender systems}, it is viable to adopt the
-definition of \textbf{A. K. Dey et.al}\cite{dey2001understanding} to
-formalize what features it has a Context-aware recommender
-system:\textit{``a system is context-aware if it uses context to
-provide relevant information and/or services  to the user, where
-relevancy depends on the user’s task."} \\  This definition is closer
-to the real about behaviour of \textbf{context-aware recommender
-system} when it incorporates contextual information to get
-recommendations,  in addition, is fewer confused and specific than
-other author's definitions.
 
-\section{Recommender systems}
+\subsection{Adaptive Hypermedia}
 
-\subsection{Collaborative Filtering algorithm}
-The idea behind collaborative recommendation approaches is to exploit
-information about past behavior or opinions of an exisiting user community 
-for predicting which items certain user of the
-system will most probably like or be interested in
-\cite{anIntroduction}. Recommender systems are useful in several types
-of  applications, however, their biggest impact has been mainly in ecommerce 
-web sites in order to  personalize the information for a particular user as
-the system can help to promote several items of his or her interest, thus increasing the sales
-of the on-line store. In traditional implementations a Collaborative Filtering (CF)
-algorithm takes as input a given \textit{user-item} matrix of ratings 
-to generate a prediction for each item-user pair indicating to what degree
-the current user will like or
-dislike an item. Subsequently with that information 
-a list of the top \textit{n} recommended 
-items for the user can be generated. The generated list contains 
-only those items that have not been reviewed by the user.
-Differents approaches are utilized for CF such
-as:  a) user-based nearest neighbor recommendation, b) Item-based
-nearest neighbor  recommendation and c) model-based recommendation.\\
-a) \textit{User-based nearest neighbor} is approach the is used the most because
-is relatibly easy to implement and offers acceptable results. Another advantage
-is tha only the rating matrix is needed to obtain recommendations. 
-The neighborhood selection consists in taking the \textit{k} 
-nearest neighbors into account usind the threshold to define 
-the size of the neighborhood. A neigborhood of small can not make accurate 
-predictions, and on the other hand if the
-neighborhood is too large the information about the nighbours could not be
-significant.\\ To obtain the similarity value between a user and his 
-neighbors, the Pearson correlations measure is commonly used, taking the values from
-$+1$ (strong positive correlation) to $-1$ (strong negative
-correlation) to define how similar a neighbor is. The similarity
-$sim(a,b)$ of users $a$ and $b$, given the rating matrix $R$ is
-denoted by the following equation:
-\begin{equation}\label{eq:pearson1}
-\displaystyle sim(a,b) = {\sum_{p \in P}(r_{a,p} - 
-\bar{r_a})(r_{b,p}- \bar{r_b}) 
-\over \sqrt{\sum_{p \in P}(r_{a,p} - \bar{r_a})^2} 
-\sqrt{\sum_{p \in P} 
-(r_{b,p}- \bar{r_b})^2}}
-\end{equation}
-Where the symbol $\bar{r_a}$ corresponds to the average rating of user
-$a$. Subsequently, a formula to calculate the prediction of the user
-$a$ for item $p$ that also factors the relative proximity of the
-nearest neighbors $N$ and $a's$ average rating $\bar{r_a}$ is denoted
-by the following equation:
-\begin{equation}\label{eq:prediction}
-\displaystyle pred(a,b) = \bar{r_a} + 
-{\sum_{b \in N} sim(a,b) * (r_{b,p}- \bar{r_b}) 
-\over \sum_{b \in N} sim(a,b)} 
-\end{equation}
-b) \textit{Item-based nearest neighbor} is the same idea than the \textit
-{user-based}, the difference is that this approach tries to find
-similar items instead of similar users to make a prediction using the rating
-matrix.  Then, in a \textit{item-based} recommendation is to compute
-predictions using the similarity between items and not the similarity
-between users.  To find similar items cosine similarity measure is
-defined, this metric measures the similarity between two
-\textit{n-dimensional} vectors based on the angle between them.
-Therefore, the similarity between two items \textit{a} and \textit{b}
-– viewed as the corresponding rating vectors $a$ and $b$ – is formally
-defined as follows:
-\begin{equation}\label{eq:cosine}
-\displaystyle sim(\overrightarrow{a},\overrightarrow{b})= 
-{\overrightarrow{a}* \overrightarrow{b} \over
-|\overrightarrow{a}|*|\overrightarrow{b}| }
-\end{equation}
-The * symbol is the dot product of vectors. $|a|$ is the Euclidian
-length of the vector, which is defined as the square root of the dot
-product of the vector with itself.\\ 
-c) \textit{Model-based approach}, in this technique  the raw data are
-first processed offline, as described for \textit {item-based}
-filtering or some dimensionality reduction techniques. At run time,
-only the learned model is required to make predictions. Although
-\textit{memory-based} approach is theoretically more precise because
-full data is available for generating recommendations, such systems
-face problems of scalability when databases of tens of millions of
-users and items are used. An example of this approach is matrix
-factorization or latent factors model, normally used to fill a rating
-matrix to calculate predictions taking in account the latent factors.
+Adaptive hypermedia system is a system that grant users to browse freely information
+network,  structured by nodes and links, to retrieve items of information (Nurmi
+et al., 2007; Deepa et al., 2012). For instance an internet website application.
+The goal of the user model is to make the interface and structure of the system
+dynamic. This enables the application to adapt to the user and to make it easier
+for the user to search for and retrieve relevant information.  The data used in
+the user model is related to the user’s abilities, knowledge, and goals in the
+application. The adaptation happens by adjusting the structure and the
+presentation style to the expected needs of the user. For example, by enhancing
+web search: promoting pages that might better correspond to the user’s
+characteristics, on the other hand by giving navigation support, through
+highlighting certain components of a page (Razmerita et al., 2012).
 
-\subsection{Content-based algorithm}
+\subsection{Adaptive ubiquitous systems}
 
-In content-based the recommendation task then consists of determining the
-items that match the user’s preferences best. Although such an approach must
-rely on additional information about items and user preferences, it does not
-require the existence of a large user community or a rating history –that is,
-recommendation lists can be generated even if there is only one single user. In
-practical settings, technical descriptions of the features and characteristics
-of an item– such as the genre of a book or the list of actors in a movie – are
-more often available in electronic form, as they are partially already provided
-by the providers or manufacturers of the goods. What remains challenging,
-however, is the acquisition of subjective, qualitative features. In domains of
-quality and taste, for example, the reasons that someone likes something are not
-always related to certain product characteristics and may be based on a
-subjective impression of the item’s exterior design.   \\
-\textbf{Content representation.} The simplest way to describe catalog items is
-to maintain an explicit list of features for each item (also often called
-attributes, characteristics, or item profiles). For a book recommender, one
-could, for instance, use the genre, the author’s name, the publisher, or
-anything else that describes the item and store his information in a relational
-database system. When the user’s preferences are described in terms of his or
-her interests using exactly this set of features, the recommendation task
-consists of matching item characteristics and user preferences.  \\
-\textbf{Vector space model.}  Content-based systems have historically been
-developed to filter and recommend text-based items such as e-mail messages or
-news. The standard approach in CB recommendation is, therefore, not to maintain
-a list of \textit{meta-information features}, but to use a list of relevant keywords
-that appear within the document. The main idea, of course, is that such a list
-can be generated automatically from the document content itself or from a 
-free-text description thereof.
+Ubiquitous systems are concerned with data handling applications integrated into
+everyday objects and activities (Nurmi et al., 2007).  For example the smart
+energy meter, recording the energy usage in a household through small devices
+distributed in a house, supporting the user with managing this energy
+usage(Hargreaves et al., 2010).   
+*  The main purpose of the user model is to
+improve the system, facilitate the user’s preferences and thus make the overall
+use easier.   
+* Because the personalization can take place in every situation
+and location, the data is focused on the user state and context. For example to
+enable the contextualization to a current environmental change. 
+*The adaptation
+takes place by changing the behavior of, and the feedback given by the whole
+system. These objects can be inferred by looking at the properties of the
+objects in the user profile, or by looking at the objects in other user profiles
+that are similar to the user (Kobsa, 2001; Kay et al., 2012). Because of the
+predominantly commercial goal of these systems, the adaptations often take place
+in a very intrusive way, to make sure the user notices the change.
+Most recommender systems used on the Internet, which means that some typical
+technical difficulties are associated with these kinds of user models. First,
+the user profile is often only saved during the user’s visit,  which means that
+fast and efficient adaption is necessary. Recommender systems often become more
+precise when the user spends more time on the system. Second, the system’s
+structure is often split up in a client and on a server side, where the client
+side solely gathers user information and sends it to the server, where the
+actual computation takes place.
 
-\subsection{Hybrid recommender systems} 
+\subsection{User models for providing a personal experience.}
 
-Each recommender system technique has its pros and cons – for
-instance, the ability to handle data sparsity and cold-start problems
-or considerable efforts for knowledge acquisition and engineering. \\ 
-User models and contextual information, community and
-product data, and knowledge models constitute the potential types of
-recommendation input. However, none of the basic approaches is able to
-fully exploit all of these. Consequently, building hybrid systems that
-combine the strengths of different algorithms and models to overcome
-some of the afore mentioned shortcomings and problems has become the
-target of recent research. Hybrid recommender systems are technical
-approaches that combine several algorithms or recommendation components.
+User models for providing the user with a personal experience have the goal to
+improve the user experience while using the system.  This kind of user modeling
+is especially focused on more commercial fields, such as e-commerce, marketing,
+and computer games, and became popular with the rise of the Internet.  The
+information that is used by the user in this main domain is mostly focused on
+the information that defines the user, such as the user’s preferences and
+interests. Since this data is regularly delicate, privacy is a  big issue (Toch
+et al., 2012). While in other domains the privacy of the user data is also
+important, in this area it is even a greater topic of discussion because the
+incentive of the application developers is frequently contradictory to the
+incentive of the actual user, considering gaining and sharing the user´s
+personal information. For instance, user profiles are often shared among diverse
+components of the same application, or even with different applications (Brun et
+al., 2010; Karam et al., 2012), which presents additional weaknesses and
+possible undesirable information sharing.  Ensuring personal data is not open to
+all people, in addition to defining strict privacy policies, is thus essential
+in these user models. Some investigation in this domain are.
 
-\subsection{Context-aware recommender systems}
+\subsection{Recommender Systems and User Adaptive Computer Games.}
 
-Traditionally, the recommendation problem has been viewed as a prediction
-problem in which, given a user profile and a target item, the recommender
-system’s task is to predict that user’s rating or that item, reflecting the
-degree of user’s preference for that item. \\  Specifically, a recommender system
-tries to estimate a rating function:  $R$ : $Users * Items$ $ 
-\leftarrow Ratings$, that maps \textit{user-item} pairs to an ordered 
-set of rating values.\\ 
-In contrast to the traditional model, context-aware recommender system tries to
-incorporate or utilize additional evidence (beyond information about users and
-items) to estimate user preferences on unseen items. \\ When such contextual
-evidence can be incorporated as part of the input to the recommender systems,
-the rating function can be viewed as  \textit{multidimensional}: $R$ : $Users *
-Items * Contexts$ $ \leftarrow Ratings$, where \textbf{contexts} represents a set of
-factors that further delineate the conditions under which the \textit{user-item}
-pair is assigned a particular rating. \\ The underlying assumption of this extended
-model is that user preferences for items are not only a function of items
-themselves, but also a function of the context in which items are being
-considered\cite{lim2009assessing}.
+Recommender systems are concerned with presenting the user with relevant
+information and suggestions. They are commonly used on the Internet, for example
+on websites such as Facebook, to provide the user with personalized news,
+targeted advertisements and possibly new friends (Brun et al.,  2010). The
+purpose of the user model is to give the system with information that is assumed
+to be important for the user. The information that is stored for this goal is
+associated with the preferences of the user to certain objects, like products,
+music or people. To benefit a classification of these objects, the interaction
+history of the user is stored, or the user is explicitly asked to rate certain
+objects. The content of the system is eventually adjusted by showing the
+recently inferred objects. In these senses, objects can be inferred by looking
+at the attributes of the objects in the user profile, or by looking at the
+objects in other user profiles that are related to the user (Kobsa, 2001; Kay et
+al., 2012).  As a result of the predominantly commercial target of these
+systems, the adaptations often take place in a very invasive way, to make sure
+the user notices the change. Most recommender systems are based on the Internet,
+which means that some typical technical difficulties  are associated with these
+kinds of user models. First, the user profile is often only stored while the
+user’s visit,  which means that fast and efficient adaption is important.
+Recommender systems usually become more precise  when the user spends more time
+with the system. Second, the system’s architecture is usually client-server,
+where the client side gathers user information and sends it to the server, where
+the  actual process takes place.
 
-\subsection{Paradigms}
+\subsection{User Adaptive Computer Games.}  
 
-When recommender system uses the contextual information, it starts
-with the data having the form \textit{U * I * C * R}, where \textit{C}
-is additional contextual   dimension and end up with a list of
-contextual recommendations  $i_{1}$,$i_{2}$,$i_{3}$...$i_{n}$ for each
-user. However, when the recommendation process does not take into
-account  the contextual information, is posible to apply the
-information about the current (or desired) context \textit{c} in
-various stages of the recommendation process.  Adomavicious defines
-three paradigms to the context-aware recommendation process that is
-based on contextual user preference:
+User Adaptive computer games are games that focus on increasing the perceived
+value by providing a strongly individualized experience (Brisson, 2012).  For
+example is a first‐person shooter that adapts the performance of the enemy
+according to the shooting accuracy of the player.
 
-\begin{itemize}
-\item  \textbf{Contextual pre-filtering (or contextualization of
-recommendation input).} In this recommendation paradigm, contextual
-information drives data selection or data construction for that specific
-context. In other words, information about the current context c is used for
-selecting or constructing the relevant set of data records (i.e., ratings).
-Then, ratings can be predicted using any traditional 2D recommender system 
-on the selected data.   	
-\item \textbf{Contextual post-filtering (or contextualization of recommendation
-output).} In this recommendation paradigm, contextual information is initially
-ignored, and the ratings are predicted using any traditional 2D recommender
-system on the entire data. Then, the resulting set of recommendations is
-adjusted (contextualized) for each user using the contextual information.
-\item \textbf{Contextual modeling (or contextualization of recommendation
-function).} In this recommendation paradigm, contextual information is used
-directly in the modeling technique as part of rating estimation.
-\end{itemize}
+The fundamental idea of the user model is to identify or classify the user, so
+the appropriate adjustment is made in the computer game. The information that is
+used addresses the preferences and progress of the user, such as the user´s
+current  difficulty level or even the employed strategy. This data is usually
+obtained through the interactions of  the user with the game, and therefor first
+should be translated and formalized  before it can be  used to interpret
+conclusions on a higher level. The adaptation that takes place in the game
+concerns changing the content and role of the  game, such as the game
+difficulty, the behavior of non‐player characters  or even the background  music
+(Bakkes, et al., 2012) .
+
+Because of the emphasis on the user, user adaptive computer games have
+relatively a lot of processing power available  for personalization. In this
+sense the user adaptive computer games domain is a very interesting research
+domain.
+
+
+\subsection{User models for educational purposes.}
+
+Educational systems are systems developed with a teaching reason. They are
+commonly applied in e‐learning,  where electronic media and Information
+technologies are used for education. However, in most educational systems,  user
+modeling and adaptation plays a minor role. Content is presented, and only
+simple things such as the student’s progress in the course are registered. By
+adding personalization to these applications, the learning value can notably
+increase, ensuring that every learner achieves and reaches the highest standards
+possible (Heller et al., 2006). Also, the experience of the teacher or
+supervisor can be increased through personalization, for instance through
+inferring and employing the preferred teaching style. However, here we consider
+the student as the user to which the system will be personalized. Thus, it is
+preferable that the data stored in the user profile be interpretable by humans.
+When looking at the time of adjustment in educational systems, we can make a
+clear difference between adaptation while the student is doing an exercise,
+which we will refer to as online adaptation, and adaptation that takes place
+afterward, which we will refer to as offline adaptation. The most important
+investigation domains that do utilize considerable user modeling constructions
+are Intelligent  Tutoring Systems and Adaptive Educational Games.
+
+\subsection{Intelligent Tutoring Systems.}
+
+Intelligent Tutoring Systems (ITS) are systems that provide students automated
+step‐by‐step instruction as the students complete training tasks and/or work on
+exercises. An ITS has the purpose to complement or even replace the human
+teacher. For example a system for teaching students how to program, with the
+ability to automatically detect common mistakes (Elsom‐Cook, 1993).
+
+The particular goal of the user model is to select educational activities and
+strategies and in addition  delivered individual feedback that is most relevant
+to the user’s level of knowledge (Kobsa, 2001;  McTear, 1993). The user
+information that is stored for this purpose is the student’s state, knowledge
+and level of  achievement. This data is exclusively observed over the actions
+and results of the student, such as the answers the student gives. After
+observing this information, it is used to infer higher level  properties, such
+as the student´s learning style and other preferences.
+
+Traditionally, just like decision support systems, information technology
+systems are knowledge based systems, using formalized domain  knowledge and
+rules to drive the user adjustment (adaptation). For instance stereotypes are
+widely used in information technology systems(Kay, 2000)  and represent a set of
+default attributes that often co‐occur in users or in a certain group of people.
+The different stereotypes that have been build differ in granularity of detail
+and complexity.
+
+
+\subsection{Adaptive Educational Games.} 
+
+Adaptive Educational Games (AEGs) are complicated educational games that combine
+ideas from several investigations areas, to increase the student’s learning
+experience (Peeters, et al., 2012a). These are especially based on  serious
+games: computer games with an educational approach, where things are taught to
+students by using a  playful idea ( Korteling, et al., 2011; Johnson, et al.,
+2005). For instance an AEG is a training application  for fire fighters, letting
+the fire fighters train their skills and knowledge in a safe on a virtual
+environment.
+  
+The objective of the user model in an AEGs is to optimize the learning process
+and outcome.   The user information is considered with the advance and knowledge
+of the student, but also with the  student’s mental and cognitive
+characteristics. The gained data can be used to adjust the content,
+presentation, and system behavior to the  student’s need, for example, by
+adjusting the content, tone, or amount of presented feedback. Adaptive computer
+games have a lot of processing power available for personalization,  making a
+complex and interesting domain for user modeling.
+
+\subsection{Methods for user modeling.} 
+
+In the user modeling topic, researchers have proposed more general design
+methods and frameworks to guide the developers in the process of user modeling.
+These general methods are useful in research projects, where the knowledge can
+be reused to adjust the user model to the system’s characteristics. Also in
+commercial applications,  these general methods have proven to be useful (Brun
+et al., 2010), because they make it easier and more feasible to implement
+personalization into a system. In early work, the process of user modeling was
+mostly based on the intuition and experience of the developer or researcher. In
+recent work, the techniques of user modeling were essentially based on the
+intuition and expertise of the developer or researcher. As the user modeling
+research field evolved, there has been put much effort in creating a general way
+for designing and constructing a user model, by basing decisions on more
+empirical grounds and by defining methods applicable to the whole field (Kobsa,
+2001; Durrani, 1997).
+
+Frameworks,  methodologies, and architectures have been developed, defining the
+strict process, restrictions and choices on how to design and build a user
+model.  In the early days of user modeling, the focus was put on developing one
+method applicable to the user modeling field as a whole. However, user modeling
+is a very cross‐disciplinary research subject. Therefore, throughout the
+decades, the user modeling area of research has been influenced by the important
+research topics and trends of their time. For example, when information
+technologies became a major subject in the early nineties, user modeling methods
+were also mostly focused on the application of stereotypes, knowledge bases, and
+logic to define a user model. With the rise of the Internet, the objectives of
+the user modeling field change to Web-oriented applications and all the specific
+problems that arise with this. Thus this connection,  also the general user
+modeling methods that were developed, were focused on the popular research
+domains of their time (Kay et al., 2012). The main approaches to user modeling
+did not change, but the specific filling‐in of the user model, such as which
+technology to apply, did change. In this sense development of user modeling as a
+whole, most researchers eventually agreed that one method to solve all problems
+is not possible (McTear, 1993; Kobsa, 2001). Instead, a broad range of  generic
+user modeling methods has been developed (Fischer, 2001); each of which supports
+only a few of the very different manifestations of personalization. In the rest
+of this section, the general user modeling architecture and the most interesting
+general and domain specific methods will be shortly discussed.
+
+
+
+
+\section{Interactive Evolutionary Computation.}
+
+\section{Fuzzy Logic.}
+
+\section{Gaminfication.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
