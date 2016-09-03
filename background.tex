@@ -481,18 +481,127 @@ the rule strength. 2. Clipping the output membership function at the rule
 strength. Once again, refer to Figure 4-1 to see how this is done for a two
 input, two rule Mamdani FIS.
 
-\subsection{Combining Outputs into an Output Distribution} The outputs of all of
+\subsection{Combining Outputs into an Output Distribution} 
+The outputs of all of
 the fuzzy rules must now be combined to obtain one fuzzy output distribution.
 This is usually, but not always, done by using the fuzzy "or". Figure 4-1 shows
 an example of this. The output membership functions on the right-hand side of
 the figure are combined using the fuzzy "or" to obtain the output distribution
 shown in the lower right corner of the figure.
 
+\subsection{Defuzzification of Output Distribution} 
+
+In many instances, it is desired to come up with a single crisp output from a
+FIS. For example, if one was trying to classify a letter drawn by hand on a
+drawing tablet, ultimately the FIS would have to come up with a crisp number to
+tell the computer which letter was drawn. This crisp number is obtained in a
+process known as defuzzification. There are two common techniques for
+defuzzifying:
+
+\begin{enumerate} 
+\item   Center of mass - This technique takes the output
+distribution found in section 4.1.5 and finds its center of mass to come up with
+one crisp number. This is computed as follows:
+\begin{equation}\label{eq:centerM}
+\displaystyle z=\frac{\sum_{j=1}^qz_j\mu_c(z_j)}{\sum_{j=1}^q\mu_c(z_j)}  
+\end{equation}
+
+where z is the center of mass and uc is the membership in class c at value zj.
+An example outcome of this computation is shown in Figure 4-2.
+
+
+Falta agregar imagen al path
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/inference-sample.png}}
+\caption{Defuzzification Using the Center of Mass.}
+\label{fig:centerMass}       
+\end{figure*}
 
 
 
+\item Mean of maximum - This technique takes the output distribution found in section
+4.1.5 and finds its mean of maxima to come up with one crisp number. This is
+computed as follows:
+\begin{equation}\label{eq:centerM}
+\displaystyle z=\frac{\sum_{j=1}^lz_j}{l}
+\end{equation}
+
+where z is the mean of maximum, zj is the point at which the membership function
+is maximum, and l is the number of times the output distribution reaches the
+maximum level. An example outcome of this computation is shown in Figure x.
+
+Falta agregar imagen al path
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/inference-sample.png}}
+\caption{Defuzzification Using the Mean of Maximum.}
+\label{fig:mean}       
+\end{figure*}
+
+\end{enumerate}
+
+\subsection{Fuzzy Inputs.}  
+In summary, Figure x-1 shows a two input Mamdani FIS
+with two rules. It fuzzifies the two inputs by finding the intersection of the
+crisp input value with the input membership function. It uses the minimum
+operator to compute the fuzzy "and" for combining the two fuzzified inputs to
+obtain a rule strength. It clips the output membership function at the rule
+strength. Finally, it uses the maximum operator to compute the fuzzy "or" for
+combining the outputs of the two rules. Figure x-4 shows a modification of the
+Mamdani FIS where the input y0 is fuzzy, not crisp. This can be used to model
+inaccuracies in the measurement. For example, we may be measuring the output of
+a pressure sensor. Even with the exact same pressure applied, the sensor is
+measured to have slightly different voltages. The fuzzy input membership
+function models this uncertainty. The input fuzzy function is combined with the
+rule input membership function by using the fuzzy "and" as shown in Figure x-4.
+
+falta agregar el path de la imgen
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/inference-sample.png}}
+\caption{A two Input, two rule Mamdani FIS with a fuzzy output.}
+\label{fig:fuzzyOut}       
+\end{figure*}
 
 
 \section{Gamification.}
+
+A definition given by  referencia is  “Gamification is the process by which
+concepts are brought to the real world task associated with real people”. Also
+gamification handle game design elements which are commonly known as non-game
+context in the presud to  enhance user engagement, organizational productivity,
+flow, learning, evaluations, among others.
+
+\subsection{Techniques.}   
+Techniques in this context seek to influence humans
+natural desires for competing, learning, mastery,  achievement, status, self-
+expression, and socializing[][][][]. Early approaches use rewards for players
+who accomplish desired tasks or competition to engage players[]. For instance
+some sort of rewards include points,[25] achievement badges or levels,[26] the
+filling of a progress bar,[27] or providing the user with virtual currency.[26].
+By Making the rewards for  tasks achievements visible to other players or
+providing leader boards are ways of encouraging players to compete.[28]. Because
+the  problematic consequences of competition, which can result in negative
+conduct, low cooperation and collaboration, or disadvantaging certain player
+demographics such as women,[29] best-practice gamification designs try to
+refrain from using this element.
+
+Another techniques to gamification is to make existing tasks feel more like
+games.[30] Some techniques used in this approach include adding meaningful
+choice, onboarding with a tutorial, increasing challenge,[31] and adding
+narrative.[30]
+
+
 
 
