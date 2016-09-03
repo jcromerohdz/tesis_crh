@@ -1,7 +1,7 @@
 \chapter{Proposed method}
 
 This chapter we explain the proposal method describing all the differents
-techniques and proposal tools to apply user modeling in interactive evolutionary
+techniques and  tools to apply user modeling in interactive evolutionary
 computation area using fuzzy logic, graphs theory and "gamification" paradigm.
 
 A fundamental aproach of this research is to develop a user modeling for
@@ -18,7 +18,7 @@ In following sections we explain the techniques mentioned above.
 
 \section{Graph-based user model} 
 
-To develop user model, it was necessary to know the factors that are involved in
+To develop a user model, it was necessary to know the factors that are involved in
 interactive evolutionary computation system . The key factors
 that drive modeling users are described here:
 
@@ -94,464 +94,96 @@ search for users who have installed the application "Facebook" and subsequently
 create this connection between the user node and nodes that represent all the
 friends.
 
+\section{Interface}
+In particular, we shall explain how it was necessary to create an application called “EvoDrawings” to improve the way users interact “collaborate” with an interactive evolutionary computing system. One important class of this application is the user interface, which is the model we will explain in this chapter.
+
+EvoDrawings is a web-based application of interactive evolutionary computing system. In these days when social media platforms has become the perfect tool for masses to exchange information/ideas, interests and creations, EvoDrawings include as a common requirement to the users to have an account of the social platform “Facebook” to have access to the application and consequently participate in it.
+
+The main point to have users logged in the application is that they can evaluate individuals that are formed as a digital paint composed for a single chromosome of nine positions of real numbers.
+Each post of the chromosome represents some figure, color, performing behavior, etc. In figure X we can observe a chromosome composed of 15 elements from a digital paint. Once the individual is shown, the users can proceed to evaluate the individual subjectively. This means that according to the user's preferences the user can print his taste in all the evaluations.
+The evaluation method consists of giving the desired rating through an interactive visual component of five stars. The interactive visual component allows the user to select from one to five stars to evaluate the individual, having the one star as a slightly liking rate and the five stars like a total satisfaction rate. 
+The application enables the user to visualize his social network and the personal evaluation of the users from his social net. In addition to this, the users can create collections with the main goal to allow the users to stock the more pleasing digital paints based on his preferences. 
+Also, the user interface contains a section called “About” where the application explains to users in a general way what the application is all about.
 
 
 
-\subsection{Restaurant model} 
+We can find the vertices that are defined by the users, individuals, and collections as we can observe in figure 1. The users has the following properties:
 
-An effective on-line recommender system must be based upon an
-understanding of consumer  preferences and successfully mapping
-potential products into the consumer’s
-preferences\cite{adomavicius2011context}. Pan and
-Fesenmaier\cite{pan2006online} argued that this can be achieved
-through the understanding of how consumers describe in their own
-language a product, a place, and the experience when they are
-consuming the product or visiting the place.\\ Traditionally,
-choosing a restaurant has been considered as rational behavior where a
-number of attributes contribute to the overall usefulness of a
-restaurant. For example: food type, service quality, atmosphere of the
-restaurant, and availability of information about a restaurant, plays
-an important role at different stages in consumer’s desitions
-making\cite{auty1992consumer}. While food quality and food type have
-been perceived as the most important variables for consumers’
-restaurant selection, situational and contextual factors have been
-found to be important also. Due to this in
-Kivela\cite{jack1997restaurant} identifies 4 types of restaurants: 1)
-fine dining/gourmet, 2) theme/atmosphere, 3) family/popular, and 4)
-convenience/fast-food; and Auty\cite{auty1992consumer} identifies 4
-types of dining out occasions: 1) namely celebration, 2) social
-occasion, 3) convenience/quick meal, and 4) business meal.\\
-Taking in account the context, the restaurant model proposed for
-context-aware recommender system was definded with 55 attributes about the
-restaurants features. An exploration about contents of models of
-others works were compared to define the suitable information into the
-model. Therefore, the restaurant model is a binary vector with the
-following contextual attributes: 1) price range, 2) payment type, 3) alcohol
-type, 4) smoking area, 5) dress code, 6) parking type, 7)
-installations type, 8) atmosphere type, and 9) cuisine type. An
-example of restaurant model in the context-aware recommender system is depicted in figure
-\ref{fig:restaurantmodel} with some domain values of the context
-represented by a binary vector where 1 means that the restaurant has
-the property that corresponds to the position value. Additionally, the
-restaurant model contains contextual information such as users's reviews, ratings average, and geographycal location.\\  
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/restaurant-model.png}}
-\caption{User interface of the restaurant model.}
-\label{fig:restaurantmodel}       
-\end{figure*}
-\subsubsection{Data model} \label{datamodelsection}   
-The data model in postgreSQL is depicted in the figure
-\ref{fig:restaurantmodeldata}, the model contains the restaurant
-entity and its attributes. The restaurant entity is related to
-\textit{Item entity} in a \textit{"one-to-one"} relation that at the
-same time is related to the \textit{RecommenderRule entity} which
-specifies some restrictions for item recommendations. A large view of
-all the entities related is depicted in the whole scheme refered in
-figure \ref{fig:datamodel}.
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/data-resmodel.png}
-\caption{The data model of restaurant.}
-\label{fig:restaurantmodeldata}     
-\end{figure*}
+\section{User activity}
+The user activity is not so different from how the graph is formed, with the difference that the information generated is formed using the standard specified by "JSON activity stream 1.0," which is stored in the engine database NoSQL "Redis ."
 
-Some related entity corresponds to the proposed catalogues, 
-that are defined as following: 
-\begin{itemize}
-\item  \textbf{Installations:} garden, terrace, indoor, outdoor.
-\item  \textbf{Atmosphere:} relax, familiar, friends, bussines, romantic.
-\item  \textbf{Parking:} no parking, free parking, valet parking.
-\item  \textbf{Payment:} credit/debit card, cash.
-\item  \textbf{Smoking area:} yes, no.
-\item  \textbf{Price:} cheap, regular, expensive, too expensive.
-\item  \textbf{Dresscode:} casual, informal, formal.
-\item  \textbf{Alcohol:}no alcohol, wine-beer.
-\item  textbf{Cuisine:} japanese, chinese, italian, argentinean,
-cantonese, mandarin, mongolian, arabic, greek, spanish, brasilian,
-swiss, szechuan, asian, international, steak grill,vegetarian,
-natural/healthy/light, traditional mexican, tacos, mediterranean,
-middle eastern, american/fast food, gourmet, pizza, bar/beer, tapas
-cafe/bar, french, birds, seafood.
+An activity consists of 4 elements: an actor, a verb, an object and a target. The activity generates the history of a user and performs an action on an object. For example - "Christian likes the individual 3" or "Mario created a collection". In most cases, the components will be explicit, but may also be implicit.
 
-\end{itemize}
+The primary goal of this specification is to provide sufficient metadata about the activity, to help the consumer of these data to present the information to the user, in a straightforward and user-friendly format. This involves building simple sentences on the activity that is happening, as well as the visual representation of the activity.
 
-The cuisines were defined according the food variety of restaurants in
-Tijuana, there are 30 kinds of cuisines defined in the system. \\
-The smoking area is the unique attribute with boolean value, it
-defines if a restaurant has a smoking area into its installation.
+So far, we can say that an "Activity Stream" is a collection of one or more activities of an individual (user).
+This specification does not define the relations between the activity within the collection, therefore remains to the interpretation of the user who implements it.
 
-\subsection{User model} 
+\section{Database for interactive evolutionary computation}
+The database for interactive evolutionary computation consists of two databases, as we observe in figure X. In one hand we have the EvoSpace database that uses Redis database engine that is already explained in Chapter X section X.
 
-The user's profile is derived from the ratings matrix. Let $U=[u_1,u_2,...u_n]$
-the set of all users and $ I=[i_1,i_2,$...$i_n] $ the set of all items, if $R$
-represent the ratings matrix,  an element  $R_{u,i}$ represents a user’s rating
-$u \in U$  in a item $i \in I$.  The unknown ratings are denoted as $\neq $. The
-matrix $R$ can be decomposed into rows vectors, the row vector is denoted as $
-\overrightarrow{r_u} $=$[R_{u,1}$...$R_{u,|I|}]$ for every $u \in U$. Therefore,
-each row vector represents the ratings of a particular user over the items. Also
-denote a set of items rated by a certain user u is denoted as $ I_u = i \in I |
-\forall  i: R_{u,i} \neq \emptyset $. This set of items rated represents the
-user preferences where for each domain element $R_{u,i} \in [1-5]$ represents
-the intensity of the user interest for  the item.\\  
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.60pt}
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/user-profile.png}}
-\caption{Example of user interface for user profile.}
-\label{fig:user-profile}       % Give a unique label
-\end{figure*}
-In context-aware recommender system, user profile has contextual
-information such as: 1) price range, 2) current location, 3) cuisine
-types, 4) attributes or features of restaurants that the user want, 5)
-the reviews posted, and 6) the favorite restaurants list. The user
-profile is stored in database and it is available for queries request,
-and it can be changed by users many times in a session. The
-information used to recommendations is the last one register stored.
-The user interface is represented in figure \ref{fig:user-profile}.
+This database contains the structure of individual user data, where every user participation is being stored as well as the fitness of the individual, the user identifier, the representation of the chromosome, etc. 
 
-\subsubsection{Data model} 
+It is necessary to have this information because it is used for fuzzy inference block, which is explained in another chapter. On the other hand, we have a relational database, where basic user information is stored, such the ID, the email, the session, etc. This database also stores everything needed to meet the requirements of login for "Facebook". One important additional information is that contains the structure for storing collections as we can see in Figure X.
 
-The user's data model in postgreSQL is represented in the figure
-\ref{fig:datausermodel}, the model involves the entities:
-\textit{User, UserProfile, and Friends.} \textit{UserProfile entity}
-provides the contextual information of user, \textit{User entity} is
-the default model defined in the system and is related to userProfile
-for suplies valuable information. The \textit{Friends entity}
-represents the social aspect into the userProfile, Friends involves
-the users related to the current user taking in account the
-preferences of each other. \\  The user profile entity is related with
-3 catalogues: price and cuisine are the same that in restaurant model,
-attribute groups corresponds to restaurant model mentioned (section
-\ref{datamodelsection}). A total of 55 attributes(or features) could
-be contained in user profile, this information is used such as 
-contextual information also. The domain values of the related
-catalogues are following:
+\section{Fuzzy Inference}
+In this chapter, we will focus on the explanation of fuzzy inference block. This block uses fuzzy inference to acquire a parameter having the weight function to adjust the participation in interactive evolutionary computing applications. This parameter is used in the decision block which will be explained later. Additionally, the parameter is also acquired from the information generated in different databases.
 
-\begin{itemize}
-\item  \textbf{Price:} cheap, regular, expensive, too expensive.
-\item  \textbf{Cuisine:} japanese, chinese, italian, argentinean,
-cantonese, mandarin, mongolian, arabic, greek, spanish, brasilian,
-swiss, szechuan, asian, international, steak grill,vegetarian,
-natural/healthy/light, traditional mexican, tacos, mediterranean,
-middle eastern, american/fast food, gourmet, pizza, bar/beer, tapas
-cafe/bar, french, birds, seafood.
-\item  \textbf{Attribute groups:} Installations, atmosphere, 
-parking, payment, smoking area, dresscode, alcohol.
+The fuzzy inference system is Mamdani type and is composed of three inputs and one output. Where entries are defined by the preference variable that is also composed of three functions of triangular membership; these features are called low, medium, high, and have ranged from 1 to 5. This range is given by the preference that the user assigns to the individual at the time of assessment.
 
-\end{itemize}
+We also consider the input variable called "experience" and it is defined by three functions of triangular membership under the name of low, medium and high in a range of 1 to 100. The range of this variable are acquired from the activities that the user performs in the application, and empirically with each activity, a score is assigned. For example, if the user makes a login, a three-point score is assigned, as well if the user evaluates an individual, a two-point score is assigned, all the activities has a score punctuation and also the user has a score limit of one hundred points.
 
-\begin{figure*}
-%\captionsetup{justification=centering,margin=2cm}
-\centering
-\includegraphics[width=8cm,height=8cm,keepaspectratio]{img/data-usermodel.png}
-\caption{The data model of user profile.}
-\label{fig:datausermodel}     
-\end{figure*}
+The third variable which is called “ranking” it is also defined by three triangular membership functions with the name of low, medium, high, in a range of 1 to 30. This range is defined by a ranking process as well as is also performed in video games; the range is adjusted according to the user participation.
 
-\subsection{Relational data model} 
+This involvement is acquired from all the cardinality of the graph that the user has and passes through the logarithmic equation X that calculates the value of ranking. Finally, the exit "fuzzyrate" is in a range of 1 to 100 defined by three triangular membership functions with the name of bad, normal and good. In figure X we can see this fuzzy inference system.
 
-A complete database relational scheme is represented in the figure
-\ref{fig:datamodel}. This model involves the whole database for
-context-aware recommender system, as well as the entities and
-relations among them. \\   The context is modeled as a relational database,
-each user context is a new register into data table to store user
-contexts.\\  Contextual information is also stored in the entities:
-\textit{Reviews, CurrentLocation, DistancePoi and Ratings.} For
-instance, \textit{Reviews entity} describes the user’s opinion about
-visited restaurants, this information contributes to have additional
-information about recent preferences of diners.\\   
-\textit{CurrentLocation entity} stores the geographical position of
-user to get a \textit{"nearby recommendation"}, the system locates
-restaurants around 2 kilometers from the user position. The position
-is changed frequently, in this manner, it allows the adaptation for
-each particular situation. \textit{Distance Poi entity} stores the
-distances (kilometers) between the user and restaurants, this
-information is used to calculate \textit{"nearby recommendation"}, 
-each recommended restaurant ought be over the threshold defined.\\   
-Finally, \textit{Rating entity} represents the user preferences 
-in a vector of scores, ratings could be increased in time and 
-the user's preferences patterns could be changed in time also.
-\begin{landscape} 
-\begin{figure}[!h] 
-\centering
-\includegraphics[width=1.3\textwidth]{img/recomet.png}
-\caption{The relational database of context-aware recommender system.}
-\label{fig:datamodel}    
-\end{figure}
-\end{landscape}
+Falta imagen aqui
 
-\section{Expert recomendation} 
+We need the rules here please. ??????
 
-Fuzzy logic is a methodology that provides a simple way to obtain
-conclusions of linguistic data. Is based on the traditional process of
-how a person makes decisions based in linguistic information. \\    Fuzzy
-logic is a computational intelligence technique that allows to use
-information with a high degree of inaccuracy; this is the difference
-with the conventional logic that only uses concrete and accurately
-information \cite{zedeh1989knowledge}.\\  In this work, fuzzy logic is
-used to model fuzzy variables that highligh in the popularity of a
-restaurant. The context-aware recommender system has implemented a
-Fuzzy Inference System that represents the expert recommendation. \\   The
-expert Fuzzy Inference System generates recommendations when the
-recommendation techniques (collaborative filtering, content-based) are
-not getting results because of the cold start problem.\\   The Fuzzy
-Inference System proposed has 3 \textbf{input variables} (such as in
-previous work realized\cite{garcia2009hybrid}): 1)\textit{rating} is
-an average of ratings that has a particular restaurant inside the user
-community; the domain of variable is 0 to 5 and contains 2 membership
-functions labeled as \textit{low} and \textit{high}(figure
-\ref{fig:mf:a}), 2)\textit{price} represents the kind of price that
-has a particular restaurant; the domain of variable is 0 to 5 and
-contains 2 membership functions labeled as \textit{low} and
-\textit{high} (figure \ref{fig:mf:b}), and 3)\textit{votes} is used to
-measure how many items have been rated by the current user, i.e., the
-participation of the user, if the user has rated few items (less than
-10) is not sufficient to make accurate predictions(figure
-\ref{fig:mf:c}), the domain of variable is 0 to 10 and contains 2
-membership functions labeled as \textit{insufficient} and
-\textit{sufficient}. \\   The \textbf{output variable} is
-\textit{recommendation}, represents a weight for each restaurant
-proposed by the expert considering the inputs mentioned above, the
-domain of variable is 0 to 5 and contains 3 membership functions
-labeled as \textit{low}, \textit{medium} and \textit{high} (figure
-\ref{fig:mf:d}).
 
-\begin{figure}[ht!]
-   \centering
-   %%----primera subfigura----
-   \subfloat[]{
-        \label{fig:mf:a}
-        \includegraphics[width=0.42\textwidth]{img/mf-rating.png}}
-   \hspace{0.1\linewidth}
-   %%----segunda subfigura----
-   \subfloat[]{
-        \label{fig:mf:b} 
-        \includegraphics[width=0.42\textwidth]{img/mf-price.png}}\\[20pt]
-   %%----tercera subfigura----
-   \subfloat[]{
-        \label{fig:mf:c} 
-        \includegraphics[width=0.42\textwidth]{img/mf-votes.png}}
-    \hspace{0.1\linewidth}
-   %%----cuarta subfigura----
-    \subfloat[]{
-        \label{fig:mf:d} 
-        \includegraphics[width=0.42\textwidth]{img/mf-recommendation.png}}
-   \caption{The Gaussian membership functions of the expert system.
-   }
-   \label{fig:mfexpert} 
-\end{figure}
+\section{Decision Making}
+The decision block it is defined by equation 1 representing the value of fitness that takes the individual to be evaluated by the user, as well as everything else that makes in the application.
 
-The proposed Fuzzy Inference System(figure \ref{fig:expertfis})
-represents the users experience and their knowledge about restaurants.
-This factors are considered important  for users that visiting a
-restaurant. This information is recovered of user profile and
-restaurant profile; and the system uses this information to get
-weights that influence in the final recommendations. The Fuzzy
-Inference System uses 5 inference rules that involve the variables of
-inputs and output.The input variables determine the recommendation
-activation; each input variable contains labels as \textit{low} and
-\textit{high} that also correspond to memberships functions of
-Gaussian type. For the output variable \textit{recommendation} the
-labels \textit{low}, \textit{medium}, and \textit{high} are used with
-membership functions Gaussian type also. The rules are:
-\begin{enumerate} 
-\item \textit{If \textbf{rating} is high and \textbf{price} is low then \textbf{recommendation} is high.}
-\item \textit{If \textbf{rating} is high and \textbf{votes} is sufficient then \textbf{recommendation} is high.}
-\item \textit{If \textbf{rating} is high and \textbf{votes} is insufficient then \textbf{recommendation} is medium.}
-\item \textit{If \textbf{rating} is low and \textbf{price} is high and then \textbf{recommendation} is low.} 
-\item \textit{If \textbf{rating} is low and \textbf{votes} is insufficient then \textbf{recommendation} is low.}
-\end{enumerate} 
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\fbox{\includegraphics[width=0.70\textwidth]{img/expert.png}}
-\caption{Fuzzy Inference System of expert.}
-\label{fig:expertfis}       % Give a unique label
-\end{figure*}
+equation please
 
-\section{Fuzzy Inference System to assing weights} 
+Where  represents the fuzzy fitness function for all users who have evaluated an individual of the population in particular.
+Likewise  represents the range that a user assigned to the individual according to their preferences. The function  represents our fuzzy inference and is defined by the equation 2.
 
-The main goal of this Fuzzy Inference System is to define weights for each recommendation list. The recommendation technique is based in the amount of available information stored, so each technique utilizes this information to provide a list of restaurants as well as a weight for each one, therefore, these is used for  recommendations if its weight is upper the threshold.  The Fuzzy Inference System has inputs and outputs to infer each list's weight, its variables are depicted in figure \ref{fig:fis-pesos}. 
-There are 3 membership functions for inputs and 3 for outputs. The input variables are: \textit{userSimilarity, restaurantSimilarity and Participation} and are depicted in figure \ref{fig:fis-inputs}. The (\ref{fig:fis-inputs}.a) and(\ref{fig:fis-inputs}.b) are in a range from 0 to 1 to define the similarity average among users and restaurants, respectively. The figure (\ref{fig:fis-inputs}.c) has a range from 0 to 15  to represent the ratings of the user(participation). This information is stored in the Popularity entity (see figure \ref{fig:datamodel}). \\
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\fbox{\includegraphics[width=0.70\textwidth]{img/fis-pesos.png}}
-\caption{Fuzzy Inference System to assign weights.}
-\label{fig:fis-pesos}       % Give a unique label
-\end{figure*}
-By other side, the output variables are: \textit{Expert, RestaurantProfile and Correlation}, these are depicted in figure \ref{fig:fis-outputs}. The figure (\ref{fig:fis-outputs}.a) represents the weight for expert recommendation list, figure (\ref{fig:fis-outputs}.b) represents the weight of the content-based list and figure (\ref{fig:fis-outputs}.c) represents the weight of collaborative recommendation list, their membership functions are in a range from 0 to 1 to get the value.
-\begin{figure}[ht!]
-   \centering
-   %----primera subfigura----
-   \subfloat[]{
-        \label{fig:mf:a}
-        \includegraphics[width=0.42\textwidth]{img/usersimilarity.png}}
-   \hspace{0.1\linewidth}
-   %%----segunda subfigura----
-   \subfloat[]{
-        \label{fig:mf:b} 
-        \includegraphics[width=0.42\textwidth]{img/restaurantsimilarity.png}}\\% [20pt]
-   %%----tercera subfigura----
-   \subfloat[]{
-        \label{fig:mf:c} 
-        \includegraphics[width=0.42\textwidth]{img/participation.png}}
-        %\hspace{0.1\linewidth}
-   \caption{The Gaussian membership functions of input variables.
-   }
-   \label{fig:fis-inputs} 
-\end{figure}
-\begin{figure}[ht!]
-   \centering
-   %%----primera subfigura----
-    \subfloat[]{
-        \label{fig:mf:d} 
-        \includegraphics[width=0.42\textwidth]{img/expert-mf.png}}%\\ %[20pt]
-        \hspace{0.1\linewidth}
-      %%----segunda subfigura----
-    \subfloat[]{
-        \label{fig:mf:d} 
-        \includegraphics[width=0.42\textwidth]{img/restaurantprofile-mf.png}}\\
-     %%----tercera subfigura----
-    \subfloat[]{
-        \label{fig:mf:d} 
-        \includegraphics[width=0.42\textwidth]{img/correlation-mf.png}}%\\ %[20pt]
-   \caption{The Gaussian membership functions of output variables.
-   }
-   \label{fig:fis-outputs} 
-\end{figure}
-Taking in account the input variables, the rules utilized to infer the 
-output values are following:
-\begin{enumerate} 
-\item \textit{If \textbf{userSimilarity} is low and 
-\textbf{restaurantSimilarity} is low and \textbf{participation} 
-is insufficient then \textbf{expert} is high, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is low.}
-\item \textit{If \textbf{userSimilarity} is low and 
-\textbf{restaurantSimilarity} is low and \textbf{participation} 
-is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is low and 
-\textbf{restaurantSimilarity} is low and \textbf{participation} 
-is minimun then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is low and 
-\textbf{restaurantSimilarity} is high and \textbf{participation} 
-is insufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is high, \textbf{correlation} is low.}
-\item \textit{If \textbf{userSimilarity} is low and 
-\textbf{restaurantSimilarity} is high and \textbf{participation} 
-is minimun then \textbf{expert} is low, \textbf{restaurantProfile} i
-s high, \textbf{correlation} is low.}
-\item \textit{If \textbf{userSimilarity} is low and 
-\textbf{restaurantSimilarity} is high and \textbf{participation} 
-is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is high, \textbf{correlation} is low.}
-\item \textit{If \textbf{userSimilarity} is high and 
-\textbf{restaurantSimilarity} is low and \textbf{participation} 
-is insufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is high and 
-\textbf{restaurantSimilarity} is low and \textbf{participation} 
-is minimun then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is high and 
-\textbf{restaurantSimilarity} is low and \textbf{participation} 
-is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is high and 
-\textbf{restaurantSimilarity} is high and \textbf{participation} 
-is insufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is high and 
-\textbf{restaurantSimilarity} is high and \textbf{participation} 
-is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\item \textit{If \textbf{userSimilarity} is high and 
-\textbf{restaurantSimilarity} is high and \textbf{participation} 
-is minimun then \textbf{expert} is low, \textbf{restaurantProfile} 
-is low, \textbf{correlation} is high.}
-\end{enumerate} 
+equation please
 
-\section{Contextual Recommendation} 
+Where  is still the range that users assigned to a particular individual. The variable represents the user experience, which is a function that is defined in equation 3
 
-The interface of the system(figure \ref{fig:context})  allows to
-collect contextual information such as type of price, restaurant's
-attributes, type of cuisine and geographical location.  The context-
-aware recommender system uses pre-filtering paradigm, then the
-contextual information is used for adjust the final recommendations
-list.  For example, geographical location is used to get restaurants
-around  2 kilometers of distance, next, the list of nearby restaurants
-is displayed  for the user. If context-aware recommender system
-considers another  attributes as type of price and type of cuisine
-preferred by the user, the system gets restaurants matched in the
-context especified  by the user in this time.  In the attributes box,
-the user can chose any preference about what things are importants to
-select a restaurant. The features are collected from the dataset of
-Tijuana restaurants. In the cuisine box, the user choosen his/her
-favorite cuisine, it can be one or more cuisines such as in attributes also. \\  
-The context changes constantly, indeed, the users migh change 
-it many times such as them wish.
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\fbox{\includegraphics[width=0.60\textwidth]{img/context.png}}
-\caption{System interface to collect contextual information.}
-\label{fig:context}   
-\end{figure*}
-After the post-filtering, the system displays the  recommended
-restaurants according the information provides by the user. The
-context-aware recommender system contains 4 techniques to display
-recommendations. The interface in figure \ref{fig:recom} shows
-recommendations: \textit{1) Expert, 2) Content- based, 3) Collaborative
-filtering and 4) Nearby.} Each one was explained above, except the
-nearby recommendations. For nearby recommendations the system
-calculates the approximate distance between the current geographical
-location of the user and the available restaurants in the area.  The
-threshold is 2 kilometers around the user position to determine what
-restaurants will be recommended.  The geographical position is
-obtained throught Google maps.
+equation please
 
-\begin{figure*}
-%\captionsetup{justification=centering,margin=2cm}
-\centering
-\fbox{\includegraphics[width=0.60\textwidth]{img/recom.png}}
-\caption{System inferface of recommendations for the user.}
-\label{fig:recom}    
-\end{figure*}
+Where  represents user activity. The variable  represents the taste generated of the verb "like" from the user activity stream.
+The variable  represents the access that like the variable  is obtained from the verb "join" from the user activity stream. The variables are represented by the verbs "save" and "open" from the user activity stream.
 
-\section{Architecture} 
+equation please
 
-The architecture for poposed method is depicted in the figure
-\ref{fig:archit}.  In the first part, the three techniques of
-recommendations are suplied by the rating matrix to obtain the
-recommendation list. Ratings matrix makes that Fuzzy Inference System
-can obtain the inputs values to calculate the output value. The
-Content-based utilizes the rating matrix and user profiles to compare
-the similarity among the restaurants through cosine similarity. The
-collaborative filtering is based in rating matrix (user profiles) to
-predict ratings for restaurants using Pearson correlation to get the K
-neighbors.\\ 
-The second part shows the recommendation lists for the user getting of
-each algorithm. Subsequently, the recommendation lists are reduced
-when filter context is applied, i.e., the recommendations are adjusted
-for the user current context. Finally, the contextual recommendations
-list is displayed in the user interface (figure \ref{fig:recom}).
-\begin{figure*}
-%\captionsetup{justification=centering,margin=2cm}
-\centering 
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/archit.png}}
-%\fbox{\includegraphics[width=0.60\textwidth]{img/archit.png}}
-\caption{Context-aware recommender system architecture.}
-\label{fig:archit}       % Give a unique label
-\end{figure*}
+In equation 2, we can find the variable  as the last entry and represents a range of the user; this variable is defined by a logarithmic scale where intervenes our user modeling based on graphs and is defined by Equation 4.
+
+equation please
+
+In equation 4, the variable  represents the scale, levels represents the highest level that the users can have. The variable  represents the endpoints, which are the maximum points that a particular user can have.
+
+In order to acquire the user's level of range, a function floor is calculated, the main point of this is to increase the difficulty for the high ranked users to level up. In other words the expert users needs to have more participation if they want to raise their level range. This function is defined by equation 5
+
+equation please
+
+Where  represents the level of range,  represents the scale and  are all the participations  that the user has made. These participations represents the degree that the user has within his own graph and is defined by the vicinity of its vertex  that is given by the adjacent vertices to , defined in Equation 6.
+
+equation please
+
+In this case the degree of the vertex is number of neighbors of: 
+
+equation please
+
+we represent this participation as we can see in figure x.
+
+
+
+
 
 
 
