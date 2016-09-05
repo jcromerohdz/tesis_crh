@@ -1,65 +1,162 @@
-\chapter{Experiments and Results} \label{sec:4}
+\chapter{Case study} \label{sec:4}
 
 
-In this chapter the results of the experiments described in chapter 4 are 
-presented.
+This chapter will explain the experiment used in the Study Case.   Three versions of EvoDrawing were used to fulfill this research.
+
+Starting off with the hypothesis which will allow increasing the user experience of having a drawing modeling using diffuse logic and use techniques.
+
+It was necessary to design Three experiments to prove this thesis work hypothesis; each experiment used a different version of EvoDrawing.  The results as well as each version of EvoDrawing compared to other applications of interactive evolutionary computing and also were compared between other Evo Drawing versions itself.  Equality of data, parameters, and users compared to all experiments which examined as follows:
+
+It is necessary to compare our proposal with other which we have explained early in the last chapter, due evolutionary interactive computing applications with the same amount of parameters are difficult to find we decided to build two additional ones in order to run pertinent tests so our hypothesis could be answered., This required to design experiments the following way.
+
+The X table contains Evo Drawing versions and comparison. The first column will specify each version of Evo Drawing including its characteristics and each subsequent column describes the characteristics of each Evo Drawing version.
+
+\begin{table}
+	\small
+	\caption{comparison of the different versions.}
+	\label{tab:comparison} 
+	\centering
+	\small
+	\begin{tabular}{p{3cm} p{4cm} p{4cm} p{4cm} }
+		\hline\noalign{\smallskip}
+		Version & EvoDrawing01 & EvoDrawing02 & EvoDrawing03 \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		\small{User Interface} & \small{This version have an easy to handle and simple gui.Observe figure X} & \small{This version have an easy to handle and simple gui. Observe figure X} & \small{As the previous versions this one have the same interface but differs from the others on the competitiveness visual components based on video games and we can observe it in figure X}\\ \hline
+		\small{Fuzzy Inferance} & \small{It does not have Fuzzy inference system} & \small{A fuzzy inference system has been added to this version.  It is composed by two inputs Experience and Preference; it also has a type Mamdani output called fuzzy rate.} & \small{A fuzzy inference system has been added to this version.  It is composed by three inputs Ranking, Experience and Preference; it also has a type Mamdani output called fuzzy rate.
+			}\\ \hline 
+		\small{Graph-based user model} & \small{User modeling is not available} & \small{User modeling is not available} & \small{User modeling is available in this version based on graphs and is used to adapt inside diffuse inference aptitude function on ranking entrance.
+		}\\ \hline 
+		
+		\noalign{\smallskip}\hline
+	\end{tabular}
+\end{table}
+
+Now we will explain each version developed details and goes as follows; we will explain each version specific and technical reasons.
+
+
+
+
 
 \section{EvoDrawings01} 
 
 
-In the experiment EvoDrawings01 the following data are generated,  this data is 
-presented in Table \ref{tab:graph_data_1}.
+This version initial configuration of our evolutionary algorithm goes as follows:
 
-\begin{table}
-\small
-\caption{Data generated in graph based user modeling.}
-\label{tab:graph_data_1} 
-\centering
-\small
-\begin{tabular}{p{7cm} p{5cm} }
-\hline\noalign{\smallskip}
- & Data \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\small{Nodes} & \small{595} \\ \hline  
-\small{Relations} & \small{2220} \\ \hline  
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
-
-
-These data are the total of nodes and relations generated  in EvoDrawings01.
-
-
-The total number of active users who participated voluntarily meners are presented in 
-Table \ref{tab:graph_data_2}.
-
-\begin{table}
-\small
-\caption{Total number of volunteers active users.}
-\label{tab:graph_data_2} 
-\centering
-\small
-\begin{tabular}{p{7cm} p{5cm} }
-\hline\noalign{\smallskip}
- & Users\\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\small{Total number of users} & \small{54} \\ \hline  
-\noalign{\smallskip}\hline
-\end{tabular}
-\end{table}
+\begin{enumerate}
+	\item  \textbf{Having an initial 80 individual population which we will represent in the following way:}
+	
+	
+	
+	\item  \textbf{evaluations equals an evolution parameter.}
+	 
+	\item  \textbf{Its fitness provided by equation x.} 
+	\item  \textbf{Combining the fuzzified inputs according to the fuzzy rules to establish a rule strength.} 
+	\item  \textbf{Combining the consequences to get an output distribution.}
+	\item  \textbf{Defuzzifying the  output distribution (this step is only if a crisp production (class) is needed).}
+\end{enumerate}
 
 
 
+
+
+
+
+
+
+
+
+\subsection{Interface.} 
+
+An easy use individual evaluation web interface is develop to this version.  We can notice in the navigation bar the access application functionality, worth mentioning that the app will only work with the social platform Facebook. Once accessed with a Facebook account the navigation bar will show an avatar as well as the exit application functionality through a logout. Also inside this interface exist the visual element “Friends” that will show all the participating friends in the form, to be able to view friend’s public collections is another functionality this element has.
+Continuing with the interface explanation, we found the “Collections” panel where the user's list of created and saved collections is shown as well as the functionality that give the ability to create new collections. An “About this” section will be shown inside; this will explain in a general way the functionality to the participating users. Now when it comes to user’s individual evaluation they will have a visual canvas element who will show behavior of a to be evaluated individual (animation) and in the lower part the individual will have the ability to star rank evaluate where one star means he/she did not like it much and five stars meaning he/she like it too much. Now in the lower section of the star rank, a button will provide the ability to add that individual to a collection previously created. In the upper-rank star section, we will find a link which reads “Click here to see my DNA History” this will take us to detail about the individual to be evaluated that way we could review the detail of the individual in image x.
+
+\begin{figure*}
+	%\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
+	\caption{The Post-Filtering architecture for Tijuana restaurants.}
+	\label{fig:postfiltering}     
+\end{figure*}
+
+
+Detailed Important information about individual DNA history is shown here such as how many evaluations in likes he/she has received, how many visitors as well as ascendancy, genetic crossing operator, chromosome numeric representation and inside population identifier.
 
 
 \begin{figure*}
-%\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-\caption{The Post-Filtering architecture for Tijuana restaurants.}
-\label{fig:postfiltering}     
+	%\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
+	\caption{The Post-Filtering architecture for Tijuana restaurants.}
+	\label{fig:postfiltering}     
 \end{figure*}
+
+\section{EvoDrawing02}
+
+Inside this version we will find an initial configuration of the interactive evolutionary algorithm in the following way:
+
+As in the Las version it counts with 80 individuals as initial population and individuals are represented in the same way as in the previous version:
+Eight evaluations as one evolution parameter.
+One genetic Operator as aleatory selection between competition and ...      
+One horizontal genetic crossing Operator.
+Its fitness function is provided by equation x.
+
+\begin{enumerate}
+	\item  \textbf{Having an initial 80 individual population which we will represent in the following way:}
+	
+	
+	
+	\item  \textbf{As in the Las version it counts with 80 individuals as initial population and individuals are represented in the same way as in the previous version.}
+	
+	\item  \textbf{Eight evaluations as one evolution parameter..} 
+	\item  \textbf{Combining the fuzzified inputs according to the fuzzy rules to establish a rule strength.} 
+	\item  \textbf{One genetic Operator as aleatory selection between competition and ...}
+	\item  \textbf{Its fitness function is provided by equation x.}
+\end{enumerate}
+
+\begin{figure*}
+	%\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
+	\caption{The Post-Filtering architecture for Tijuana restaurants.}
+	\label{fig:postfiltering}     
+\end{figure*}
+
+
+
+\subsection{Fuzzy Inferance.}
+Where represents all the individuals.
+Is the rank given to the individuals by the users.
+Represents one diffuse rank function composed by a diffuse inference system and will be represented by equation x.
+
+
+Where represents the diffuse rank.
+Will continue been users given rank according to their preferences to each.
+Is the experience which is defined by the activity already explained in the previous chapter.
+
+The diffuse inference system type is Mamdani, and it is composed by two entrances represented by and a fuzzy rate exit as we can observe represented in figure x.
+
+
+It counts with 9 if/then rules which were designed in an empiric way and are the following:
+
+If experience is low and preference is low then fuzzy\_rate is bad
+If experience is mid and preference is low then fuzzy\_rate is bad
+If experience is high and preference is low then fuzzy\_rate is normal
+If experience is low and preference is mid then fuzzy\_rate is bad
+If experience is mid and preference is mid then fuzzy\_rate is normal
+If experience is high and preference is mid then fuzzy\_rate is good
+If experience is low and preference is high then fuzzy\_rate is normal
+If experience is mid and preference is high then fuzzy\_rate is good
+If experience is high and preference is high then fuzzy\_rate is good
+
+\subsection{Interface}
+
+The user interface in this version is the same as in the previous version. It only differs in how inference is made between versions.
+
+
+
 
 In order to validate the proposed approach, data about restaurant
 preferences of users in different contexts was collected. The study
@@ -68,7 +165,7 @@ master’s program and professors of the Tijuana Institute of
 Technology. A total of \textbf{50 users} answered a questionnaire; the
 questions were about their preferences for nearby restaurants and the
 technology used by them. The \textit{questionnaire} consisted of \textbf{8
-questions} and they rate restaurants from a list of 40 restaurants.
+	questions} and they rate restaurants from a list of 40 restaurants.
 Each restaurant chosen was rated 6 times one per context considered, a
 matrix rating with \textit{1,422 ratings} were collected. The
 questions are shown in the table \ref{tab:questions}.
@@ -83,18 +180,18 @@ that users consider the most important to visit a restaurant;
 devices when are using Internet for restaurant recommendations;
 \textbf{figure \ref{fig:cakeschart}d} represents the percentage of
 operating system that often used, \textbf{figure
-\ref{fig:cakeschart}e} shows the percentage of users that use the
+	\ref{fig:cakeschart}e} shows the percentage of users that use the
 Internet to search restaurants in Tijuana; and \textbf{figure
-\ref{fig:cakeschart}f}, shows the percentage of users that would like
+	\ref{fig:cakeschart}f}, shows the percentage of users that would like
 using a restaurant recommender system of Tijuana.
 \begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.7pt}
-\includegraphics[width=0.9\textwidth]{img/cakes.png}
-\caption{The chart shows the users preferences for questions from 1 to 6.}
-\label{fig:cakeschart}     
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	%\setlength\fboxrule{0.7pt}
+	\includegraphics[width=0.9\textwidth]{img/cakes.png}
+	\caption{The chart shows the users preferences for questions from 1 to 6.}
+	\label{fig:cakeschart}     
 \end{figure*}
 For questions 7 and 8 only the top-ten restaurants are shown,
 without/with the contextual situation. In figure \ref{fig:barschart}a,
@@ -104,13 +201,13 @@ top-ten. When considering the context \textit{midweek}, the favorite
 restaurant was \textbf{Carls Jr.}, which appears in both graphs; this
 restaurant was also the most voted in the different contexts.
 \begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.7pt}
-\includegraphics[width=0.5\textwidth]{img/bars.png}
-\caption{The chart shows the users preferences for questions 7 and 8.}
-\label{fig:barschart}     
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	%\setlength\fboxrule{0.7pt}
+	\includegraphics[width=0.5\textwidth]{img/bars.png}
+	\caption{The chart shows the users preferences for questions 7 and 8.}
+	\label{fig:barschart}     
 \end{figure*}
 Contextual recommendations of post-filtering approach depends of
 context \textit{midweek} or \textit{weekend}, which is the day when
@@ -119,20 +216,20 @@ refined according to the user context; the 6 contexts mentioned
 correspond to combinations of contextual factors shown in table
 \ref{tab:contextstijuana}.
 \begin{table}
-\small
-\caption{Contextual factors considered in the questionnaire.}
-\label{tab:contextstijuana} 
-\centering
-\small
-\begin{tabular}{p{2.5cm} p{7cm} }
-\hline\noalign{\smallskip}
-Contextual Factor & Context \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-\small{Day} & \small{1.Midweek(Monday, Thuesday,Wednesday and Thursday) 
-2.Weekend(Friday,Saturday and Sunday)}  \\ \hline 
-\small{Place} & \small{1.School 2. Home 3.Work} \\ 
-\noalign{\smallskip}\hline
-\end{tabular}
+	\small
+	\caption{Contextual factors considered in the questionnaire.}
+	\label{tab:contextstijuana} 
+	\centering
+	\small
+	\begin{tabular}{p{2.5cm} p{7cm} }
+		\hline\noalign{\smallskip}
+		Contextual Factor & Context \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		\small{Day} & \small{1.Midweek(Monday, Thuesday,Wednesday and Thursday) 
+			2.Weekend(Friday,Saturday and Sunday)}  \\ \hline 
+		\small{Place} & \small{1.School 2. Home 3.Work} \\ 
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 The dataset was explicitly collected from \textbf{50 users} whom
 answered questionnaire (see table \ref{tab:questions}). A total of 172
@@ -150,15 +247,15 @@ from the MovieLens  web site (http://movielens.org). \\   The data sets
 were collected over various periods of time,  depending on the size of
 the set.
 \begin{itemize} 
-\item \textbf{MovieLens 1M Dataset}: Stable
-benchmark dataset, 1 million ratings from 6000 users on 4000 movies.
-Released 2/2003.\\ Downloaded from
-\textit{http://grouplens.org/datasets/movielens/1m/}. 
-\item \textbf{MovieLens
-10M Dataset}: Stable benchmark dataset, 10 million ratings and 100,000
-tag applications applied to 10,000 movies by 72,000 users. Released
-1/2009. \\Downloaded from
-\textit{http://grouplens.org/datasets/movielens/10m/}. 
+	\item \textbf{MovieLens 1M Dataset}: Stable
+	benchmark dataset, 1 million ratings from 6000 users on 4000 movies.
+	Released 2/2003.\\ Downloaded from
+	\textit{http://grouplens.org/datasets/movielens/1m/}. 
+	\item \textbf{MovieLens
+		10M Dataset}: Stable benchmark dataset, 10 million ratings and 100,000
+	tag applications applied to 10,000 movies by 72,000 users. Released
+	1/2009. \\Downloaded from
+	\textit{http://grouplens.org/datasets/movielens/10m/}. 
 \end{itemize}
 The recommender system proposed for MovieLens uses post-filtering 
 and time segmentation.
@@ -187,14 +284,14 @@ for the recommender system proposed. The first phase is division of
 three time segments based on the current context of the user is
 performed such as in is depicted in figure \ref{fig:context-ml}.
 \begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=0.60\textwidth]{img/context-ml.png}}
-\caption{Time segmentation of contexts based on current user
-context.}
-\label{fig:context-ml}     
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	%\setlength\fboxrule{0.7pt}
+	\fbox{\includegraphics[width=0.60\textwidth]{img/context-ml.png}}
+	\caption{Time segmentation of contexts based on current user
+		context.}
+	\label{fig:context-ml}     
 \end{figure*}
 
 In recommender system, the first step is get the current user context
@@ -228,14 +325,14 @@ system gets the recommendations list for each user in different
 contexts. The recommendation process of pre-filtering is depicted in
 figure \ref{fig:archi-ml}.
 \begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-%\setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=0.60\textwidth]{img/archi-ml.png}}
-\caption{Pre-filtering process for context-aware recommender
-system.}
-\label{fig:archi-ml}     
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	%\setlength\fboxrule{0.7pt}
+	\fbox{\includegraphics[width=0.60\textwidth]{img/archi-ml.png}}
+	\caption{Pre-filtering process for context-aware recommender
+		system.}
+	\label{fig:archi-ml}     
 \end{figure*}
 The dataset used to test the algorithm was MovieLens(100000 ratings)
 with 943 users and 1,682 movies. The ratings were collected in a
@@ -253,20 +350,20 @@ error increase in context 3, in this  context the ratings matrix is a
 little bit sparse;  the error is  justifiable because user has less
 participations.
 \begin{table}
-\small
-\caption{Results of comparison by contexts in MovieLens dataset.}
-\label{tab:contexts} 
-\small
-\centering
-\begin{tabular}{llll}
-\hline\noalign{\smallskip}
-Context & \# Preditions & MAE &    \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-1 & 12235 & 0.28 \\
-2 & 21049 & 0.24 \\
-3 & 1075  & 0.38 \\
-\noalign{\smallskip}\hline
-\end{tabular}
+	\small
+	\caption{Results of comparison by contexts in MovieLens dataset.}
+	\label{tab:contexts} 
+	\small
+	\centering
+	\begin{tabular}{llll}
+		\hline\noalign{\smallskip}
+		Context & \# Preditions & MAE &    \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		1 & 12235 & 0.28 \\
+		2 & 21049 & 0.24 \\
+		3 & 1075  & 0.38 \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 
 
@@ -298,41 +395,41 @@ into the users community, i.e. if it was a popular item for users. \\  The
 FIS has Gaussians membership functions and are depicted in figure
 \ref{fig:mffis}.
 \begin{figure}[ht!]
-   \centering
-   %%----primera subfigura----
-   \subfloat[]{
-        \label{fig:1a}
-        \includegraphics[width=0.42\textwidth]{img/ratingaverage.png}}
-   \hspace{0.1\linewidth}
-   %%----segunda subfigura----
-   \subfloat[]{
-        \label{fig:1b} 
-        \includegraphics[width=0.42\textwidth]{img/userparticipation.png}}\\[20pt]
-   %%----tercera subfigura----
-    \subfloat[]{
-        \label{fig:1c} 
-        \includegraphics[width=0.42\textwidth]{img/recommendation.png}}
-   \caption{Gaussian Membership functions in the input are: a) RatingAverage, 
-   b) UserParticipation, and an output: c) Recommendation.}
-   \label{fig:mffis} 
+	\centering
+	%%----primera subfigura----
+	\subfloat[]{
+		\label{fig:1a}
+		\includegraphics[width=0.42\textwidth]{img/ratingaverage.png}}
+	\hspace{0.1\linewidth}
+	%%----segunda subfigura----
+	\subfloat[]{
+		\label{fig:1b} 
+		\includegraphics[width=0.42\textwidth]{img/userparticipation.png}}\\[20pt]
+	%%----tercera subfigura----
+	\subfloat[]{
+		\label{fig:1c} 
+		\includegraphics[width=0.42\textwidth]{img/recommendation.png}}
+	\caption{Gaussian Membership functions in the input are: a) RatingAverage, 
+		b) UserParticipation, and an output: c) Recommendation.}
+	\label{fig:mffis} 
 \end{figure}
 The Fuzzy Inference System uses fuzzy rules to infer the inputs and 
 output (a numeric value) that represents the weight of the recommendation. 
 The rules are following: 
 \begin{enumerate}
-\item \textit{If \textbf{RatingAverage} is low and \textbf{UserParticipation} is insufficient then \textbf{recommendation} is low.}
-\item \textit{If \textbf{RatingAverage} is low and \textbf{UserParticipation} is sufficient then \textbf{recommendation} is high.}
-\item \textit{If \textbf{RatingAverage} is high and \textbf{UserParticipation} is insufficient then \textbf{recommendation} is low.}
-\item \textit{If \textbf{RatingAverage} is high and \textbf{UserParticipation} is sufficient then \textbf{recommendation} is high.}
+	\item \textit{If \textbf{RatingAverage} is low and \textbf{UserParticipation} is insufficient then \textbf{recommendation} is low.}
+	\item \textit{If \textbf{RatingAverage} is low and \textbf{UserParticipation} is sufficient then \textbf{recommendation} is high.}
+	\item \textit{If \textbf{RatingAverage} is high and \textbf{UserParticipation} is insufficient then \textbf{recommendation} is low.}
+	\item \textit{If \textbf{RatingAverage} is high and \textbf{UserParticipation} is sufficient then \textbf{recommendation} is high.}
 \end{enumerate}
 \begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.7pt}
-\includegraphics[width=0.75\textwidth]{img/fis.png}
-\caption{Fuzzy Inference System.}
-\label{fig:fis}   
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.7pt}
+	\includegraphics[width=0.75\textwidth]{img/fis.png}
+	\caption{Fuzzy Inference System.}
+	\label{fig:fis}   
 \end{figure*}
 Content-based uses cosine similarity to compare the binary
 vectors representing the profile of each item, thereby obtaining a
@@ -342,18 +439,18 @@ determine the most similar to items the user has rated with highest
 score, context-aware recommender system proposed has a scale from 1 to
 5. 
 \begin{table}[htb]
-\small
-\centering
-\caption{Example of contextual ratings in the user profile.}
-\label{tab:2}
-\small
-\begin{tabular}{lll}
-\hline
-\multicolumn{3}{c}{User profile} \\ \hline
-Item1 & Rating1 & Context1 \\ 
-Item2 & Rating2 & Context2 \\ 
-Item3 & Rating3 & Context3 \\ \hline
-\end{tabular}
+	\small
+	\centering
+	\caption{Example of contextual ratings in the user profile.}
+	\label{tab:2}
+	\small
+	\begin{tabular}{lll}
+		\hline
+		\multicolumn{3}{c}{User profile} \\ \hline
+		Item1 & Rating1 & Context1 \\ 
+		Item2 & Rating2 & Context2 \\ 
+		Item3 & Rating3 & Context3 \\ \hline
+	\end{tabular}
 \end{table}
 In the next step the outputs of every recommender algorithm is
 represented by a list of recommended items. Subsequently applies the
@@ -367,11 +464,11 @@ The context filtering is the last step before to get the recommended
 items. The schema of architecture for context-aware recommender system
 is depicted in figure \ref{fig:architecture}.
 \begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\fbox{\includegraphics[width=0.70\textwidth]{img/archit-ta.png}}
-\caption{Recommender system architecture}
-\label{fig:architecture}   
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\fbox{\includegraphics[width=0.70\textwidth]{img/archit-ta.png}}
+	\caption{Recommender system architecture}
+	\label{fig:architecture}   
 \end{figure*}
 Two experiments were performed using TripAdvisor dataset, table
 \ref{tab:3} describes the data sets and the scarcity percentage of the
@@ -385,35 +482,35 @@ Error in order to compare the results with context relaxation
 algorithm\cite{zheng2012differential} that is evaluated with the same
 dataset.
 \begin{table}
-\centering
-\small
-\caption{Datasets description.}
-\label{tab:3}      
-\begin{tabular}{lllll}
-\hline\noalign{\smallskip}
-Dataset & Users & Items & Ratings & Scarcity (percent) \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-TripAdvisor v1 & 1202 & 1890 & 4669 & 99.79 \\
-TripAdvisor v2 & 2731 & 2269 & 14175 & 99.77 \\
-\noalign{\smallskip}\hline
-\end{tabular}
+	\centering
+	\small
+	\caption{Datasets description.}
+	\label{tab:3}      
+	\begin{tabular}{lllll}
+		\hline\noalign{\smallskip}
+		Dataset & Users & Items & Ratings & Scarcity (percent) \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		TripAdvisor v1 & 1202 & 1890 & 4669 & 99.79 \\
+		TripAdvisor v2 & 2731 & 2269 & 14175 & 99.77 \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 
 \begin{table}
-\centering
-\small
-\caption{Comparison of RMSE.}
-\label{tab:4}  
-\small   
-\begin{tabular}{lll}
-\hline\noalign{\smallskip}
-Dataset & Algorithm & RMSE \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-TripAdvisor v2 & FC + Post-filtering  & 0.504  \\
-               & FC          & 0.994  \\
-               & Pre-filtering + Relaxation & 0.985  \\
-\noalign{\smallskip}\hline
-\end{tabular}
+	\centering
+	\small
+	\caption{Comparison of RMSE.}
+	\label{tab:4}  
+	\small   
+	\begin{tabular}{lll}
+		\hline\noalign{\smallskip}
+		Dataset & Algorithm & RMSE \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		TripAdvisor v2 & FC + Post-filtering  & 0.504  \\
+		& FC          & 0.994  \\
+		& Pre-filtering + Relaxation & 0.985  \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 
 The fundament of content-based is the cosine similarity; this means
@@ -422,18 +519,18 @@ improve the degree of user satisfaction. This is observed when
 calculating the similarity average in each dataset as shown in table
 \ref{tab:5}.
 \begin{table}
-\centering
-\small
-\caption{Level of similarity among items in datasets. }
-\label{tab:5}      
-\begin{tabular}{lll}
-\hline\noalign{\smallskip}
-Dataset  & Similarity  & Avg.votes per user. \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-TripAdvisor v1 & 0.448  & 5  \\
-TripAdvisor v2 & 0.508  & 8  \\
-\noalign{\smallskip}\hline
-\end{tabular}
+	\centering
+	\small
+	\caption{Level of similarity among items in datasets. }
+	\label{tab:5}      
+	\begin{tabular}{lll}
+		\hline\noalign{\smallskip}
+		Dataset  & Similarity  & Avg.votes per user. \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		TripAdvisor v1 & 0.448  & 5  \\
+		TripAdvisor v2 & 0.508  & 8  \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 
 FIS can provides a list of popular items for each dataset,
@@ -473,24 +570,24 @@ defined in \cite{tzanetakis2002musical}: classical, country, disco,
 hip hop,  jazz, rock, blues, reggae, pop and metal, 50 music tracks 
 and 42 users in dataset.
 \begin{table}
-\centering
-\small
-\caption{Contexts in InCarMusic dataset.}
-\label{tab:incarmusic}   
-\begin{tabular}{ll}
-\hline\noalign{\smallskip}
-Context  			& Values \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-Driving style 		&  elaxed, driving, sport driving.   \\
-Road type 			&  city, highway, serpentine. \\
-Landscape 			& coast line, country side, mountains/hills, urban.\\
-Sleepiness 			& awake, sleepy. \\
-Traffic conditions 	& free road, many cars, traffic jam. \\
-Mood 				& active, happy, lazy, sad. \\
-Weather 			& cloudy, snowing, sunny, rainy. \\
-Natural phenomena 	& day time, morning, night, afternoon. \\
-\noalign{\smallskip}\hline
-\end{tabular}
+	\centering
+	\small
+	\caption{Contexts in InCarMusic dataset.}
+	\label{tab:incarmusic}   
+	\begin{tabular}{ll}
+		\hline\noalign{\smallskip}
+		Context  			& Values \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		Driving style 		&  elaxed, driving, sport driving.   \\
+		Road type 			&  city, highway, serpentine. \\
+		Landscape 			& coast line, country side, mountains/hills, urban.\\
+		Sleepiness 			& awake, sleepy. \\
+		Traffic conditions 	& free road, many cars, traffic jam. \\
+		Mood 				& active, happy, lazy, sad. \\
+		Weather 			& cloudy, snowing, sunny, rainy. \\
+		Natural phenomena 	& day time, morning, night, afternoon. \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 
 \subsection{Results} 
@@ -511,37 +608,36 @@ among MovieLens 1 million and 10 millions shows that there's not a
 significant difference.
 
 \begin{figure*}
-\centering
-\fbox{\includegraphics[width=0.70\textwidth]{img/fm-test.png}}
-\caption{RMSE results of matrix factorization test.}
-\label{fig:fm-test}   
+	\centering
+	\fbox{\includegraphics[width=0.70\textwidth]{img/fm-test.png}}
+	\caption{RMSE results of matrix factorization test.}
+	\label{fig:fm-test}   
 \end{figure*}
 By other side,  other datasets were used to test matrix factorization under the same parameters to calculate the RMSE for each one. Table \ref{tab:mf-set}
 presents the total of ratings of each dataset, the cosine similarity,
 it means how similar are the items into the dataset, and the RMSE
 error obtained in the test with matrix factorization technique. 
 \begin{table}
-\centering
-\small
-\caption{RMSE of datasets using matrix factorization.}
-\label{tab:mf-set}   
-\begin{tabular}{llll}
-\hline\noalign{\smallskip}
-Dataset & Ratings & Cosine Sim. & RMSE \\
-\noalign{\smallskip}\hline\noalign{\smallskip}
-Tijuana Rest.  &    896       &  0.67    &   0.60 \\
-Mexico Rest.  &   1161       &  0.25    &  0.54 \\
-InCarMusic    &    4012      &  0.45     &  0.93 \\
-TripAdvisor    &    4669      &  0.17     &  0.85 \\
-MovieLens    &    10000     &   0.46    &  0.51 \\
-Movielens    &     100000   &   0.94    &  0.42 \\
-\noalign{\smallskip}\hline
-\end{tabular}
+	\centering
+	\small
+	\caption{RMSE of datasets using matrix factorization.}
+	\label{tab:mf-set}   
+	\begin{tabular}{llll}
+		\hline\noalign{\smallskip}
+		Dataset & Ratings & Cosine Sim. & RMSE \\
+		\noalign{\smallskip}\hline\noalign{\smallskip}
+		Tijuana Rest.  &    896       &  0.67    &   0.60 \\
+		Mexico Rest.  &   1161       &  0.25    &  0.54 \\
+		InCarMusic    &    4012      &  0.45     &  0.93 \\
+		TripAdvisor    &    4669      &  0.17     &  0.85 \\
+		MovieLens    &    10000     &   0.46    &  0.51 \\
+		Movielens    &     100000   &   0.94    &  0.42 \\
+		\noalign{\smallskip}\hline
+	\end{tabular}
 \end{table}
 The datasets contain less ratings than the presented in the chart
 \ref{tab:mf-set}, according the table \ref{tab:mf-set} is not possible
 to assum that matrix factorization has a better performance with small
 datasets, because TripAdvisor and InCarMusic datasets obtain an error
 in the same range that the large datasets of the previuos chart.
-
 
