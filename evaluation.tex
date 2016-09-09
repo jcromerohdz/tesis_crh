@@ -1,128 +1,504 @@
-\chapter{System evaluation} \label{sec:6}
+\chapter{Results} \label{sec:6}
+In this chapter the results of the experiments described above are presented.
 
-\section{Metrics}
 
-To evaluate context-aware recommender system was used the \textbf{task success}
-and \textbf{time-on-task} metrics. \\ The \textbf{task success metric} is
-perhaps the most widely used performance metric. It measures how effectively
-users are able to complete a given set of tasks.  The \textbf{time-on-task
-metric} is a common performance metric that measures how much time is required
-to complete a task\cite{albert2013measuring}.\\ Task success is something that
-almost anyone can do.  If the users can’t complete their tasks, then something
-is wrong.  When the users fail to complete a simple task can be an evidence that
-something needs to be fixed in the recommender system.  The usability test
-consist of a list of simple tasks for users that they shall perform in the
-system to complete the test. Before to start, a minimal description about the
-system for user was explained. The tasks list are the following:
-\begin{enumerate} 
-\item \textit{Rated a restaurant without context.}
-\item \textit{Add context to the user profile.}
-\item \textit{Filter restaurants by favorite context.}
-\item \textit{Find information of a specific restaurant.}
-\item \textit{Find all the reviews of a specific restaurant.} 
-\item \textit{Find section of my favorite restaurants.}
-\item \textit{Add a review of a restaurant.}
-\item \textit{Find the most popular restaurants.}
-\item \textit{Add a restaurant to your wishlist.}
-\item \textit{Get recommendations based on expert opinion.} 
-\item \textit{Get the recommendations content-based.}
-\item \textit{Get the collaborative recommendations.}
-\item \textit{Get recommendations of the nearby restaurants.}
-\end{enumerate} 
+\section{EvoDrawing01}
 
-\section{Enviromental set up}
+The experiment EvoDrawing01 generated the following data shown in the table x
 
-Each user did the task list, one by one, with previous instructions. It gives a brief explanation about the general features of system before to start. The time average for each user was around 10 minutes to finished all activities without disruptions.\\ 
-After, the results was depicted in a chart to observe the user behaviour for each task, in the figure \ref{fig:tsuccess}  the axis (x, y) represent the task number and percent of success, respectively. The chart shows that only 3 tasks weren’t accomplished successfuly, the task 5, 6 and 7. \\ The issue with task 5 was that users can not found easily the reviews section in the interface, the issue in task 7 is derived of task 5 because the user couldn’t find the manner to add a review. The task 6 correspond to the favorite restaurants, but the issue is that it was confused to chose favorite restaurants in place of wishlist section. \\ In general, these results mean a possible redisign in the interfacte to facilitate the performance of these tasks.
+
+\begin{table}
+\small
+\caption{Data generated in graph-based user modeling.}
+\label{tab:dataGenerated_1} 
+\centering
+\small
+\begin{tabular}{p{3cm} p{3cm} p{3cm} }
+\hline\noalign{\smallskip}
+  & Data &  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Nodes} & \small{595} & \\ \hline  
+\small{Relationships} & \small{2220} & \\ \hline  
+  
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+These data are generated total of nodes as well as relationships.
+
+\begin{table}
+\small
+\caption{Total number of volunteers active users.}
+\label{tab:totalUsers_1} 
+\centering
+\small
+\begin{tabular}{p{3cm} p{3cm} p{3cm} }
+\hline\noalign{\smallskip}
+  & Users &  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Total } & \small{53} & \\ \hline    
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+In order to observe which users have better social interconnectivity within the
+experiments it was decided to make a relation of number known users that the
+user’s have. This relation is shown in table 3
+
+\begin{table}
+\small
+\caption{Number of known among users.}
+\label{tab:knownUsers_1} 
+\centering
+\small
+\begin{tabular}{p{3cm} p{3cm}  }
+\hline\noalign{\smallskip}
+ User name & Number of known users \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Chriss de Blanc } & \small{7}  \\ \hline 
+\small{Alejandro Salcido } & \small{4}  \\ \hline
+\small{Jonathan Amezcua Aguiluz } & \small{1}  \\ \hline
+\small{Daniela Sanchez } & \small{1}  \\ \hline
+\small{Jennifer Llamas} & \small{1}  \\ \hline
+\small{Iliana Dl } & \small{1}  \\ \hline
+\small{Xochilt Ramirez Garcia } & \small{1}  \\ \hline
+\small{Manuel Elizondo } & \small{1}  \\ \hline 
+\small{Julian Torres } & \small{1}  \\ \hline 
+\small{Data Back } & \small{1}  \\ \hline 
+\small{Frank Arce } & \small{1}  \\ \hline 
+\small{Gustavo Vargas } & \small{1}  \\ \hline 
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+Likewise in Table 3 interconnectivity having a particular user with other users
+is shown. The degree of relationship of users is associated with the number of
+friends known within the application. This means that we have the degree of
+influence among participants. For example the "Chriss Blanc" user has a degree
+of relatedness 7 (Figure x A)) indicating that this particular user can have
+more influence on the decisions of others. Moreover the user "Alejandro Salcido"
+has the second highest degree of relationship to other users (Figure x B)).
+
 \begin{figure*}
 %\captionsetup{justification=centering,margin=1cm}
 \centering
-\fbox{\includegraphics[scale=0.75]{img/tsuccess.png}} %[width=0.7\textwidth]
-\caption{Representation of the percent of success for each task.}
-\label{fig:tsuccess}   
+\fbox{\includegraphics[scale=0.75]{img/users_known_1.PNG}} %[width=0.7\textwidth]
+\caption{Graph users with greater interconnectivity.}
+\label{fig:guserknown_1}   
 \end{figure*}
-The time it takes a participant to perform a task says a lot about the usability
-of the application. In almost every situation, the faster a participant can
-complete a task, the better the experience. In fact, it would be pretty unusual
-for a user to complain that a task took less time than expected
-\cite{albert2013measuring}.\\ Then, task-on-time was applied to measure time
-that an user did the task. A resume of the time tasks for each user it is in
-table \ref{tab:datausers}, \textit{null} values mean that the user didn't the task.
+
+In figure \ref{fig:guserknown_1} shows users more connected in the graph. This may represent the degree
+of impact of a user and the possible influence that may have on the decisions of
+other users. For example, if the user with the greatest impact is affected in
+any decision likely other users may be affected in some way.
+
+
 \begin{table}
+\small
+\caption{Total number of individuals generated.}
+\label{tab:totalIndividuals_1} 
 \centering
 \small
-\caption{Time on task data for 10 users and 13 tasks. }
-\label{tab:datausers}  
-\begin{tabular}{lllllllllll}
+\begin{tabular}{p{3cm} p{3cm} p{3cm} }
 \hline\noalign{\smallskip}
-Task  & Us1  & Us2 & Us3 & Us4 & Us5 & Us6 & Us7 & Us8 & Us9 & Us10 \\
+  & Individuals &  \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-1 & 12  & 28 & 24 & 30 & 19 & 33  & 23 & 16 & 5  & 7 \\
-2 & 3   & 4  & 17 & 5  & 17 & 134 & 9  & 16 & 12 & 11 \\
-3 & 123 & 69 & 159& 53 & 69 & 113 & 44 & 41 & 70 & 98 \\
-4 & 20  & 4  & 86 & 40 & 13 & 4   & 17 & 3  & 20 & 3 \\
-5 & 50  & 10 & 63 & 50 & 7  & 11  & 10 & 5  & 20 & Null \\
-6 & 10  & 30 & 28 & 27 & 5  & 46  & Null  & 7  & Null  & 34 \\
-7 & 10  & 20 & 16 & 8  & 15 & Null & 9  & 24 & 16 & 28 \\
-8 & 18  & 24 & 10 & 10 & 5  & 3   & 27 & 4  & 5  & 6 \\
-9 & 5   & 6  & 31 & 4  & 45 & 9   & 12 & 5  & 3  & 8 \\
-10 & 15 & 17 & 15 & 11 & 10 & 19  & 13 & 10 & 20 & 20 \\
-11 & 30 & 15 & 20 & 16 & 20 & 22  & 15 & 13 & 18 & 20 \\
-12 & 12 & 14 & 19 & 14 & 40 & 10  & 17 & 17 & 15 & 15 \\
-13 & 25 & 15 & 15 & 14 & 10 & 10  & 11 & 10 & 10 & 25 \\
+\small{Total } & \small{500} & \\ \hline    
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
 
-\section{Results}
 
-To measure the efficiency of the metric it was chose an confidence interval.  In
-this way, it is observed the time variability within the same task and  also
-helps visualize the difference across tasks to determine whether there is a
-statistically significant difference between tasks. The obtained information is
-in table \ref{tab:ic}, the median was used to calculate the confidence interval.
+Table 4 presents the total number of individuals generated within the graph.
+
 \begin{table}
+\small
+\caption{Sample of 30 individuals evaluated from.}
+\label{tab:totalIndividuals_1} 
 \centering
 \small
-\caption{Confidence interval per task with a confidence level of 95\%. }
-\label{tab:ic}    
-\begin{tabular}{lllll}
+\begin{tabular}{p{3cm} p{4cm} p{3cm} p{3cm}}
 \hline\noalign{\smallskip}
-Task  & Median & CI 95\% & Upper bound & Lower bound  \\
+ id & Chromosome & Views & Likes  \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-1 &    20         & 5.96  & 25.96 & 14.04  \\
-2 &    11.5      & 0.81  & 12.31  & 10.69   \\
-3 &    69.5      &  25.57   &  95.07  &  43.93   \\
-4 &    15        & 16.34  &  31.34  &  -1.34   \\
-5 &    15.5     &  14.84  &  30.34  &  0.66  \\
-6 &     27.5    &   11.57  &  39.07  &  15.93    \\
-7 &     16       &  5.19  & 21.19  &  10.81   \\
-8 &     8         &   5.80  &  13.80  & 2.20 \\
-9 &     7         & 9.43  &  16.43  &  -2.43  \\
-10 &   15       &   2.44  &  17.44   &  12.56   \\
-11 &   19       &  3.00  &  22.00  &  16.00   \\
-12 &   14.5    &  5.51  &  20.01  &  8.99   \\
-13 &   12.5    &  3.89  &  16.39  &  8.61    \\
+\small{pop:individual:107} & \small{[125, 30, 0, 1, 0, 0, 3, 0, 1, 0, 0, 0, 0, 2, 1]} 
+& \small{20} & \small{20}\\ \hline 
+\small{pop:individual:133} & \small{[143, 15, 1, 1, 0, 1, 3, 0, 1, 0, 2, 0, 0, 1, 1]} 
+& \small{15} & \small{15}\\ \hline 
+\small{pop:individual:109} & \small{[125, 30, 1, 1, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0, 1]} 
+& \small{15} & \small{15}\\ \hline 
+\small{pop:individual:37} & \small{[87, 64, 1, 1, 1, 1, 4, 0, 1, 0, 0, 0, 1, 2, 3]} 
+& \small{14} & \small{14}\\ \hline 
+\small{pop:individual:36} & \small{[95, 71, 0, 1, 1, 0, 3, 1, 0, 0, 0, 1, 1, 1, 2]} 
+& \small{14} & \small{14}\\ \hline 
+\small{pop:individual:215} & \small{[138, 29, 1, 1, 0, 1, 3, 0, 1, 1, 1, 0, 0, 1, 1]} 
+& \small{13} & \small{13}\\ \hline 
+\small{pop:individual:228} & \small{[42, 58, 0, 0, 1, 1, 4, 0, 0, 0, 2, 0, 0, 0, 3]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:48} & \small{[51, 73, 0, 0, 0, 0, 2, 0, 0, 1, 3, 0, 1, 0, 3]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:39} & \small{[60, 12, 1, 1, 1, 1, 4, 1, 1, 1, 0, 1, 0, 1, 1]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:94} & \small{[49, 71, 0, 0, 1, 0, 4, 1, 0, 0, 1, 1, 1, 0, 2]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:194} & \small{[87, 64, 0, 1, 1, 1, 1, 3, 0, 0, 0, 0, 1, 2, 3]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:75} & \small{[97, 66, 0, 0, 1, 1, 3, 0, 1, 0, 3, 0, 1, 0, 1]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:105} & \small{[125, 30, 0, 1, 0, 0, 3, 0, 1, 0, 0, 1, 0, 0, 1]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:306} & \small{[87, 64, 1, 1, 1, 1, 4, 1, 1, 1, 1, 0, 1, 2, 3]} 
+& \small{13} & \small{10}\\ \hline 
+\small{pop:individual:326} & \small{[138, 29, 1, 1, 0, 1, 3, 0, 1, 1, 1, 0, 0, 0, 0]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:82} & \small{[81, 8, 1, 0, 0, 1, 4, 1, 1, 1, 2, 0, 0, 2, 1]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:252} & \small{[125, 30, 0, 1, 0, 0, 3, 0, 1, 1, 3, 0, 1, 0, 3]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:280} & \small{[53, 63, 1, 1, 0, 1, 3, 0, 1, 1, 0, 0, 0, 2, 1]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:178} & \small{[53, 63, 1, 1, 0, 1, 3, 0, 1, 1, 0, 0, 0, 2, 1]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:108} & \small{[42, 58, 0, 0, 1, 1, 3, 0, 1, 0, 1, 1, 0, 0, 1]} 
+& \small{10} & \small{9}\\ \hline 
+\small{pop:individual:231} & \small{[125, 30, 0, 1, 0, 0, 3, 0, 1, 1, 3, 0, 1, 0, 3]} 
+& \small{0} & \small{9}\\ \hline 
+\small{pop:individual:147} & \small{[122, 38, 1, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0, 0, 0]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:181} & \small{[143, 15, 1, 1, 0, 1, 3, 0, 1, 0, 0, 0, 0, 0, 1]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:151} & \small{[49, 27, 1, 0, 0, 0, 3, 0, 0, 1, 2, 0, 1, 0, 3]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:34} & \small{[125, 30, 0, 1, 0, 0, 3, 0, 1, 0, 0, 0, 0, 2, 1]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:185} & \small{[122, 38, 0, 0, 0, 1, 1, 1, 1, 1, 3, 0, 1, 1, 1]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:88} & \small{[49, 62, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 2, 2]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:176} & \small{[125, 30, 0, 1, 0, 0, 3, 0, 1, 1, 3, 0, 1, 0, 3]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:234} & \small{[42, 58, 0, 0, 1, 1, 3, 0, 1, 0, 1, 0, 0, 0, 1]} 
+& \small{8} & \small{8}\\ \hline    
 \noalign{\smallskip}\hline
 \end{tabular}
 \end{table}
-In the next step the USE \textit{(Usefulnes, Satisfaction, and Ease of Use)}
-questionnaire \cite{morris2001experience} was applied in order to get the user's
-feedback and comments for to know about the difficults in the test.  The USE
-questionnaire consists of 30 rating scales divided into 4 categories:
-\textit{Usefulness, Satisfaction, Ease of Use, and Ease of Learning}. Each is a positive
-statement to which the user rates level of agreement on a 7-point Likert scale.
-The USE questionnaire(see appendix \ref{apendixb}) allows to get values for Usefulness, Satisfaction, Ease of Use, and Ease of Learning, the visualizing the results is in the
-Fig.\ref{fig:radial} , where the four axis of the radar chart represent the
-values of percent which users rated positively this factors with respect to
-their interaction with the context-aware recommender system.  The accurate values are
-\textit{Usability 83\%, Satisfaction 84\%, Easy of use  92\%, and Easy of Learning 81\%.}
+
+Table 5 contains a sample of 30/500 individuals were generated in the
+experiment. Where we present the unique identifier of the individual, its
+chromosome, as well as the number of views, likes available to the individual.
+This results are useful to observe individuals have been better evaluated by
+users.
+
+\begin{table}
+\small
+\caption{Level of user participation.}
+\label{tab:userParticipation_1} 
+\centering
+\small
+\begin{tabular}{p{4cm} p{4cm}}
+\hline\noalign{\smallskip}
+ User name & Participation   \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Ana Laura Lopez} & \small{116} \\ \hline 
+\small{Mario García Valdez} & \small{100} \\ \hline 
+\small{Chriss de Blanc} & \small{93} \\ \hline 
+\small{Xochilt Ramirez Garcia} & \small{85} \\ \hline 
+\small{Carlos David Gallardo Pérez} & \small{73} \\ \hline 
+\small{Ulises Reus} & \small{70} \\ \hline 
+\small{Aaron Gutierrez Urbina} & \small{58} \\ \hline 
+\small{Cesar López} & \small{49} \\ \hline 
+\small{Hector Beltran Medrano} & \small{48} \\ \hline 
+\small{Luis Alfonso Felix Garcia} & \small{45} \\ \hline 
+\small{Data Back} & \small{39} \\ \hline 
+\small{Amaury Hernandez Aguila} & \small{32} \\ \hline 
+\small{Osmar Herrera Duran} & \small{31} \\ \hline
+\small{Jorman Gtz} & \small{29} \\ \hline
+\small{Alexis Campos Lopez} & \small{29} \\ \hline
+\small{Melissa Muñoz Montes} & \small{28} \\ \hline
+\small{David Gallegos} & \small{23} \\ \hline
+\small{Jose Carlos} & \small{21} \\ \hline
+\small{Tomás Perrín} & \small{21} \\ \hline
+\small{Manuel Elizondo} & \small{20} \\ \hline
+
+    
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+
+
+Table 6 shows the results of the level of user participation in the experiment.
+These were obtained by counting the vicinity of nearest nodes from the base node
+in this case each user node.
+
+
+
 \begin{figure*}
+%\captionsetup{justification=centering,margin=1cm}
+\centering
+\fbox{\includegraphics[scale=0.75]{img/Visual_represntation_1.PNG}} %[width=0.7\textwidth]
+\caption{Visual representation of user participation in EvoDrawing01.}
+\label{fig:userP_1}   
+\end{figure*}
+
+In figure \ref{fig:userP_1} we present a visual representation of user
+participation this experiment where the y-axis represents the level of
+participation and the x axis represents the number of users who participated in
+this experiment.
+
+\begin{figure*}
+%\captionsetup{justification=centering,margin=1cm}
+\centering
+\fbox{\includegraphics[scale=0.75]{img/weibull_1.PNG}} %[width=0.7\textwidth]
+\caption{Weibull fit data representation.}
+\label{fig:weibull_1}   
+\end{figure*}
+
+
+\section {EvoDrawing02}
+
+
+In the experiment EvoDrawings02 the following data were generated presented in Table x.
+
+
+\begin{table}
+\small
+\caption{Data generated in graph-based user modeling.}
+\label{tab:dataGenerated_2} 
 \centering
 \small
-\includegraphics[width=0.8\textwidth]{img/radial.png}%[scale=0.5]{img/radial.png} 
-\caption{\small{The radar chart that depicts the four axis evaluated in the questionnaire.}}
-\label{fig:radial}   
+\begin{tabular}{p{3cm} p{3cm} p{3cm} }
+\hline\noalign{\smallskip}
+  & Data &  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Nodes} & \small{648} & \\ \hline  
+\small{Relationships} & \small{2596} & \\ \hline  
+  
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+These data are generated total of nodes as well as relationships.
+
+The total number of users who participate voluntarily shown in the table x.
+
+\begin{table}
+\small
+\caption{Total number of volunteers active users.}
+\label{tab:totalUsers_1} 
+\centering
+\small
+\begin{tabular}{p{3cm} p{3cm} p{3cm} }
+\hline\noalign{\smallskip}
+  & Users &  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Total } & \small{54} & \\ \hline    
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+Like the previous experiment which wanted to observe users had better social
+interconnectivity within this experiment, it was decided to make a relationship
+of the number of known users. This relationship presented in table x where the
+top 10 user  with social interconnectivity are shown.
+
+
+\begin{table}
+\small
+\caption{A sample of the top 10 users level influence on users.}
+\label{tab:knownUsers_2} 
+\centering
+\small
+\begin{tabular}{p{3cm} p{3cm}  }
+\hline\noalign{\smallskip}
+ User name & Number of known users \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{Rogelio UR} & \small{10}  \\ \hline 
+\small{Barbara Sandoval} & \small{9}  \\ \hline
+\small{Evelyn Macedo} & \small{8}  \\ \hline
+\small{Chriss de Blanc} & \small{8}  \\ \hline
+\small{Cesar Rojas} & \small{8}  \\ \hline
+\small{Jasiel Calzada} & \small{8}  \\ \hline
+\small{Tonyy Maldonado} & \small{7}  \\ \hline
+\small{Silvano Peraza} & \small{7}  \\ \hline 
+\small{Hector Beltran Medrano} & \small{6}  \\ \hline 
+\small{Juan Ferman Lopez} & \small{6}  \\ \hline 
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+In figure 3 shows users more connected in the graph. This may represent the
+degree of impact of a user and the possible influence that may have on the
+decisions of other users.  For example, if the user with the greatest impact is
+affected in any decision likely other users may be affected in some way.
+Particularly in this experiment the degree of social interconnectivity among
+users is becoming more complex as compared to the previous experiment.
+
+\begin{figure*}
+%\captionsetup{justification=centering,margin=1cm}
+\centering
+\fbox{\includegraphics[scale=0.75]{img/user_known_2.PNG}} %[width=0.7\textwidth]
+\caption{Sample of the top 30 individuals evaluated from a total of 556.}
+\label{fig:bestIndividuals_2}   
 \end{figure*}
+
+\begin{table}
+\small
+\caption{Sample of 30 individuals evaluated from.}
+\label{tab:totalIndividuals_1} 
+\centering
+\small
+\begin{tabular}{p{3cm} p{4cm} p{3cm} p{3cm}}
+\hline\noalign{\smallskip}
+ id & Chromosome & Views & Likes  \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{pop:individual:55} & \small{[63, 58, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 0, 0, 3]} 
+& \small{18} & \small{18}\\ \hline 
+\small{pop:individual:329} & \small{[98, 37, 0, 1, 1, 0, 4, 0, 0, 1, 0, 0, 0, 0, 2]} 
+& \small{17} & \small{17}\\ \hline 
+\small{pop:individual:304} & \small{[63, 58, 0, 1, 1, 1, 4, 0, 0, 0, 3, 0, 0, 2, 2]} 
+& \small{16} & \small{16}\\ \hline 
+\small{pop:individual:202} & \small{[107, 79, 1, 0, 1, 1, 3, 0, 0, 1, 3, 0, 1, 1]} 
+& \small{15} & \small{15}\\ \hline 
+\small{pop:individual:58} & \small{[150, 79, 1, 0, 1, 1, 3, 0, 0, 1, 3, 0, 1, 1, 1]} 
+& \small{14} & \small{14}\\ \hline 
+\small{pop:individual:310} & \small{[63, 58, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 1, 2, 2]} 
+& \small{13} & \small{13}\\ \hline 
+\small{pop:individual:67} & \small{[65, 51, 1, 1, 0, 0, 3, 1, 0, 0, 3, 1, 0, 2, 3]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:48} & \small{[51, 73, 0, 0, 0, 0, 2, 0, 0, 1, 3, 0, 1, 0, 3]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:179} & \small{[98, 37, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 0, 0, 3]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:114} & \small{[63, 58, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 0, 0, 2]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:123} & \small{[124, 42, 0, 1, 1, 1, 4, 1, 0, 1, 1, 0, 0, 2, 1]} 
+& \small{12} & \small{12}\\ \hline 
+\small{pop:individual:344} & \small{[97, 66, 0, 0, 1, 1, 3, 0, 1, 0, 3, 0, 1, 0, 1]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:105} & \small{[63, 58, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 0, 0, 2]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:435} & \small{[98, 37, 0, 1, 1, 0, 1, 1, 4, 1, 0, 0, 0, 0, 2]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:140} & \small{[150, 79, 1, 0, 1, 1, 3, 1, 1, 0, 1, 1, 1, 2, 3]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:216} & \small{[124, 42, 0, 1, 0, 0, 3, 0, 0, 1, 1, 0, 0, 1, 1]} 
+& \small{11} & \small{11}\\ \hline 
+\small{pop:individual:290} & \small{[150, 79, 1, 0, 1, 1, 3, 0, 0, 1, 3, 0, 1, 0, 1]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:255} & \small{[150, 79, 1, 0, 1, 1, 3, 1, 1, 1, 0, 0, 1, 2, 2]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:14} & \small{[89, 66, 0, 0, 1, 1, 3, 0, 0, 0, 2, 0, 0, 2, 1]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:366} & \small{[128, 66, 0, 1, 1, 4, 1, 0, 1, 0, 0, 0, 1, 2, 2]} 
+& \small{10} & \small{10}\\ \hline 
+\small{pop:individual:215} & \small{[54, 72, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 0, 0, 2]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:411} & \small{[113, 58, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 1, 2, 2]} 
+& \small{9} & \small{9}\\ \hline 
+\small{pop:individual:254} & \small{[113, 58, 0, 1, 1, 4, 1, 0, 4, 1, 1, 0, 0, 3]} 
+& \small{11} & \small{9}\\ \hline 
+\small{pop:individual:285} & \small{[54, 58, 0, 0, 0, 1, 1, 4, 1, 1, 0, 0, 1, 2, 2]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:500} & \small{[63, 58, 1, 1, 1, 0, 3, 0, 1, 1, 0, 0, 1, 2, 0]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:415} & \small{[54, 72, 0, 1, 1, 1, 4, 1, 4, 1, 3, 0, 1, 1]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:300} & \small{[54, 58, 1, 0, 1, 1, 1, 4, 1, 1, 0, 0, 1, 2, 2]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:32} & \small{[113, 29, 0, 0, 0, 0, 4, 1, 0, 1, 0, 1, 1, 1, 3]} 
+& \small{8} & \small{8}\\ \hline 
+\small{pop:individual:237} & \small{[63, 58, 1, 1, 0, 1, 1, 4, 1, 0, 0, 0, 1, 2, 3]} 
+& \small{8} & \small{8}\\ \hline  
+\small{pop:individual:268} & \small{[98, 37, 0, 1, 1, 1, 4, 0, 0, 1, 0, 0, 0, 0]} 
+& \small{8} & \small{8}\\ \hline   
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+Table 9 contains a sample of individuals 30/556 generated in the experiment.This
+table shows the unique identifier of the individual, its chromosome, as well as
+the number of views, likes available to the individual.This results are useful
+to observe individuals have been better evaluated by users.
+
+\begin{table}
+\small
+\caption{Level of user participation.}
+\label{tab:userParticipation_2} 
+\centering
+\small
+\begin{tabular}{p{4cm} p{4cm}}
+\hline\noalign{\smallskip}
+ User name & Participation   \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{1122212314475816} & \small{122} \\ \hline 
+\small{1107674982600275} & \small{91} \\ \hline 
+\small{10207544086753085} & \small{86} \\ \hline 
+\small{1128990193799346} & \small{85} \\ \hline 
+\small{1067084180030552} & \small{83} \\ \hline 
+\small{985591718197586} & \small{77} \\ \hline 
+\small{969507913124553} & \small{72} \\ \hline 
+\small{10207004677610003} & \small{63} \\ \hline 
+\small{1223229694371825} & \small{53} \\ \hline 
+\small{10153904046011462} & \small{47} \\ \hline 
+\small{1032494570125948} & \small{44} \\ \hline 
+\small{995610090523549} & \small{42} \\ \hline 
+\small{975038365907627} & \small{35} \\ \hline
+\small{10207487295119454} & \small{34} \\ \hline
+\small{1041989022528624} & \small{32} \\ \hline
+\small{471974623003503} & \small{32} \\ \hline
+\small{1275844349097672} & \small{31} \\ \hline
+\small{978744228875903} & \small{31} \\ \hline
+\small{10205734318020434} & \small{31} \\ \hline
+\small{10209454397419860} & \small{29} \\ \hline
+
+    
+\noalign{\smallskip}\hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+In table 10 shows the results of the level of user participation in the
+experiment.These were obtained by counting the vicinity of nearest nodes from
+the base node in this case each user node.
+
+\begin{figure*}
+%\captionsetup{justification=centering,margin=1cm}
+\centering
+\fbox{\includegraphics[scale=0.75]{img/visual_representation_2.PNG}} %[width=0.7\textwidth]
+\caption{Visual representation of user participation in EvoDrawing01.}
+\label{fig:userP_2}   
+\end{figure*}
+
+
+In Figure 3 we present a visual representation of user participation of this
+experiment where the y-axis represents the level of participation and the x axis
+represents the number of users who participated in this experiment.
+
+\begin{figure*}
+%\captionsetup{justification=centering,margin=1cm}
+\centering
+\fbox{\includegraphics[scale=0.75]{img/weibull_2.PNG}} %[width=0.7\textwidth]
+\caption{Weibull fit data representation.}
+\label{fig:weibull_2}   
+\end{figure*}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
