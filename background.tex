@@ -303,9 +303,7 @@ technology to apply, did change. In this sense development of user modeling as a
 whole, most researchers eventually agreed that one method to solve all problems
 is not possible (McTear, 1993; Kobsa, 2001). Instead, a broad range of  generic
 user modeling methods has been developed (Fischer, 2001); each of which supports
-only a few of the very different manifestations of personalization. In the rest
-of this section, the general user modeling architecture and the most interesting
-general and domain specific methods will be shortly discussed.
+only a few of the very different manifestations of personalization. 
 
 
 
@@ -602,6 +600,46 @@ games.[30] Some techniques used in this approach include adding meaningful
 choice, onboarding with a tutorial, increasing challenge,[31] and adding
 narrative.[30]
 
+\subsection{EvoSpace-Interactive} EvoSpace-Interactive is an open source
+framework focused on Web environments for collaborative interactive evolutionary
+applications. This framework defines three main components for each application,
+which are: 
+\begin{itemize} 
+\item Individual.  
+\item Processing Script. 
+\item Worker Script. 
+\end{itemize}
 
+The individual is represented internally as a data dictionary stored in Redis
+[16] database management system; the individual contains main attributes as id,
+chro-mosome, mom, dad, and views. This attributes represents the key information
+of the individual as the individual offspring, the number of times that the
+individual has been selected, etcetera, as we can see in figure \ref{fig:individualRep} [3].
 
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/individualRep.png}}
+\caption{Individual Representation.}
+\label{fig:individualRep}       
+\end{figure*}
 
+As we can observe on figure \ref{fig:ESFramework}, this work uses database management systems to
+implement collaborative interactive evolutionary applications. One of the
+reasons that this framework is using Redis[15] is because it provides a hash-
+based imple-mentation of sets and queues, which are natural data structures for
+the EvoSpace model. On the other hand this framework uses a relational database
+to save basic information about the user extracted from the social platform
+(Facebook) through open graph API and OAuth2 authentication.
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/ESFramework.png}}
+\caption{EvoSpace-Interactive Framework.}
+\label{fig:ESFramework}       
+\end{figure*}
