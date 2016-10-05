@@ -2,9 +2,8 @@
 
 \chapter{Background}
 
-This chapter present the fundamental concepts related this work. The
-formal definitions referring to fuzzy systems, contextual factors and
-recommender system techniques used in the proposed method.
+This chapter present the fundamental concepts related to this work. The
+formal definitions referring to fuzzy systems, user modeling concepts  and  gamification theory and techniques related to this method.
 %--------------------------------------------------------------
 %Agregue la seccion de logica difusa del articulo que me mando.
 \section{User Modeling}
@@ -16,32 +15,33 @@ user to personalize a system. The user model is commonly created as the user is
 working with the system. An example is an educational application that teaches
 students an individual skill: given the rules and knowledge in the user model,
 the difficulty level of the exercises in the form is altered as the user
-progresses.   Formally definition of user modeling according to McTear (1993, p.
-158): " user modeling is the process of gathering information about the users of
+progresses.   Formally definition of user modeling according to McTear \cite{mctear1993user} : " user modeling is the process of gathering information about the users of
 a computer system and of using the information to provide services or
 information adapted to the specific requirements of individual users (or groups
 of users)". The purpose of the user model is to have a module containing the
 operations that are needed to personalize the system, and the user profile,
-which includes the personal data of the user ( Mohamad et al., 2013).    System
+which includes the personal data of the user \cite{}( Mohamad et al., 2013).    System
 personalization over user modeling is related to the research field of adaptive
 systems; this subject is beyond the scope of this research work. Focus on the
 human user, user modeling is a very cross-disciplinary research topic,
 comprehending the domains of artificial intelligence, computer science, and
 social science. Ideas have been co‐opted from an extensive range of subdomains,
 such as human–computer interaction, e‐learning, information science, social
-computing, machine learning, data mining, cognitive science, and so on (Kay, et
-al., 2012; Kobsa, 2001). There is interest in user modeling from both a
-scientific and commercial perspective (Razmerita, 2009).
+computing, machine learning, data mining, cognitive science, and so on \cite{kay2012coming}
+\cite{kobsa2001generic}. There is interest in user modeling from both a
+scientific and commercial perspective \cite{razmerita2009user}.
 
 \subsection{Application Domains for user modeling}
 
 Amount Research and implementation exist in this domain in which personalization
 and user modeling plays an important role. This section presents several works
 of these domains. To understand this topic, the different objects are divided
-into three general categories: 
-* supporting a user during a task. 
-* giving a user a specific personalized experience. 
-* training and educating a user.  
+into three general categories:
+\begin{itemize}
+\item {supporting a user during a task. }
+\item {giving a user a specific personalized experience. }
+\item {training and educating a user.}
+\end{itemize} 
 The categories especially differ in the kind of user data that is used. For each
 domain, the general purpose of the domain and the more accurate purpose of the
 user model are discussed.
@@ -50,16 +50,17 @@ user model are discussed.
 
 Task support systems are f systems that help a user during a task by either
 supporting the user perform the task or by completely taking over this task
-(Nurmi et al., 2007; Brun et al., 2010). For instance,  an application that
+\cite{brun2010compass}(Nurmi et al., 2007). For instance,  an application that
 automatically categorizes the incoming emails of the user. The goal of the user
 model in these requests is to promote the efficiency of interactions with the
 user, to simplify these interactions and to make complex systems more usable
-(Razmerita, 2009; Fischer,  2001). To perform this personalization, data is
+\cite{razmerita2009user}\cite{fischer2001user}.
+To perform this personalization, data is
 collected through observations of the user. This information is related to the
 user’s goals and needs, but especially to the task that the user currently is
 accomplished, like the user’s task knowledge and background. Much research has
 been done in this domain, but because many separate research projects are
-focusing on an exact task or subject (Sannes, 2011), it is hard to make
+focusing on an exact task or subject \cite{}(Sannes, 2011), it is hard to make
 generalizations or to establish one delimited investigation topic. Commonly
 discussed research subjects are Decision Support Systems,  Adaptive Hypermedia,
 and Adaptive Ubiquitous Systems, each having his or her own specific domain and
@@ -68,7 +69,7 @@ way of personalization.
 \subsection{Decision support systems}
 
 Decision support systems are systems that support a user with making a decision
-in a complex, professional environment (Nurmi et al., 2007). For example,  a
+in a complex, professional environment \cite{} (Nurmi et al., 2007). For example,  a
 system used at a pharmacy for automatically checking valid combinations of
 medicine. The method can be used to help the pharmacist in prescribing the right
 combinations and to give information for making a decision when a problem
@@ -89,8 +90,7 @@ way the rules and knowledge are represented.
 \subsection{Adaptive Hypermedia}
 
 Adaptive hypermedia system is a system that grant users to browse freely information
-network,  structured by nodes and links, to retrieve items of information (Nurmi
-et al., 2007; Deepa et al., 2012). For instance an internet website application.
+network,  structured by nodes and links, to retrieve items of information \cite{deepa2012adaptive}. For instance an internet website application.
 The goal of the user model is to make the interface and structure of the system
 dynamic. This enables the application to adapt to the user and to make it easier
 for the user to search for and retrieve relevant information.  The data used in
@@ -99,7 +99,7 @@ application. The adaptation happens by adjusting the structure and the
 presentation style to the expected needs of the user. For example, by enhancing
 web search: promoting pages that might better correspond to the user’s
 characteristics, on the other hand by giving navigation support, through
-highlighting certain components of a page (Razmerita et al., 2012).
+highlighting certain components of a page \cite{razmerita2012user}.
 
 \subsection{Adaptive ubiquitous systems}
 
@@ -107,18 +107,17 @@ Ubiquitous systems are concerned with data handling applications integrated into
 everyday objects and activities (Nurmi et al., 2007).  For example the smart
 energy meter, recording the energy usage in a household through small devices
 distributed in a house, supporting the user with managing this energy
-usage(Hargreaves et al., 2010).   
-*  The main purpose of the user model is to
+usage \cite{hargreaves2010making}.   
+The main purpose of the user model is to
 improve the system, facilitate the user’s preferences and thus make the overall
-use easier.   
-* Because the personalization can take place in every situation
+use easier.
+Because the personalization can take place in every situation
 and location, the data is focused on the user state and context. For example to
 enable the contextualization to a current environmental change. 
-*The adaptation
-takes place by changing the behavior of, and the feedback given by the whole
+The adaptation takes place by changing the behavior of, and the feedback given by the whole
 system. These objects can be inferred by looking at the properties of the
 objects in the user profile, or by looking at the objects in other user profiles
-that are similar to the user (Kobsa, 2001; Kay et al., 2012). Because of the
+that are similar to the user \cite{kobsa2001generic} \cite{kay2012coming}. Because of the
 predominantly commercial goal of these systems, the adaptations often take place
 in a very intrusive way, to make sure the user notices the change.
 Most recommender systems used on the Internet, which means that some typical
@@ -138,14 +137,12 @@ is especially focused on more commercial fields, such as e-commerce, marketing,
 and computer games, and became popular with the rise of the Internet.  The
 information that is used by the user in this main domain is mostly focused on
 the information that defines the user, such as the user’s preferences and
-interests. Since this data is regularly delicate, privacy is a  big issue (Toch
-et al., 2012). While in other domains the privacy of the user data is also
+interests. Since this data is regularly delicate, privacy is a  big issue \cite{toch2012personalization}. While in other domains the privacy of the user data is also
 important, in this area it is even a greater topic of discussion because the
 incentive of the application developers is frequently contradictory to the
 incentive of the actual user, considering gaining and sharing the user´s
 personal information. For instance, user profiles are often shared among diverse
-components of the same application, or even with different applications (Brun et
-al., 2010; Karam et al., 2012), which presents additional weaknesses and
+components of the same application, or even with different applications \cite{brun2010compass} \cite{karam2012modeling}, which presents additional weaknesses and
 possible undesirable information sharing.  Ensuring personal data is not open to
 all people, in addition to defining strict privacy policies, is thus essential
 in these user models. Some investigation in this domain are.
@@ -155,7 +152,7 @@ in these user models. Some investigation in this domain are.
 Recommender systems are concerned with presenting the user with relevant
 information and suggestions. They are commonly used on the Internet, for example
 on websites such as Facebook, to provide the user with personalized news,
-targeted advertisements and possibly new friends (Brun et al.,  2010). The
+targeted advertisements and possibly new friends \cite{brun2010compass}. The
 purpose of the user model is to give the system with information that is assumed
 to be important for the user. The information that is stored for this goal is
 associated with the preferences of the user to certain objects, like products,
@@ -164,8 +161,8 @@ history of the user is stored, or the user is explicitly asked to rate certain
 objects. The content of the system is eventually adjusted by showing the
 recently inferred objects. In these senses, objects can be inferred by looking
 at the attributes of the objects in the user profile, or by looking at the
-objects in other user profiles that are related to the user (Kobsa, 2001; Kay et
-al., 2012).  As a result of the predominantly commercial target of these
+objects in other user profiles that are related to the user \cite{kobsa2001generic} 
+\cite{kay2012coming}.  As a result of the predominantly commercial target of these
 systems, the adaptations often take place in a very invasive way, to make sure
 the user notices the change. Most recommender systems are based on the Internet,
 which means that some typical technical difficulties  are associated with these
@@ -192,7 +189,7 @@ should be translated and formalized  before it can be  used to interpret
 conclusions on a higher level. The adaptation that takes place in the game
 concerns changing the content and role of the  game, such as the game
 difficulty, the behavior of non‐player characters  or even the background  music
-(Bakkes, et al., 2012) .
+\cite{bakkes2012personalised}.
 
 Because of the emphasis on the user, user adaptive computer games have
 relatively a lot of processing power available  for personalization. In this
@@ -209,7 +206,7 @@ modeling and adaptation plays a minor role. Content is presented, and only
 simple things such as the student’s progress in the course are registered. By
 adding personalization to these applications, the learning value can notably
 increase, ensuring that every learner achieves and reaches the highest standards
-possible (Heller et al., 2006). Also, the experience of the teacher or
+possible \cite{heller2006competence}. Also, the experience of the teacher or
 supervisor can be increased through personalization, for instance through
 inferring and employing the preferred teaching style. However, here we consider
 the student as the user to which the system will be personalized. Thus, it is
@@ -227,11 +224,11 @@ Intelligent Tutoring Systems (ITS) are systems that provide students automated
 step‐by‐step instruction as the students complete training tasks and/or work on
 exercises. An ITS has the purpose to complement or even replace the human
 teacher. For example a system for teaching students how to program, with the
-ability to automatically detect common mistakes (Elsom‐Cook, 1993).
+ability to automatically detect common mistakes \cite{elsom1993student}.
 
 The particular goal of the user model is to select educational activities and
 strategies and in addition  delivered individual feedback that is most relevant
-to the user’s level of knowledge (Kobsa, 2001;  McTear, 1993). The user
+to the user’s level of knowledge \cite{kobsa2001generic} \cite{mctear1993user}. The user
 information that is stored for this purpose is the student’s state, knowledge
 and level of  achievement. This data is exclusively observed over the actions
 and results of the student, such as the answers the student gives. After
@@ -241,7 +238,7 @@ as the student´s learning style and other preferences.
 Traditionally, just like decision support systems, information technology
 systems are knowledge based systems, using formalized domain  knowledge and
 rules to drive the user adjustment (adaptation). For instance stereotypes are
-widely used in information technology systems(Kay, 2000)  and represent a set of
+widely used in information technology systems \cite{kay2012coming} and represent a set of
 default attributes that often co‐occur in users or in a certain group of people.
 The different stereotypes that have been build differ in granularity of detail
 and complexity.
@@ -251,10 +248,9 @@ and complexity.
 
 Adaptive Educational Games (AEGs) are complicated educational games that combine
 ideas from several investigations areas, to increase the student’s learning
-experience (Peeters, et al., 2012a). These are especially based on  serious
+experience \cite{peeters2012situated}. These are especially based on  serious
 games: computer games with an educational approach, where things are taught to
-students by using a  playful idea ( Korteling, et al., 2011; Johnson, et al.,
-2005). For instance an AEG is a training application  for fire fighters, letting
+students by using a  playful idea \cite{korteling2011transfer} \cite{johnson2005serious}. For instance an AEG is a training application  for fire fighters, letting
 the fire fighters train their skills and knowledge in a safe on a virtual
 environment.
   
@@ -273,16 +269,16 @@ In the user modeling topic, researchers have proposed more general design
 methods and frameworks to guide the developers in the process of user modeling.
 These general methods are useful in research projects, where the knowledge can
 be reused to adjust the user model to the system’s characteristics. Also in
-commercial applications,  these general methods have proven to be useful (Brun
-et al., 2010), because they make it easier and more feasible to implement
+commercial applications,  these general methods have proven to be useful 
+\cite{brun2010compass} , because they make it easier and more feasible to implement
 personalization into a system. In early work, the process of user modeling was
 mostly based on the intuition and experience of the developer or researcher. In
 recent work, the techniques of user modeling were essentially based on the
 intuition and expertise of the developer or researcher. As the user modeling
 research field evolved, there has been put much effort in creating a general way
 for designing and constructing a user model, by basing decisions on more
-empirical grounds and by defining methods applicable to the whole field (Kobsa,
-2001; Durrani, 1997).
+empirical grounds and by defining methods applicable to the whole field 
+\cite{kobsa2001generic} \cite{durrani1997cognitive}.
 
 Frameworks,  methodologies, and architectures have been developed, defining the
 strict process, restrictions and choices on how to design and build a user
@@ -297,12 +293,12 @@ logic to define a user model. With the rise of the Internet, the objectives of
 the user modeling field change to Web-oriented applications and all the specific
 problems that arise with this. Thus this connection,  also the general user
 modeling methods that were developed, were focused on the popular research
-domains of their time (Kay et al., 2012). The main approaches to user modeling
+domains of their time \cite{kay2012coming}. The main approaches to user modeling
 did not change, but the specific filling‐in of the user model, such as which
 technology to apply, did change. In this sense development of user modeling as a
 whole, most researchers eventually agreed that one method to solve all problems
-is not possible (McTear, 1993; Kobsa, 2001). Instead, a broad range of  generic
-user modeling methods has been developed (Fischer, 2001); each of which supports
+is not possible \cite{mctear1993user} \cite{kobsa2001generic}. Instead, a broad range of  generic
+user modeling methods has been developed \cite{fischer2001user}; each of which supports
 only a few of the very different manifestations of personalization. 
 
 
