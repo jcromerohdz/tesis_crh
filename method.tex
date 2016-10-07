@@ -1,58 +1,88 @@
 \chapter{Proposed method}
 
-This chapter we explain the proposal method describing all the differents
-techniques and  tools to apply user modeling in interactive evolutionary
-computation area using fuzzy logic, graphs theory and "gamification" paradigm.
+This chapter an explanation of the proposal method is described and all the
+differents techniques to develop a user modeling in interactive evolutionary
+computation (IEC) area such as fuzzy logic, graph-based user modeling and human-
+iteraction  (gamification paradigm).
 
-A fundamental aproach of this research is to develop a user modeling for
+The fundamental aproach of this research is to develop a user modeling for
 interactive evolutionary computation in order to increase the user participation
-and to minimize the amount of evaluations for the evolutionary process in given 
+and to minimize the amount of evaluations for the evolutionary process in given
 web-based application.
 
-The web-based IEC applications in this work are using
-“EvoSpace framework” mentioned in chapter X. It is important to mention that the
-model it is limited to the web-based interactive evolutionary computation context.
+The web-based IEC applications that is used in this work is “EvoSpace framework”
+mentioned in chapter 3. It is important to mention that the model it is limited
+to Web-based applications and to this particular context.
 
-In following sections we explain the techniques mentioned above.
+In following sections explain the techniques mentioned above.
 
 
 \section{Graph-based user model} 
 
 To develop a user model, it was necessary to know the factors that are involved in
-interactive evolutionary computation system . The key factors
-that drive modeling users are described here:
+IEC system. These key factors are the following:
 
-Individuals: The individuals are agents ( entities ) that create the population
-of the interactive algorithm.
-
-Users: The users are the entities ( agents )
+\begin{itemize} 
+\item Individuals: The individuals are entities that create the population
+of the interactive algorithm.  
+\item Users: The users are the entities 
 involved in the evaluation of individuals generated in the interactive genetic
-algorithm replacing the fitness function. 
-User interface: It is the platform where users make their evaluations in an 
-easy and fast way. 
-User activity: They are the set of actions that the user performs in the application.
-
-The following user modeling based on graph theory was conceived knowing these factors.
-
-We can find the vertices that are defined by the users, individuals, and
-collections as we can observe in figure 1. The users has the following
-properties: The following user modeling based on graph theory was conceived
-knowing these factors.  Identifier Creation Date Description
-
-The  individuals has properties as well: Identifier Creation Date Name Type
-
-The collections has the following properties: Identifier Creation Date Name Type
+algorithm replacing the fitness function.
+\item User-Interaction: It is the platform where users make their evaluations in an 
+easy and fast way.
+\item User activity: They are the set of actions that the user performs in the application. 
+\end{itemize}
 
 
-The edges in Figure 1 represents the relationship between the vertices.
+Knowing these factors a graph-based user modeling is developed 
 
-The edge “KNOWS” has the following properties: Identifier Creation Date
+Where the vertices are defined by set of users, individuals, and
+collections. The Edges are define by set of relationships as LIKES, KNOWS, HAS, PARENT that represents the relationships between the vertices as seen in figure x. In this sense a formal definition is given by following definition.
 
-The edge “HAS” has the following properties: Identifier Creation Date
 
-The edge “LIKES” has the following properties: Identifier Creation Date Rating
+\begin{equation*}\label{eq:graphRelDef} 
+\displaystyle 
+\begin{split} 
+V &= \{[u_1,u_2,u_3,...,u_n],[i_1,i_2,i_3,...,i_n],[c_1,c_2,c_3,...,c_n]\},\\ 
+E&= \{[l_1,l_2,l_3,..,l_n],[p_1,p_2,p_3,...,p_n],[h_1,h_2,h_3,...,h_n],[k_1,k_2,k_3,...,k_n]\}\\ 
+\end{split} 
+\end{equation*} 
 
-Finally the edge “PARENT” has the following properties: Identifier Creation Date
+Where $V$ is a set of vertices and $u$ represents users, $i$ represents
+individuals, and $c$ represents collections. Also $E$ is a set of edges where
+$l$ represents the relationship "LIKES" ,$p$ represents the relationship
+"PARENT", $h$ represents the relationship "HAS" and finally $k$ that represents
+the relationship "KNOWS".
+
+In each vertex is necessary to store some knowledge about them, for instance in
+the vertex $u$ has the properties identifier, name, creation date and name type.
+Where identifier is a unique number to identifies the user, creation date is a
+property where the vertex was created and name type is label for classify the
+vertex in this case a “Person” label is apply. Also for vertex $i$ has the
+properties identifier,  creation date, name type. Where identifier is a unique
+alphanumerical value  that identify the individual, creation date is when this
+vertex is created and finally name type that is a label of classify the vertex
+in this case a “Individual” label is apply. Now for the  $c$ vertex has the same
+properties as the $u$ vertex for their definitions of identifier and creation
+date, the difference is the name type property that is a table for classify the
+vertex in this case a “Collection” label is apply.
+
+It is important to mention that the application for this research is using
+EvoSpace-Interactive through the EvoSpace framework. Also another thing to
+mention  is the generation of the initial individual population process in
+EvoSpace is gather to transform this individuals in vertices or nodes in order
+to  be ready for the evaluations of the users.
+ 
+This user modeling is created when the users starts to interact whit the
+application. In order to a user start evaluating individuals  in the application
+an essential process is required. These process is that the user has a
+“Facebook” account. Ones the user is access he/she can starts to interact with
+the different tasks presented by the application. Thus the user can evaluate,
+generate collection of individuals and also views friends individuals
+collections presented in the human-interacting interface, bring us the creation
+of the graph-based user modeling.
+
+
 
 Imagen
 
