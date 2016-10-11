@@ -37,7 +37,7 @@ easy and fast way.
 Knowing these factors a graph-based user modeling is developed 
 
 Where the vertices are defined by set of users, individuals, and
-collections. The Edges are define by set of relationships as LIKES, KNOWS, HAS, PARENT that represents the relationships between the vertices as seen in figure x. In this sense a formal definition is given by following definition.
+collections. The Edges are define by set of relationships as LIKES, KNOWS, HAS, PARENT that represents the relationships between the vertices as seen in \ref{fig:graph}. In this sense a formal definition is given by following definition.
 
 
 \begin{equation*}\label{eq:graphRelDef} 
@@ -73,7 +73,7 @@ mention  is the generation of the initial individual population process in
 EvoSpace is gather to transform this individuals in vertices or nodes in order
 to  be ready for the evaluations of the users.
  
-This user modeling is created when the users starts to interact whit the
+This user modeling is created when the users starts to interact whith the
 application. In order to a user start evaluating individuals  in the application
 an essential process is required. These process is that the user has a
 “Facebook” account. Ones the user is access he/she can starts to interact with
@@ -83,46 +83,16 @@ collections presented in the human-interacting interface, bring us the creation
 of the graph-based user modeling.
 
 
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/graph.png}}
+\caption{GRAPH REPRESENTATION.}
+\label{fig:graph}       
+\end{figure*}
 
-Imagen
-
-
-When users interact with the application, a graph theory model is formed. This
-model is described below.
-
-The model starts when users access the application for the first time through
-his "Facebook" account; after completion of this action a node, with the
-identifier that gives the social platform knowledge, is created. Internally, the
-call is made to the node object with the creation method where the identifier
-parameters, creation date, type, and name are executed.  If users had previously
-logged, then the application searches through the identifier to prevent the node
-replication.
-
-Later when users start the participation with the individual's evaluation, in
-the application an edge is created; this edge is called "LIKES" and represents
-the relationship between the individual node and the node of the user who is
-evaluating.
-
-It is important to mention that an EvoSpace initial population of individuals
-replication, in the form of graphs, is made. This replication has the main goal
-to generate the individual's nodes and perform the current assessment.
-
-If the user creates a collection in the application, a collection node type,
-with attributes identifier and name, is generated. Now if the user intends to
-store a digital painting according to his preference, in one of the collections
-previously created, a relationship called “HAS” is created; this relationship is
-between the collection node and the individual node which represents the paint
-chosen to be stored.
-
-The relationship between the user node and nodes that represent all his friends
-is represented by an edge called "KNOWS." To create this edge, it is necessary
-to search for users who have installed the application "Facebook" and
-subsequently create this relationship.
-
-To create the edge that represents the "KNOWS" relationship is necessary to
-search for users who have installed the application "Facebook" and subsequently
-create this connection between the user node and nodes that represent all the
-friends.
 
 \section{Interface}
 In particular, we shall explain how it was necessary to create an application called “EvoDrawings” to improve the way users interact “collaborate” with an interactive evolutionary computing system. One important class of this application is the user interface, which is the model we will explain in this chapter.
@@ -130,10 +100,31 @@ In particular, we shall explain how it was necessary to create an application ca
 EvoDrawings is a web-based application of interactive evolutionary computing system. In these days when social media platforms has become the perfect tool for masses to exchange information/ideas, interests and creations, EvoDrawings include as a common requirement to the users to have an account of the social platform “Facebook” to have access to the application and consequently participate in it.
 
 The main point to have users logged in the application is that they can evaluate individuals that are formed as a digital paint composed for a single chromosome of nine positions of real numbers.
-Each post of the chromosome represents some figure, color, performing behavior, etc. In figure X we can observe a chromosome composed of 15 elements from a digital paint. Once the individual is shown, the users can proceed to evaluate the individual subjectively. This means that according to the user's preferences the user can print his taste in all the evaluations.
+Each post of the chromosome represents some figure, color, performing behavior, etc. In figure \ref{fig:graph} we can observe a chromosome composed of 15 elements from a digital paint. Once the individual is shown, the users can proceed to evaluate the individual subjectively. This means that according to the user's preferences the user can print his taste in all the evaluations.
 The evaluation method consists of giving the desired rating through an interactive visual component of five stars. The interactive visual component allows the user to select from one to five stars to evaluate the individual, having the one star as a slightly liking rate and the five stars like a total satisfaction rate. 
 The application enables the user to visualize his social network and the personal evaluation of the users from his social net. In addition to this, the users can create collections with the main goal to allow the users to stock the more pleasing digital paints based on his preferences. 
 Also, the user interface contains a section called “About” where the application explains to users in a general way what the application is all about.
+For users interact with the interactive evolutionary computation system  it was necessary to develop an application which is called “EvoDrawings”. In this point an explanation of the human-computer interface that was used  is given. 
+
+EvoDrawing It is a Web-based application of interactive evolutionary computation. In this application users need an account of the social network platform in particular "Facebook" to access the application and consequently participate. Once users access can evaluate individuals presented as a digital painting that is composed of a chromosome, where its representation is a vector of real numbers of fifteen positions. Each position in the  chromosome  represents some kind of behavior, for instance  the type of figure, movement, color, and so on. Figure \ref{fig:graph} chromosome composed of 15 items represent a digital painting is displayed. Once the individual is shown, users come to evaluate in a subjectively way. This means that according to the likes, preferences, and so on., users conduct their evaluations. 
+
+To evaluate individuals, users are presented with a component of visual interaction based on star ratings. This visual component is from one star to five star where  a star means that the user does not like much the painting and five means total satisfaction. Within the applications users can create collections in order to store paintings are met their expectations, in other words having a grate like for them. 
+
+Users can view their friends who are using the application as well as see what level of experience (participation) in a leaderboard. This in order to motivate them to evaluate more Individuals and consequently Increase Their participation Within the application.
+
+In the interface there is a section of "About" where he explains to users in a general way that addresses the application of EvoDrawigns. In the interface there is a section of "About" which explains to the  users in a breve way what the application is all about. This human-computer web-based interface can be seen in figure x.
+
+
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/chromosome.png}}
+\caption{CHROMOSOME REPRESENTATION.}
+\label{fig:chromosome}       
+\end{figure*}
 
 
 
@@ -150,6 +141,21 @@ So far, we can say that an "Activity Stream" is a collection of one or more acti
 This specification does not define the relations between the activity within the collection, therefore remains to the interpretation of the user who implements it.
 
 \section{Database for interactive evolutionary computation}
+Our data store for interactive evolutionary computation consists of two databases, as figure \ref{fig:databases} shown. On one hand one  data base  engine for EvoSpace uses Redis database already explained in Chapter x.  This database contains the structure of individual-user data, where every user participation is store, for instance the fitness of the individual, the  user identifier, the representation of the chromosome, and so on. It is necessary to have this information because is used in the fuzzy inference block , which is explained later in this chapter. 
+On the other hand there is a relational database, where basic user information is stored, such as a user ID, your email, user session. Also this database  stores everything needed to meet the requirements process login "Facebook". It also contains the structure for storing collections as we can see in Figure x.
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/databases.png}}
+\caption{DATABASES FOR IEC.}
+\label{fig:databases}       
+\end{figure*}
+
+
+
 The database for interactive evolutionary computation consists of two databases, as we observe in figure X. In one hand we have the EvoSpace database that uses Redis database engine that is already explained in Chapter X section X.
 
 This database contains the structure of individual user data, where every user participation is being stored as well as the fitness of the individual, the user identifier, the representation of the chromosome, etc. 
@@ -157,7 +163,7 @@ This database contains the structure of individual user data, where every user p
 It is necessary to have this information because it is used for fuzzy inference block, which is explained in another chapter. On the other hand, we have a relational database, where basic user information is stored, such the ID, the email, the session, etc. This database also stores everything needed to meet the requirements of login for "Facebook". One important additional information is that contains the structure for storing collections as we can see in Figure X.
 
 \section{Fuzzy Inference}
-In this chapter, we will focus on the explanation of fuzzy inference block. This block uses fuzzy inference to acquire a parameter having the weight function to adjust the participation in interactive evolutionary computing applications. This parameter is used in the decision block which will be explained later. Additionally, the parameter is also acquired from the information generated in different databases.
+In this chapter, we will focus on the explanation of fuzzy inference block. This block uses fuzzy inference to acquire a parameter having the weight function to adjust the participation in interactive evolutionary computing applications. This parameter is used in the decision block which will be explained later in this chapter. Additionally, the parameter is also acquired from the information generated in different databases.
 
 The fuzzy inference system is Mamdani type and is composed of three inputs and one output. Where entries are defined by the preference variable that is also composed of three functions of triangular membership; these features are called low, medium, high, and have ranged from 1 to 5. This range is given by the preference that the user assigns to the individual at the time of assessment.
 
@@ -165,11 +171,70 @@ We also consider the input variable called "experience" and it is defined by thr
 
 The third variable which is called “ranking” it is also defined by three triangular membership functions with the name of low, medium, high, in a range of 1 to 30. This range is defined by a ranking process as well as is also performed in video games; the range is adjusted according to the user participation.
 
-This involvement is acquired from all the cardinality of the graph that the user has and passes through the logarithmic equation X that calculates the value of ranking. Finally, the exit "fuzzyrate" is in a range of 1 to 100 defined by three triangular membership functions with the name of bad, normal and good. In figure X we can see this fuzzy inference system.
+This involvement is acquired from all the cardinality of the graph that the user has and passes through the logarithmic equation X that calculates the value of ranking. Finally, the exit "fuzzyrate" is in a range of 1 to 100 defined by three triangular membership functions with the name of bad, normal and good. In figure ref{fig:Fuzzy} shows this fuzzy inference system.
 
 Falta imagen aqui
 
-We need the rules here please. ??????
+\begin{enumerate} 
+\item \textit{If \textbf{userSimilarity} is low and 
+\textbf{restaurantSimilarity} is low and \textbf{participation} 
+is insufficient then \textbf{expert} is high, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is low.}
+\item \textit{If \textbf{userSimilarity} is low and 
+\textbf{restaurantSimilarity} is low and \textbf{participation} 
+is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is low and 
+\textbf{restaurantSimilarity} is low and \textbf{participation} 
+is minimun then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is low and 
+\textbf{restaurantSimilarity} is high and \textbf{participation} 
+is insufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is high, \textbf{correlation} is low.}
+\item \textit{If \textbf{userSimilarity} is low and 
+\textbf{restaurantSimilarity} is high and \textbf{participation} 
+is minimun then \textbf{expert} is low, \textbf{restaurantProfile} i
+s high, \textbf{correlation} is low.}
+\item \textit{If \textbf{userSimilarity} is low and 
+\textbf{restaurantSimilarity} is high and \textbf{participation} 
+is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is high, \textbf{correlation} is low.}
+\item \textit{If \textbf{userSimilarity} is high and 
+\textbf{restaurantSimilarity} is low and \textbf{participation} 
+is insufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is high and 
+\textbf{restaurantSimilarity} is low and \textbf{participation} 
+is minimun then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is high and 
+\textbf{restaurantSimilarity} is low and \textbf{participation} 
+is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is high and 
+\textbf{restaurantSimilarity} is high and \textbf{participation} 
+is insufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is high and 
+\textbf{restaurantSimilarity} is high and \textbf{participation} 
+is sufficient then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\item \textit{If \textbf{userSimilarity} is high and 
+\textbf{restaurantSimilarity} is high and \textbf{participation} 
+is minimun then \textbf{expert} is low, \textbf{restaurantProfile} 
+is low, \textbf{correlation} is high.}
+\end{enumerate} 
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=10cm,height=15cm,keepaspectratio]{img/fuzzySys.png}}
+\caption{Fuzzy Inference System.}
+\label{fig:Fuzzy}       
+\end{figure*}
 
 
 \section{Decision Making}
