@@ -1,7 +1,7 @@
 \chapter{Proposed method}
 
-This chapter an explanation of the proposal method is described and all the
-differents techniques to develop a user modeling in interactive evolutionary
+In this chapter an explanation of the proposal method is described and the
+differents techniques used to develop a user modeling in interactive evolutionary
 computation (IEC) area such as fuzzy logic, graph-based user modeling and human-
 iteraction  (gamification paradigm).
 
@@ -14,7 +14,20 @@ The web-based IEC applications that is used in this work is “EvoSpace framewor
 mentioned in chapter 3. It is important to mention that the model it is limited
 to Web-based applications and to this particular context.
 
-In following sections explain the techniques mentioned above.
+In order to give an explanation of method an architecture is designed as shown in figure \ref{fig:arch}. This architecture contemplate the techniques mention above. Each blocks of this architecture will be explained in fallowing sections. 
+
+\begin{figure*}
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.7pt}
+	\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/achitecture.png}}
+	\caption{Method Architecture.}
+	\label{fig:arch}       
+\end{figure*}
+
+
+
 
 
 \section{Graph-based user model} 
@@ -34,9 +47,7 @@ easy and fast way.
 \end{itemize}
 
 
-Knowing these factors a graph-based user modeling is developed 
-
-Where the vertices are defined by set of users, individuals, and
+Knowing these factors a graph-based user modeling is developed. Where the vertices are defined by set of users, individuals, and
 collections. The Edges are define by set of relationships as LIKES, KNOWS, HAS, PARENT that represents the relationships between the vertices as seen in \ref{fig:graph}. In this sense a formal definition is given by following definition.
 
 
@@ -106,7 +117,7 @@ The application enables the user to visualize his social network and the persona
 Also, the user interface contains a section called “About” where the application explains to users in a general way what the application is all about.
 For users interact with the interactive evolutionary computation system  it was necessary to develop an application which is called “EvoDrawings”. In this point an explanation of the human-computer interface that was used  is given. 
 
-EvoDrawing It is a Web-based application of interactive evolutionary computation. In this application users need an account of the social network platform in particular "Facebook" to access the application and consequently participate. Once users access can evaluate individuals presented as a digital painting that is composed of a chromosome, where its representation is a vector of real numbers of fifteen positions. Each position in the  chromosome  represents some kind of behavior, for instance  the type of figure, movement, color, and so on. Figure \ref{fig:graph} chromosome composed of 15 items represent a digital painting is displayed. Once the individual is shown, users come to evaluate in a subjectively way. This means that according to the likes, preferences, and so on., users conduct their evaluations. 
+EvoDrawing It is a Web-based application of interactive evolutionary computation. In this application users need an account of the social network platform in particular "Facebook" to access the application and consequently participate. Once users access can evaluate individuals presented as a digital painting that is composed of a chromosome, where its representation is a vector of real numbers of fifteen positions. Each position in the  chromosome  represents some kind of behavior, for instance  the type of figure, movement, color, and so on. Figure \ref{fig:chromosome} chromosome composed of 15 items represent a digital painting is displayed. Once the individual is shown, users come to evaluate in a subjectively way. This means that according to the likes, preferences, and so on., users conduct their evaluations. 
 
 To evaluate individuals, users are presented with a component of visual interaction based on star ratings. This visual component is from one star to five star where  a star means that the user does not like much the painting and five means total satisfaction. Within the applications users can create collections in order to store paintings are met their expectations, in other words having a grate like for them. 
 
@@ -142,7 +153,7 @@ This specification does not define the relations between the activity within the
 
 \section{Database for interactive evolutionary computation}
 Our data store for interactive evolutionary computation consists of two databases, as figure \ref{fig:databases} shown. On one hand one  data base  engine for EvoSpace uses Redis database already explained in Chapter x.  This database contains the structure of individual-user data, where every user participation is store, for instance the fitness of the individual, the  user identifier, the representation of the chromosome, and so on. It is necessary to have this information because is used in the fuzzy inference block , which is explained later in this chapter. 
-On the other hand there is a relational database, where basic user information is stored, such as a user ID, your email, user session. Also this database  stores everything needed to meet the requirements process login "Facebook". It also contains the structure for storing collections as we can see in Figure x.
+On the other hand there is a relational database, where basic user information is stored, such as a user ID, your email, user session. Also this database  stores everything needed to meet the requirements process login "Facebook". It also contains the structure for storing collections as shown in Figure ref{fig:databases}.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -173,7 +184,6 @@ The third variable which is called “ranking” it is also defined by three tri
 
 This involvement is acquired from all the cardinality of the graph that the user has and passes through the logarithmic equation X that calculates the value of ranking. Finally, the exit "fuzzyrate" is in a range of 1 to 100 defined by three triangular membership functions with the name of bad, normal and good. In figure ref{fig:Fuzzy} shows this fuzzy inference system.
 
-Falta imagen aqui
 
 \begin{enumerate} 
 
@@ -272,17 +282,17 @@ The variable  $j$ represents the access that like the variable  is obtained from
 \displaystyle s =\frac{levels}{log_{2}fp}
 \end{equation}
 
-In equation \ref{eq:fuzzyInference}, we can find the variable $r$ as the last parameter of the funtion and represents a ranking of the user; this variable is defined by a logarithmic scale where intervenes our graph-base user modeling  and is defined by Equation \ref{eq:scale}.
+In equation \ref{eq:fuzzyInference}, we can find the variable $r$ as the last parameter of the function and represents a ranking of the user; this variable is defined by a logarithmic scale where intervenes our graph-base user modeling  and is defined by Equation \ref{eq:scale}.
 
 In equation \ref{eq:scale}, the variable $s$ represents the scale and $levels$ represents the highest level that the users can have. The variable $fp$ represents the final points, which are the maximum points that a particular user can have.
 
-In order to acquire the user's ranking level , a floor function  is calculated, the main point of this is to increase the difficulty for the high ranked users to level up. In other words the expert users needs to have more participation if they want to increse their level ranking. This function is defined by equation \ref{eq:floorf}.
+In order to acquire the user's ranking level , a floor function  is calculated, the main point of this is to increase the difficulty for the high ranked users to level up. In other words the expert users needs to have more participation if they want to increase their level ranking. This function is defined by equation \ref{eq:floorf}.
 
 \begin{equation}\label{eq:floorf}
 \displaystyle rl=\lfloor(s)(log_2pf)\rfloor
 \end{equation}
 
-Where $rl$ represents the ranking lavel, $s$ represents the scale and  are all the participations  that the user has made. These participations represents the degree that the user has within his own graph and is defined by the vicinity of its vertex  that is given by the adjacent vertices to $u$, defined in Equation \ref{eq:neighbors}.
+Where $rl$ represents the ranking level, $s$ represents the scale and  are all the participations  that the user has made. These participations represents the degree that the user has within his own graph and is defined by the vicinity of its vertex  that is given by the adjacent vertices to $u$, defined in Equation \ref{eq:neighbors}.
 
 \begin{equation}\label{eq:neighbors}
 \displaystyle N(u)={\{y\in V_{G}|\{u,y}\in E_{G}\}
@@ -294,7 +304,7 @@ In this case the degree of the vertex $u$ is the number of neighbors of:
 \displaystyle g(u)=|N(x)|
 \end{equation}
 
-we represent this participation as we can see in figure x.
+
 
 
 
