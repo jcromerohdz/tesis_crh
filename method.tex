@@ -1,20 +1,16 @@
-\chapter{Proposed method}
+\chapter{Proposed user-centered framework}
 
-In this chapter an explanation of the proposal method is described and the
-differents techniques used to develop a user modeling in interactive evolutionary
-computation (IEC) area such as fuzzy logic, graph-based user modeling and human-
-iteraction  (gamification paradigm).
+The fundamental goal of this research is to develop a user-centered framework
+for interactive evolutionary computation (IEC) in order to increase users’
+participation and also to minimize the amount of evaluations needed for the
+evolutionary process in given Web-based IEC application.
 
-The fundamental aproach of this research is to develop a user modeling for
-interactive evolutionary computation in order to increase the user participation
-and to minimize the amount of evaluations for the evolutionary process in given
-web-based application.
+In this chapter an explanation of the proposed framework is described. The
+different techniques used, such as user modeling, fuzzy logic, and human-
+interaction.
 
-The web-based IEC applications that is used in this work is “EvoSpace framework”
-mentioned in chapter 3. It is important to mention that the model it is limited
-to Web-based applications and to this particular context.
-
-In order to give an explanation of method an architecture is designed as shown in figure \ref{fig:arch}. This architecture contemplate the techniques mention above. Each blocks of this architecture will be explained in fallowing sections. 
+This framework is presented in figure \ref{fig:uc_framework}. Each of the
+entities of this framework will be explained in detail in following sections.
 
 \begin{figure*}
 	\captionsetup{justification=centering,margin=2cm}
@@ -23,28 +19,68 @@ In order to give an explanation of method an architecture is designed as shown i
 	\setlength\fboxrule{0.7pt}
 	\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/framework.png}}
 	\caption{User-Centerd Framework.}
-	\label{fig:arch}       
+	\label{fig:uc_framework}       
 \end{figure*}
 
+\section{Users} 
 
+Users are a central part of this proposed framework as it aims to study their
+behavior when interacting with individuals within interactive evolutionary
+algorithms and other tasks that may exist within IEC systems. Thus users in
+this proposal are entities interacting with an evolutionary computation that
+has the fundamental purpose of evaluating individuals of a population
+replacing the fitness function according to their preferences and mood, among
+others []. This form of evaluate individual is given a subjectively way.
 
+On the other hand in order to capture the attention of users and possibly
+increase their participation, currently there exist some basic actions that
+users can perform in a given system, going from to be able to access a system
+through login mechanism, once the user has logged-in in to the system the
+users can interact with different actions, for example the inviting action is
+when users can be invited through social networks or maybe of person to
+person. Another example is the sharing action, that can occur when users want
+to share something of their interest through their social networks. In this sense the action of posting is when
+users want to put something on their wall who want others to know through
+their social networks. Likewise the storing action occurs when users want to
+retain permanently information that are of their interest. Finally the
+browsing action occurs when users are exploring content for their needs. All
+these actions go beyond only evaluating individuals.
 
+\begin{figure*}
+	\captionsetup{justification=centering,margin=2cm}
+	\centering
+	\setlength\fboxsep{0pt}
+	\setlength\fboxrule{0.7pt}
+	\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/users.png}}
+	\caption{Users actions on interactive evolutionary systems.}
+	\label{fig:users}       
+\end{figure*}
 
-\section{Graph-based user model} 
+In order to start the task of evaluating individuals is necessary that users
+access the system through a login mechanism. This mechanism consists of
+providing a username and a password in order to grant access to the system. All
+users accessing in this way they are considered active users within an IEC
+system.
 
-To develop a user model, it was necessary to know the factors that are involved in
-IEC system. These key factors are the following:
+For the evaluating action is proposed  that users evaluate individuals
+indirectly, this means users can evaluate accepting indirect recommendations of
+friends that are currently active in the system. These recommendations can be
+store individuals in the system of users who know each other.
+
+Also the  browsing action is proposed within IEC systems,  this means that users
+can explore information that other active users in the system are generating.
+
+Finally activity participation is proposed. This can be divided into four
+different actions as fallows:
 
 \begin{itemize} 
-\item Individuals: The individuals are entities that create the population
-of the interactive algorithm.  
-\item Users: The users are the entities 
-involved in the evaluation of individuals generated in the interactive genetic
-algorithm replacing the fitness function.
-\item User-Interaction: It is the platform where users make their evaluations in an 
-easy and fast way.
-\item User activity: They are the set of actions that the user performs in the application. 
+\item The Inviting action occurs when a user invites another to the system through social networks or from person to person.  
+\item The sharing action occurs when users share their individual creations with others active user in the system.
+\item The posting action occurs when published what they are doing within the system.
+\item The storing action occurs when users keep individuals in a collection, the collections concept will be discussed later in this chapter.
 \end{itemize}
+
+All the mention above is shown in figure \ref{fig:users}
 
 
 Knowing these factors a graph-based user modeling is developed. Where the vertices are defined by set of users, individuals, and
@@ -94,24 +130,33 @@ collections presented in the human-interacting interface, bring us the creation
 of the graph-based user modeling.
 
 
+\section{Individual}  
+
+Individuals are entities that form the population for the evolutionary
+algorithm. In particular for  this work individuals are animated digital
+paintings, every individual in the population is defined by a chromosome [].
+This chromosome defines the behavior of the individual, so that it consists of a
+vector of real numbers of fifteen genes, where each gen define a particular
+behavior in painting. This individuals combined each other to generated new
+individual in the population following the genetic operators such as selection,
+crossover and mutation[]. An example of a individual in this case it is
+illustrated in figure \ref{fig:individual}
+
+
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/graph.png}}
-\caption{GRAPH REPRESENTATION.}
+\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/individual.png}}
+\caption{Individual representation.}
 \label{fig:graph}       
 \end{figure*}
 
 
-\section{Interface}
-In particular, we shall explain how it was necessary to create an application called “EvoDrawings” to improve the way users interact “collaborate” with an interactive evolutionary computing system. One important class of this application is the user interface, which is the model we will explain in this chapter.
 
-EvoDrawings is a web-based application of interactive evolutionary computing system. In these days when social media platforms has become the perfect tool for masses to exchange information/ideas, interests and creations, EvoDrawings include as a common requirement to the users to have an account of the social platform “Facebook” to have access to the application and consequently participate in it.
 
-The main point to have users logged in the application is that they can evaluate individuals that are formed as a digital paint composed for a single chromosome of nine positions of real numbers.
-Each post of the chromosome represents some figure, color, performing behavior, etc. In figure \ref{fig:graph} we can observe a chromosome composed of 15 elements from a digital paint. Once the individual is shown, the users can proceed to evaluate the individual subjectively. This means that according to the user's preferences the user can print his taste in all the evaluations.
+etc. In figure \ref{fig:graph} we can observe a chromosome composed of 15 elements from a digital paint. Once the individual is shown, the users can proceed to evaluate the individual subjectively. This means that according to the user's preferences the user can print his taste in all the evaluations.
 The evaluation method consists of giving the desired rating through an interactive visual component of five stars. The interactive visual component allows the user to select from one to five stars to evaluate the individual, having the one star as a slightly liking rate and the five stars like a total satisfaction rate. 
 The application enables the user to visualize his social network and the personal evaluation of the users from his social net. In addition to this, the users can create collections with the main goal to allow the users to stock the more pleasing digital paints based on his preferences. 
 Also, the user interface contains a section called “About” where the application explains to users in a general way what the application is all about.
@@ -155,15 +200,7 @@ This specification does not define the relations between the activity within the
 Our data store for interactive evolutionary computation consists of two databases, as figure \ref{fig:databases} shown. On one hand one  data base  engine for EvoSpace uses Redis database already explained in Chapter x.  This database contains the structure of individual-user data, where every user participation is store, for instance the fitness of the individual, the  user identifier, the representation of the chromosome, and so on. It is necessary to have this information because is used in the fuzzy inference block , which is explained later in this chapter. 
 On the other hand there is a relational database, where basic user information is stored, such as a user ID, your email, user session. Also this database  stores everything needed to meet the requirements process login "Facebook". It also contains the structure for storing collections as shown in Figure ref{fig:databases}.
 
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/databases.png}}
-\caption{DATABASES FOR IEC.}
-\label{fig:databases}       
-\end{figure*}
+
 
 
 
