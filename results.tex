@@ -1,249 +1,370 @@
 \chapter{Case study} \label{sec:4}
 
 
-This chapter will explain the experiment used in the Study Case.   Three versions of EvoDrawing were used to fulfill this research.
-
-Starting off with the hypothesis which will allow increasing the user experience of having a drawing modeling using diffuse logic and use techniques.
-
-It was necessary to design Three experiments to prove this thesis work hypothesis; each experiment used a different version of EvoDrawing.  The results as well as each version of EvoDrawing compared to other applications of interactive evolutionary computing and also were compared between other Evo Drawing versions itself.  Equality of data, parameters, and users compared to all experiments which examined as follows:
-
-It is necessary to compare our proposal with other which we have explained early in the last chapter, due evolutionary interactive computing applications with the same amount of parameters are difficult to find we decided to build two additional ones in order to run pertinent tests so our hypothesis could be answered., This required to design experiments the following way.
-
-The X table contains Evo Drawing versions and comparison. The first column will specify each version of Evo Drawing including its characteristics and each subsequent column describes the characteristics of each Evo Drawing version.
-
-\begin{table}
-	\small
-	\caption{comparison of the different versions.}
-	\label{tab:comparison} 
-	\centering
-	\small
-	\begin{tabular}{p{3cm} p{4cm} p{4cm} p{4cm} }
-		\hline\noalign{\smallskip}
-		Version & EvoDrawing01 & EvoDrawing02 & EvoDrawing03 \\
-		\noalign{\smallskip}\hline\noalign{\smallskip}
-		\small{User Interface} & \small{This version have an easy to handle and simple gui.Observe figure X} & \small{This version have an easy to handle and simple gui. Observe figure X} & \small{As the previous versions this one have the same interface but differs from the others on the competitiveness visual components based on video games and we can observe it in figure X}\\ \hline
-		\small{Fuzzy Inferance} & \small{It does not have Fuzzy inference system} & \small{A fuzzy inference system has been added to this version.  It is composed by two inputs Experience and Preference; it also has a type Mamdani output called fuzzy rate.} & \small{A fuzzy inference system has been added to this version.  It is composed by three inputs Ranking, Experience and Preference; it also has a type Mamdani output called fuzzy rate.
-			}\\ \hline 
-		\small{Graph-based user model} & \small{User modeling is not available} & \small{User modeling is not available} & \small{User modeling is available in this version based on graphs and is used to adapt inside diffuse inference aptitude function on ranking entrance.
-		}\\ \hline 
-		
-		\noalign{\smallskip}\hline
-	\end{tabular}
-\end{table}
-
-Now we will explain each version developed details and goes as follows; we will explain each version specific and technical reasons.
 
 
+\section{Motivation and objectives} 
 
+Our motivation begins from knowing if a user modeling in combination with
+techniques of usability and fuzzy logic increase the participation of users in a
+given interactive evolutionary system. It is well know that one of the main
+problems in these systems is fatigue, who is the cause of the decrease of user's
+participation [].
 
+Our approach goes with the sense of increasing the participation of the users
+within these systems, providing to them very simple tasks to execute in order to
+capture their attention as well as to know their behavior.
 
-\section{EvoDrawings01} 
+Since we have described that the main approach is to increase the participation
+of users, in order to measure these results and to be able to demonstrate a real
+increase in the participation of these users, it was necessary to build a study
+case where an evolutionary art application is involved within an interactive
+evolutionary system which we call EvoDrawings. This application was modified in
+order to obtain three versions of this one, which were labeled with the names
+ED01, ED02, ED03. The objective is to extract data from each of the different
+versions and then quantify and compare which of these had the best result in the
+participation of the users.
 
-
-This version initial configuration of our evolutionary algorithm goes as follows:
-
-\begin{enumerate}
-	\item  \textbf{Having an initial 80 individual population which we will represent in the following way:}
-	
-	
-	
-	\item  \textbf{evaluations equals an evolution parameter.}
-	 
-	\item  \textbf{Its fitness provided by equation x.} 
-	\item  \textbf{Combining the fuzzified inputs according to the fuzzy rules to establish a rule strength.} 
-	\item  \textbf{Combining the consequences to get an output distribution.}
-	\item  \textbf{Defuzzifying the  output distribution (this step is only if a crisp production (class) is needed).}
-\end{enumerate}
-
-
-
-
-
-
-
-
-
-
-
-\subsection{Interface.} 
-
-An easy use individual evaluation web interface is develop to this version.  We can notice in the navigation bar the access application functionality, worth mentioning that the app will only work with the social platform Facebook. Once accessed with a Facebook account the navigation bar will show an avatar as well as the exit application functionality through a logout. Also inside this interface exist the visual element “Friends” that will show all the participating friends in the form, to be able to view friend’s public collections is another functionality this element has.
-Continuing with the interface explanation, we found the “Collections” panel where the user's list of created and saved collections is shown as well as the functionality that give the ability to create new collections. An “About this” section will be shown inside; this will explain in a general way the functionality to the participating users. Now when it comes to user’s individual evaluation they will have a visual canvas element who will show behavior of a to be evaluated individual (animation) and in the lower part the individual will have the ability to star rank evaluate where one star means he/she did not like it much and five stars meaning he/she like it too much. Now in the lower section of the star rank, a button will provide the ability to add that individual to a collection previously created. In the upper-rank star section, we will find a link which reads “Click here to see my DNA History” this will take us to detail about the individual to be evaluated that way we could review the detail of the individual in image x.
+\section{EvoDrawings} EvoDrawings is based on the EvoSpace-i [] framework and
+consequently uses the same architecture which is presented in figure
+\ref{fig:ESFramework}. In this architecture we have the individual block which
+contains different information, including the chromosome that represents the
+digital painting. Technically the individual is an associative arrangement
+(dictionary) where an abstract collection of keys and values is stored with a
+one-to-one association. Where keys represent a specific property in each object
+and the values are different types of data, such as lists, tuples, numbers,
+strings and dictionaries.
 
 \begin{figure*}
-	%\captionsetup{justification=centering,margin=2cm}
-	\centering
-	\setlength\fboxsep{0pt}
-	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-	\caption{The Post-Filtering architecture for Tijuana restaurants.}
-	\label{fig:postfiltering2}     
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=8cm,height=8cm,keepaspectratio]{img/ESFramework.png}}
+\caption{EvoSpace-i framework.}
+\label{fig:ESFramework}       
 \end{figure*}
 
 
-Detailed Important information about individual DNA history is shown here such as how many evaluations in likes he/she has received, how many visitors as well as ascendancy, genetic crossing operator, chromosome numeric representation and inside population identifier.
-
-
-\begin{figure*}
-	%\captionsetup{justification=centering,margin=2cm}
-	\centering
-	\setlength\fboxsep{0pt}
-	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-	\caption{The Post-Filtering architecture for Tijuana restaurants.}
-	\label{fig:postfiltering3}     
-\end{figure*}
-
-\section{EvoDrawing02}
-
-Inside this version we will find an initial configuration of the interactive evolutionary algorithm in the following way:
-
-As in the Las version it counts with 80 individuals as initial population and individuals are represented in the same way as in the previous version:
-Eight evaluations as one evolution parameter.
-One genetic Operator as aleatory selection between competition and ...      
-One horizontal genetic crossing Operator.
-Its fitness function is provided by equation x.
-
-\begin{enumerate}
-	\item  \textbf{Having an initial 80 individual population which we will represent in the following way:}
-	
-	
-	
-	\item  \textbf{As in the Las version it counts with 80 individuals as initial population and individuals are represented in the same way as in the previous version.}
-	
-	\item  \textbf{Eight evaluations as one evolution parameter..} 
-	\item  \textbf{Combining the fuzzified inputs according to the fuzzy rules to establish a rule strength.} 
-	\item  \textbf{One genetic Operator as aleatory selection between competition and ...}
-	\item  \textbf{Its fitness function is provided by equation x.}
-\end{enumerate}
+The individual has the following fields, shown in figure \ref{fig:individual_dic}.
+The field is represented by a single string for each object. The chromosome
+field represented by a string, which for EvoDrawing represents an array of 15
+numerical characters which define the behavior of the digital drawing ... The
+fitness field is defined by a dictionary, this field contains the information of
+users evaluations as well as the creation date as a timestamp. The field called
+views is determined by a string and represent the number of times they have seen
+the individual. The keys called mom and dad define where the individual comes
+from. The GeneticOperator field is a string that specifies the genetic operator
+produced.
 
 \begin{figure*}
-	%\captionsetup{justification=centering,margin=2cm}
-	\centering
-	\setlength\fboxsep{0pt}
-	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-	\caption{The Post-Filtering architecture for Tijuana restaurants.}
-	\label{fig:postfiltering4}     
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=8cm,height=8cm,keepaspectratio]{img/individual_dic.png}}
+\caption{Chromosome representation.}
+\label{fig:individual_dic}       
 \end{figure*}
 
+\subsection{Processing Script}  It is necessary to explain how the animation
+that the users visualize works. EvoSpace-i uses processing script in order to do
+the rendering of the individuals which contain the behavior of the figures. This
+application can run in browsers that are compatible with HTML 5, this is due to
+the use of a javascript library called processingscriptjs that is in charge of
+communicating with the base script and thus perform the render on HTML 5 canvas
+in The EvoDrawings application.
 
+\subsection{Fitness} The fitness assignment for each individual is given by the
+evaluations of the users. EvoDrawings has positive reviews when users give their
+rating as a star rating. We can see this rate of stars on the figure x of the
+interface that EvoDrawings uses in all its variations. This rate ranges from 1
+star to 5 stars, which defines the user's liking for the digital drawing
+presented by EvoDrawings. When users evaluate a sample of individuals, some of
+these will not receive any evaluation. The view property, it increases by 1 when
+it is viewed. Internally, a fitness calculation is used defined by the following
+equation:
 
-\subsection{Fuzzy Inferance.}
-Where represents all the individuals.
-Is the rank given to the individuals by the users.
-Represents one diffuse rank function composed by a diffuse inference system and will be represented by equation x.
-
-
-Where represents the diffuse rank.
-Will continue been users given rank according to their preferences to each.
-Is the experience which is defined by the activity already explained in the previous chapter.
-
-The diffuse inference system type is Mamdani, and it is composed by two entrances represented by and a fuzzy rate exit as we can observe represented in figure x.
-
-
-It counts with 9 if/then rules which were designed in an empiric way and are the following:
-
-If experience is low and preference is low then fuzzy\_rate is bad
-If experience is mid and preference is low then fuzzy\_rate is bad
-If experience is high and preference is low then fuzzy\_rate is normal
-If experience is low and preference is mid then fuzzy\_rate is bad
-If experience is mid and preference is mid then fuzzy\_rate is normal
-If experience is high and preference is mid then fuzzy\_rate is good
-If experience is low and preference is high then fuzzy\_rate is normal
-If experience is mid and preference is high then fuzzy\_rate is good
-If experience is high and preference is high then fuzzy\_rate is good
-
-\subsection{Interface}
-
-The user interface in this version is the same as in the previous version. It only differs in how inference is made between versions.
-
-\section{EvoDrawing03}
-To create version we made an initial configuration in the following way:
-
-\begin{enumerate}
-	\item  \textbf{As in the previous version it counts with an 80 individuals initial population and individuals are represented in the exact same way as in the previous version.
-	}
-	
-	\item  \textbf{8 evaluations as one evolution parameter.}
-	
-	\item  \textbf{One genetic Operator as aleatory selection between competition and … } 
-	\item  \textbf{Combining the fuzzified inputs according to the fuzzy rules to establish a rule strength.} 
-	\item  \textbf{One horizontal genetic crossing Operator.}
-	\item  \textbf{Its fitness function is provided by equation x.}
-\end{enumerate}
-
-\begin{equation}\label{eq:fitfunc03}
-\displaystyle f=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
+\begin{equation}\label{eq:fitfunc01}
+\displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+ 1}{\sum_{i=0}^{n}v_{i} + 1}
 \end{equation}
 
-Where  represents fuzzy rank.
-continues been the given rank users conceive to individuals according to their preferences.
-represents the experience defined by the activity already explained in the previous chapter.
-represents users ranking which we have previously described how is this variable calculated in the last chapter.
+$i$ represents the individual's.
+$x$ is the range that individuals received when evaluated by users.
+$v$ are the views that users have viewed individuals.
 
-The fuzzy inference system type is Mamdani and it is composed by three entrances represented by  and a fuzzy rate exit as we can observe represented in figure x.
+The above is used in version ED01. For the next two versions we use a different
+defined fitness based on the behavior that users perform within EvoDrawings,
+such as assigned tasks, the logging action in order to start evaluating
+individuals, individuals evaluation, creating collections for later store
+individuals and finally view the public individuals of friends who are
+participating in the application.
+
+For ED02 we use a fuzzy inference system consisting of two inputs and one
+output. Entries are defined by preference and experience. The preference is the
+range of stars from 1 to 5 and are the evaluations that users give to the
+presented digital drawing, and are represented with triangular membership
+functions called high, medium and low. In the same way the input experience is
+defined by the tasks performed and it has the range of 1 to 100, each task
+receives points until reaching a threshold of 100 points where the user is
+considered as an expert within the application. This input is also represented
+by triangular membership functions called high, medium, low. Finally we have the
+output called fuzzy\_rate in a range of 1 to 100, defined by triangular
+membership functions called bad, normal, good. This fuzzy system consists of 9
+if-then rules:
+
+\begin{enumerate}
+	\item \textit{If \textbf{preference} is low and 
+		\textbf{experience} is low then \textbf{fuzzy\_rate} is bad.}
+	\item \textit{If \textbf{preference} is mid and 
+		\textbf{experience} is low  then \textbf{fuzzy\_rate} is bad.}
+	\item \textit{If \textbf{preference} is high and 
+		\textbf{experience} is low  then \textbf{fuzzy\_rate} is normal.}
+	\item \textit{If \textbf{preference} is low and 
+		\textbf{experience} is mid then \textbf{fuzzy\_rate} is bad.}
+	\item \textit{If \textbf{preference} is mid and 
+		\textbf{experience} is mid  then \textbf{fuzzy\_rate} is normal.}
+	\item \textit{If \textbf{preference} is high and 
+		\textbf{experience} is mid  then \textbf{fuzzy\_rate} is good.}
+	\item \textit{If \textbf{preference} is low and 
+		\textbf{experience} is high then \textbf{fuzzy\_rate} is normal.}
+	\item \textit{If \textbf{preference} is mid and 
+		\textbf{experience} is high  then \textbf{fuzzy\_rate} is good.}
+	\item \textit{If \textbf{preference} is high and 
+		\textbf{experience} is high  then \textbf{fuzzy\_rate} is good.}
+		
+\end{enumerate}
+
+The fitness function is given by the following equation:
+
+\begin{equation}\label{eq:fitfunc02}
+\displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
+\end{equation}
+
+$i$ represents the individual's. x is the range that users gave to individuals..
+$f(y_i)$ represents a fuzzy function composed of a fuzzy inference system and is
+represented by the equation \ref{eq:fuzzyFunc}.
+
+\begin{equation}\label{eq:fuzzyFunc}
+\displaystyle y=fr(x,e)
+\end{equation}
+
+
+$fr$ represents the fuzzy rate.  
+$x$ it remains the range that users give according to their preferences to individuals. 
+$e$  is the experience that is defined by the
+activity that the user is doing within the application. The fuzzy inference system of it is a Mamdani type composed of two inputs that are  $x,e$ and a fuzzy rate output as shown in figure \ref{fig:fis_01}.
+
 
 \begin{figure*}
-	%\captionsetup{justification=centering,margin=2cm}
-	\centering
-	\setlength\fboxsep{0pt}
-	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-	\caption{The Post-Filtering architecture for Tijuana restaurants.}
-	\label{fig:postfiltering5}     
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fuzzy_system_2_1.png}}
+\caption{Chromosome representation.}
+\label{fig:fis_01}       
 \end{figure*}
 
-This version includes 30 diffuse rules designed in an empiric way.
-Two punctual differences exist in this version, the first one represented by the ranking value used in the users modeling based on graphs; the second one represents the usability elements adding a video game competitiveness paradigm.   Inside figure X we will appreciate the interface design added to EvoDrawing 03 version.
+For ED03 the fitness function is given by the same equation as ED02 the difference relies in the inputs of the fuzzy function, for this case a new input is added with the name of ranking. This new input is the given by the cardinality of the graph of the user model for each user. here is the fuzzy function for ED03.
+
+\begin{equation}\label{eq:fuzzyFunc2}
+\displaystyle y=fr(x,e,r)
+\end{equation}
+
+$fr$ represents the fuzzy rate.  
+$x$ it remains the range that users give according to their preferences to individuals. 
+$e$  is the experience that is defined by the
+activity that the user is doing within the application.
+$r$ is the ranking the user within the graph model.
+ The fuzzy inference system it is a Mamdani type composed of three inputs that are  $x,e, r$ and a fuzzy rate output as shown in figure \ref{fig:fis_02}.
 
 \begin{figure*}
-	%\captionsetup{justification=centering,margin=2cm}
-	\centering
-	\setlength\fboxsep{0pt}
-	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-	\caption{The Post-Filtering architecture for Tijuana restaurants.}
-	\label{fig:postfiltering6}     
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fuzzySys.png}}
+\caption{Fuzzy inference system for ED03.}
+\label{fig:fis_02}       
 \end{figure*}
 
 
-Visual elements added to the navigation bar are added to this version, items such as the score where users can view its participations in EvoDrawings, it also provides you with the experience level acquired through their participation; This version will also offer an option to vie the leader chart inside the application as can we appreciate in figure x. The chart will show the ten best users and how many times they participate up to date.
+\subsection{Configurations.}
+
+Previously we mentioned that EvoDrawings is an application of evolutionary art
+within an evolutionary system with the aim of being able to prove the increase
+of the participation of the users. To prove this hypothesis within this thesis,
+3 different versions of EvoDrawing were designed. The EvoDrawing versions and
+the results of the experiments were compared to each other. All experiments and
+comparisons were performed on equal data, parameters and users.
+
+For ED03 the initial configuration of our evolutionary algorithm in this version
+is the following:
+
+\begin{enumerate}
+	\item  \textbf{We have an initial population of 80 individuals.}
+	
+	\item  \textbf{An evolution parameter is 8 evaluations.}
+	
+	\item  \textbf{A mutation parameter of } 
+	\item  \textbf{With random selection between competition.} 
+	\item  \textbf{One horizontal genetic crossing Operator.}
+	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc01}.}
+\end{enumerate}
+
+For the interface in this version there is an easy-to-use Web interface for
+users to evaluate  individuals. In figure \ref{fig:UI_01} shows the navigation
+bar that have the functionality for the application access, it should be
+mentioned that this application only works with the social platform Facebook.
+Once logged in with a Facebook account an avatar appears in the navigation bar
+as well as the functionality to exit the application through a logout. Also
+within this interface exists the visual element 'Friends' where all the friends
+that are participating in the application appear, this element also has the
+functionality to be able to see the public collections that the friends have.
+Continuing with the explanation of the interface we have the 'Collections' panel
+which shows a list of collections that the users created and saved, as well as
+the functionality of being able to create new collections. Within this we have
+an 'About this' section where users are explained in which they are
+participating in a general way. Now to evaluate individuals the users have a
+visual canvas element that shows the behavior of the individual subject to
+evaluation (animation) and at the bottom is given the ability to evaluate the
+individual with a range of stars where one star means the user did not like it
+very much and five stars mean the user like it too much. Now at the bottom of
+the star range we have a button that provides the functionality of being able to
+add this individual to a collection that we have already created previously. At
+the top of the star rank is a league with the legend that says 'Click here to
+see my DNA History' this takes us to a detail about the individual that is about
+to be evaluated and thus to be able to observe the detail of the individual shows in image \ref{fig:dna}.
 
 \begin{figure*}
-	%\captionsetup{justification=centering,margin=2cm}
-	\centering
-	\setlength\fboxsep{0pt}
-	\fbox{\includegraphics[width=0.60\textwidth]{img/posfil.png}}
-	\caption{The Post-Filtering architecture for Tijuana restaurants.}
-	\label{fig:postfiltering8}     
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/UI_ed01.png}}
+\caption{User interface ED01.}
+\label{fig:UI_01}       
 \end{figure*}
 
-Each experiment was promoted through social networking using specifically Facebook and  Twitter por medio de un URL corto asi como tambien un anuncio para motivar a los usuarios a presionar el link (URL corto). Esto con el fin encontrar participantes de forma voluntaria. Este URL corto se puede observar en la tabla x.
+This detail presents important information about the individual's DNA history,
+such as the number of evaluations he has received in the form of likes, the
+number of views as well as the ancestry, his genetic crossing operator, the
+numerical representation of his Chromosome and its identifier within the
+population.
+
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/dna.png}}
+\caption{DNA history.}
+\label{fig:dna}       
+\end{figure*}
+
+For ED02 there is an initial configuration of the interactive evolution algorithm as follows:
+
+\begin{enumerate}
+	\item  \textbf{We have an initial population of 80 individuals.}
+	
+	\item  \textbf{An evolution parameter is 8 evaluations.}
+	
+	\item  \textbf{A mutation parameter of } 
+	\item  \textbf{With random selection between competition.} 
+	\item  \textbf{One horizontal genetic crossing Operator.}
+	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
+\end{enumerate}
+
+The user interface of this version is the same as the previous version. The difference between versions lies in how the inference is made internally.
+
+For ED03 there is an initial configuration of the interactive evolution algorithm as follows:
+
+\begin{enumerate}
+	\item  \textbf{We have an initial population of 80 individuals.}
+	
+	\item  \textbf{An evolution parameter is 8 evaluations.}
+	
+	\item  \textbf{A mutation parameter of } 
+	\item  \textbf{With random selection between competition.} 
+	\item  \textbf{One horizontal genetic crossing Operator.}
+	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
+\end{enumerate}
+
+This version has a new intput on the fuzzy fuctionality named ranking and this
+value is given by the cardinality of the graph by each user within the graph-
+based user model. Also the fuzzy inferance system has a 27 if-then rules which
+can visualise in apandix b. The second difference is the usability elements
+where the gamification paradigm is apply. Figure \ref{fig:intarface03} shows this
+usability elements that are the score level, the eperience level and also the
+leader board element.
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/interface.png}}
+\caption{ED03 Web interface.}
+\label{fig:intarface03}       
+\end{figure*}
+
+This elements in the navigation bar is for users to visualise their scores
+inside ED03 application. Likewise the level of experience that is acquiring
+through its participations. This version also has an option to see the table of
+leaders within the application as shows in figure \ref{fig:leaderBoard}. This table shows the
+10 best users and the number of entries that have been made so far.
+
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/leaderBoard.png}}
+\caption{Leader board at ED03.}
+\label{fig:leaderBoard}       
+\end{figure*}
+
+
+\subsection{Promote.}
+
+Each of the experiments was promoted through social networks particularly on
+Facebook and Twitter platforms through a short URL as well as an ad to motivate
+users to press the link (short URL). This is in order to find participants on a
+voluntary basis. This short URL can be seen in table \ref{tab:PromoteUrl}.
 
 \begin{table}
-	\small
-	\caption{comparison of the different versions.}
-	\label{tab:shorurl} 
-	\centering
-	\small
-	\begin{tabular}{p{6cm} p{4cm}  }
-		\hline\noalign{\smallskip}
-		Long URL & Short URL  \\
-		\noalign{\smallskip}\hline\noalign{\smallskip}
-		\small{evodrawings01.herokuapp.com} & \small{goo.gl/J8TCe1}\\ \hline
-		\small{evodrawings02.herokuapp.com} & \small{goo.gl/jqjNy5}\\ \hline
-		\small{evodrawings03.herokuapp.com} & \small{goo.gl/J8TCe1}\\ \hline
-		\noalign{\smallskip}\hline
-	\end{tabular}
+\small
+\caption{Short URL for promoting the applicatins.}
+\label{tab:PromoteUrl} 
+\centering
+\small
+\begin{tabular}{p{5cm} p{4cm}  }
+\hline\noalign{\smallskip}
+ Long URL & Short URL \\
+\noalign{\smallskip}\hline\noalign{\smallskip}
+\small{evodrawings01.herokuapp.com } & \small{goo.gl/J8TCe1}  \\ \hline 
+\small{evodrawings02.herokuapp.com } & \small{goo.gl/jqjNy5}  \\ \hline
+\small{evodrawings03.herokuapp.com} & \small{goo.gl/J8TCe1}  \\ \hline
+\noalign{\smallskip}\hline
+\end{tabular}
 \end{table}
 
-Is Worth to mention each experiment were implemented through a cloud service by using the  (Heroku) cloud service, in the following chart, each experiment will show its characteristics.
+
+\subsection{Heroku dynos and ad-ons server configurations.}
+It is necessary to be mentioned that each of the experiments was implemented under the cloud service (Heroku), in the following figure \ref{tab:heroku} can visualize its characteristics by each of the experiments.
 
 \begin{table}
 	\small
-	\caption{characteristics of  resources and services in cloud Heroku..}
-	\label{tab:shorurl2} 
+	\caption{characteristics of  resources and services in cloud Heroku.	}
+	\label{tab:heroku} 
 	\centering
 	\small
 	\begin{tabular}{p{4cm} p{3cm} p{3cm} p{3cm}  }
 		\hline\noalign{\smallskip}
-		Service and resources & EvoDrawings01 & EvoDrawings02 & EvoDrawigs03 \\
+		Service and resources & ED01 & ED02 & ED03 \\
 		\noalign{\smallskip}\hline\noalign{\smallskip}
 		\small{Heroku Free} & \small{\checkmark} & \small{\checkmark} & \small{\checkmark}\\ \hline
 		\small{Deploy from Git} & \small{\checkmark} & \small{\checkmark} & \small{\checkmark}\\ \hline
@@ -266,6 +387,14 @@ Is Worth to mention each experiment were implemented through a cloud service by 
 	\end{tabular}
 \end{table}
 
-The experiments initial purpose is to design specific applications and interfaces to achieve user participation in a voluntary way in every single application. Each experiment allowed the commitment to obtain data to be used later  to evaluate and analyze which version had the most user participation; To prove the initial hypothesis we implemented 3 study cases with slight differences in its configuration characteristics to each application allowing us enabling us to decide through obtained results which of the study cases prove this investigation hypothesis. Next chapter will show the Obtained results in the survey.
 
+The initial purpose of the experiments is to design specific applications and
+interfaces to enable users to participate voluntarily within the different
+applications. Each experiment allowed the task of collecting data that will
+later be analyzed to determine which of these versions had the largest number of
+user participations. To verify the initial hypothesis, 3 case studies were
+implemented with slight differences in the configuration characteristics of each
+application, which allowed to decide through the results obtained which of the
+case studies verify the hypothesis of this investigation. The results obtained
+are presented in the next chapter.
 
