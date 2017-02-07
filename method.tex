@@ -1,4 +1,4 @@
-\chapter{Proposed user-centered framework}
+	\chapter{Proposed user-centered framework}
 
 The fundamental goal of this research is to develop a user-centered framework
 for interactive evolutionary computation (IEC) in order to increase users’
@@ -19,10 +19,10 @@ entities of this framework will be explained in detail in following sections.
 	\setlength\fboxrule{0.7pt}
 	\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/framework.png}}
 	\caption{User-Centerd Framework.}
-	\label{fig:uc_framework}       
+	\label{fig:uc_framework}
 \end{figure*}
 
-\section{Users} 
+\section{Users}
 
 Users are a central part of this proposed framework as it aims to study their
 behavior when interacting with individuals within interactive evolutionary
@@ -53,7 +53,7 @@ these actions go beyond only evaluating individuals.
 	\setlength\fboxrule{0.7pt}
 	\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/users.png}}
 	\caption{Users actions on interactive evolutionary systems.}
-	\label{fig:users}       
+	\label{fig:users}
 \end{figure*}
 
 In order to start the task of evaluating individuals is necessary that users
@@ -73,8 +73,8 @@ can explore information that other active users in the system are generating.
 Finally activity participation is proposed. This can be divided into four
 different actions as fallows:
 
-\begin{itemize} 
-\item The Inviting action occurs when a user invites another to the system through social networks or from person to person.  
+\begin{itemize}
+\item The Inviting action occurs when a user invites another to the system through social networks or from person to person.
 \item The sharing action occurs when users share their individual creations with others active user in the system.
 \item The posting action occurs when published what they are doing within the system.
 \item The storing action occurs when users keep individuals in a collection, the collections concept will be discussed later in this chapter.
@@ -82,7 +82,7 @@ different actions as fallows:
 
 All the mention above is shown in figure \ref{fig:users}
 
-\section{Individual}  
+\section{Individual}
 
 Individuals are entities that form the population for the evolutionary
 algorithm. In particular for  this work individuals are animated digital
@@ -102,7 +102,7 @@ illustrated in figure \ref{fig:individual}
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/individual.png}}
 \caption{Individual representation.}
-\label{fig:graph}       
+\label{fig:graph}
 \end{figure*}
 
 
@@ -125,7 +125,7 @@ edges, these properties will be explained as fallows.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/user_individual.png}}
 \caption{User-Individual.}
-\label{fig:User-Individual}       
+\label{fig:User-Individual}
 \end{figure*}
 
 In this proposed graph-based user-individual model the vertices are represented
@@ -142,8 +142,8 @@ the user wants to store permanently individuals within the IEC system.
 
 Now for the edges in this proposal are explained as follows:
 
-\begin{itemize} 
-\item The  LIKES edge represents a preference relationship that a user has with respect to an individual.  
+\begin{itemize}
+\item The  LIKES edge represents a preference relationship that a user has with respect to an individual.
 \item Now the  PARENT edge represents an ancestor of the individual, in other words where the individual comes from.
 \item Likewise the  HAS edge represents that users have a collection where can contain individuals.
 \item Finally the KNOWS edge represents a relationship of friendship between users.
@@ -158,7 +158,7 @@ In figure \ref{fig:Nodes_Edges} illustrated the above mentioned, about nodes and
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/user_individual_collections.png}}
 \caption{Nodes And Edges Representation.}
-\label{fig:Nodes_Edges}       
+\label{fig:Nodes_Edges}
 \end{figure*}
 
 
@@ -175,8 +175,8 @@ graph according to the vertex type.
 
 The properties for the vertex “u” are the following:
 
-\begin{itemize} 
-\item id.  
+\begin{itemize}
+\item id.
 \item created.
 \item name.
 \item element\_type.
@@ -197,13 +197,13 @@ In figure \ref{fig:User_node} the vertex $u$ properties are shown.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/user_node.png}}
 \caption{User Properties.}
-\label{fig:User_node}       
+\label{fig:User_node}
 \end{figure*}
 
 The properties for the vertex $i$ are the following:
-\begin{itemize} 
-\item id. 
-\item created. 
+\begin{itemize}
+\item id.
+\item created.
 \item element\_type.
 \item chromosome.
 \item views.
@@ -227,15 +227,15 @@ In figure \ref{fig:Individual_node} the vertex $i$ properties are shown.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/individual_node.png}}
 \caption{Individual Properties.}
-\label{fig:Individual_node}       
+\label{fig:Individual_node}
 \end{figure*}
 
 The properties for the vertex “c” are the following:
 
-\begin{itemize} 
-\item id. 
+\begin{itemize}
+\item id.
 \item element\_type.
-\item created. 
+\item created.
 \item name.
 \end{itemize}
 
@@ -254,7 +254,7 @@ In figure \ref{fig:Collection_node} the vertex $c$ properties are shown.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/collection_node.png}}
 \caption{Collection Properties.}
-\label{fig:Collection_node}       
+\label{fig:Collection_node}
 \end{figure*}
 
 In the same way that the vertices have properties also the edges, these
@@ -262,9 +262,9 @@ properties are defined as follows.
 
 The “LIKES” edge has the following properties:
 
-\begin{itemize} 
-\item id. 
-\item created. 
+\begin{itemize}
+\item id.
+\item created.
 \item rate.
 \end{itemize}
 
@@ -283,13 +283,13 @@ In figure \ref{fig:Likes_edge} the edge “LIKES” properties and the relations
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/edge_properties_likes.png}}
 \caption{LIKES edge Properties.}
-\label{fig:Likes_edge}       
+\label{fig:Likes_edge}
 \end{figure*}
 
 The “KNOWS” edge has the following properties.
-\begin{itemize} 
-\item id. 
-\item created. 
+\begin{itemize}
+\item id.
+\item created.
 \end{itemize}
 
 The “id” property defines that the edge “KNOWS” has a unique identifier in the
@@ -306,13 +306,13 @@ are shown.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/edge_properties_knows.png}}
 \caption{KNOWS edge Properties.}
-\label{fig:Knows_edge}       
+\label{fig:Knows_edge}
 \end{figure*}
 
 The “PARENT” edge has the following properties, and represent the parents of a new individual.
-\begin{itemize} 
-\item id. 
-\item created. 
+\begin{itemize}
+\item id.
+\item created.
 \end{itemize}
 
 The “id” property defines that the edge “PARENT” has a unique identifier in the set of edges, which means that there will not be duplicate edges.
@@ -327,13 +327,13 @@ In figure \ref{fig:Parent_edge} the edge “PARENT” properties and the relatio
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/edge_properties_parent.png}}
 \caption{PARENT edge Properties.}
-\label{fig:Parent_edge}       
+\label{fig:Parent_edge}
 \end{figure*}
 
 The edge “HAS” has the following properties, and represent the parents of a new individual.
-\begin{itemize} 
-\item id. 
-\item created. 
+\begin{itemize}
+\item id.
+\item created.
 \end{itemize}
 
 The “id” property defines that the edge “HAS” has a unique identifier in the set of edges, which means that there will not be duplicate edges.
@@ -348,16 +348,16 @@ In figure \ref{fig:Has_edge} the edge “HAS” properties and the relationship 
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=5cm,height=5cm,keepaspectratio]{img/edge_properties_has.png}}
 \caption{HAS edge Properties.}
-\label{fig:Has_edge}       
+\label{fig:Has_edge}
 \end{figure*}
 
-\begin{equation*}\label{eq:graphRelDef} 
-\displaystyle 
-\begin{split} 
-V &= \{[u_1,u_2,u_3,...,u_n],[i_1,i_2,i_3,...,i_n],[c_1,c_2,c_3,...,c_n]\},\\ 
-E&= \{[l_1,l_2,l_3,..,l_n],[p_1,p_2,p_3,...,p_n],[h_1,h_2,h_3,...,h_n],[k_1,k_2,k_3,...,k_n]\}\\ 
-\end{split} 
-\end{equation*} 
+\begin{equation*}\label{eq:graphRelDef}
+\displaystyle
+\begin{split}
+V &= \{[u_1,u_2,u_3,...,u_n],[i_1,i_2,i_3,...,i_n],[c_1,c_2,c_3,...,c_n]\},\\
+E&= \{[l_1,l_2,l_3,..,l_n],[p_1,p_2,p_3,...,p_n],[h_1,h_2,h_3,...,h_n],[k_1,k_2,k_3,...,k_n]\}\\
+\end{split}
+\end{equation*}
 
 Already defined the vertices and edges a graph-based user-individual model is
 proposed where vertices users are related to the vertices individuals, likewise
@@ -374,25 +374,5 @@ a vertex collections collections is related to $n$ individuals vertex. In Figure
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=8cm,height=8cm,keepaspectratio]{img/model_representation.png}}
 \caption{Graph-based user-individual model.}
-\label{fig:user_moder}       
+\label{fig:user_moder}
 \end{figure*}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
