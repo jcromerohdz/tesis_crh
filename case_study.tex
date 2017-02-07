@@ -3,7 +3,7 @@
 
 
 
-\section{Motivation and objectives} 
+\section{Motivation and objectives}
 
 Our motivation begins from knowing if a user modeling in combination with
 techniques of usability and fuzzy logic increase the participation of users in a
@@ -42,7 +42,7 @@ strings and dictionaries.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=8cm,height=8cm,keepaspectratio]{img/ESFramework.png}}
 \caption{EvoSpace-i framework.}
-\label{fig:ESFramework}       
+\label{fig:ESFramework}
 \end{figure*}
 
 
@@ -64,7 +64,7 @@ produced.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=8cm,height=8cm,keepaspectratio]{img/individual_dic.png}}
 \caption{Chromosome representation.}
-\label{fig:individual_dic}       
+\label{fig:individual_dic}
 \end{figure*}
 
 \subsection{Processing Script}  It is necessary to explain how the animation
@@ -114,25 +114,25 @@ membership functions called bad, normal, good. This fuzzy system consists of 9
 if-then rules:
 
 \begin{enumerate}
-	\item \textit{If \textbf{preference} is low and 
+	\item \textit{If \textbf{preference} is low and
 		\textbf{experience} is low then \textbf{fuzzy\_rate} is bad.}
-	\item \textit{If \textbf{preference} is mid and 
+	\item \textit{If \textbf{preference} is mid and
 		\textbf{experience} is low  then \textbf{fuzzy\_rate} is bad.}
-	\item \textit{If \textbf{preference} is high and 
+	\item \textit{If \textbf{preference} is high and
 		\textbf{experience} is low  then \textbf{fuzzy\_rate} is normal.}
-	\item \textit{If \textbf{preference} is low and 
+	\item \textit{If \textbf{preference} is low and
 		\textbf{experience} is mid then \textbf{fuzzy\_rate} is bad.}
-	\item \textit{If \textbf{preference} is mid and 
+	\item \textit{If \textbf{preference} is mid and
 		\textbf{experience} is mid  then \textbf{fuzzy\_rate} is normal.}
-	\item \textit{If \textbf{preference} is high and 
+	\item \textit{If \textbf{preference} is high and
 		\textbf{experience} is mid  then \textbf{fuzzy\_rate} is good.}
-	\item \textit{If \textbf{preference} is low and 
+	\item \textit{If \textbf{preference} is low and
 		\textbf{experience} is high then \textbf{fuzzy\_rate} is normal.}
-	\item \textit{If \textbf{preference} is mid and 
+	\item \textit{If \textbf{preference} is mid and
 		\textbf{experience} is high  then \textbf{fuzzy\_rate} is good.}
-	\item \textit{If \textbf{preference} is high and 
+	\item \textit{If \textbf{preference} is high and
 		\textbf{experience} is high  then \textbf{fuzzy\_rate} is good.}
-		
+
 \end{enumerate}
 
 The fitness function is given by the following equation:
@@ -150,8 +150,8 @@ represented by the equation \ref{eq:fuzzyFunc}.
 \end{equation}
 
 
-$fr$ represents the fuzzy rate.  
-$x$ it remains the range that users give according to their preferences to individuals. 
+$fr$ represents the fuzzy rate.
+$x$ it remains the range that users give according to their preferences to individuals.
 $e$  is the experience that is defined by the
 activity that the user is doing within the application. The fuzzy inference system of it is a Mamdani type composed of two inputs that are  $x,e$ and a fuzzy rate output as shown in figure \ref{fig:fis_01}.
 
@@ -163,7 +163,7 @@ activity that the user is doing within the application. The fuzzy inference syst
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fuzzy_system_2_1.png}}
 \caption{Chromosome representation.}
-\label{fig:fis_01}       
+\label{fig:fis_01}
 \end{figure*}
 
 For ED03 the fitness function is given by the same equation as ED02 the difference relies in the inputs of the fuzzy function, for this case a new input is added with the name of ranking. This new input is the given by the cardinality of the graph of the user model for each user. here is the fuzzy function for ED03.
@@ -172,8 +172,8 @@ For ED03 the fitness function is given by the same equation as ED02 the differen
 \displaystyle y=fr(x,e,r)
 \end{equation}
 
-$fr$ represents the fuzzy rate.  
-$x$ it remains the range that users give according to their preferences to individuals. 
+$fr$ represents the fuzzy rate.
+$x$ it remains the range that users give according to their preferences to individuals.
 $e$  is the experience that is defined by the
 activity that the user is doing within the application.
 $r$ is the ranking the user within the graph model.
@@ -186,7 +186,7 @@ $r$ is the ranking the user within the graph model.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fuzzySys.png}}
 \caption{Fuzzy inference system for ED03.}
-\label{fig:fis_02}       
+\label{fig:fis_02}
 \end{figure*}
 
 
@@ -204,11 +204,11 @@ is the following:
 
 \begin{enumerate}
 	\item  \textbf{We have an initial population of 80 individuals.}
-	
+
 	\item  \textbf{An evolution parameter is 8 evaluations.}
-	
-	\item  \textbf{A mutation parameter of } 
-	\item  \textbf{With random selection between competition.} 
+
+	\item  \textbf{A mutation parameter of }
+	\item  \textbf{With random selection between competition.}
 	\item  \textbf{One horizontal genetic crossing Operator.}
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc01}.}
 \end{enumerate}
@@ -244,7 +244,7 @@ to be evaluated and thus to be able to observe the detail of the individual show
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/UI_ed01.png}}
 \caption{User interface ED01.}
-\label{fig:UI_01}       
+\label{fig:UI_01}
 \end{figure*}
 
 This detail presents important information about the individual's DNA history,
@@ -261,18 +261,18 @@ population.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/dna.png}}
 \caption{DNA history.}
-\label{fig:dna}       
+\label{fig:dna}
 \end{figure*}
 
 For ED02 there is an initial configuration of the interactive evolution algorithm as follows:
 
 \begin{enumerate}
 	\item  \textbf{We have an initial population of 80 individuals.}
-	
+
 	\item  \textbf{An evolution parameter is 8 evaluations.}
-	
-	\item  \textbf{A mutation parameter of } 
-	\item  \textbf{With random selection between competition.} 
+
+	\item  \textbf{A mutation parameter of }
+	\item  \textbf{With random selection between competition.}
 	\item  \textbf{One horizontal genetic crossing Operator.}
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
 \end{enumerate}
@@ -283,11 +283,11 @@ For ED03 there is an initial configuration of the interactive evolution algorith
 
 \begin{enumerate}
 	\item  \textbf{We have an initial population of 80 individuals.}
-	
+
 	\item  \textbf{An evolution parameter is 8 evaluations.}
-	
-	\item  \textbf{A mutation parameter of } 
-	\item  \textbf{With random selection between competition.} 
+
+	\item  \textbf{A mutation parameter of }
+	\item  \textbf{With random selection between competition.}
 	\item  \textbf{One horizontal genetic crossing Operator.}
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
 \end{enumerate}
@@ -307,7 +307,7 @@ leader board element.
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/interface.png}}
 \caption{ED03 Web interface.}
-\label{fig:intarface03}       
+\label{fig:intarface03}
 \end{figure*}
 
 This elements in the navigation bar is for users to visualise their scores
@@ -324,7 +324,7 @@ leaders within the application as shows in figure \ref{fig:leaderBoard}. This ta
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/leaderBoard.png}}
 \caption{Leader board at ED03.}
-\label{fig:leaderBoard}       
+\label{fig:leaderBoard}
 \end{figure*}
 
 
@@ -338,14 +338,14 @@ voluntary basis. This short URL can be seen in table \ref{tab:PromoteUrl}.
 \begin{table}
 \small
 \caption{Short URL for promoting the applicatins.}
-\label{tab:PromoteUrl} 
+\label{tab:PromoteUrl}
 \centering
 \small
 \begin{tabular}{p{5cm} p{4cm}  }
 \hline\noalign{\smallskip}
  Long URL & Short URL \\
 \noalign{\smallskip}\hline\noalign{\smallskip}
-\small{evodrawings01.herokuapp.com } & \small{goo.gl/J8TCe1}  \\ \hline 
+\small{evodrawings01.herokuapp.com } & \small{goo.gl/J8TCe1}  \\ \hline
 \small{evodrawings02.herokuapp.com } & \small{goo.gl/jqjNy5}  \\ \hline
 \small{evodrawings03.herokuapp.com} & \small{goo.gl/J8TCe1}  \\ \hline
 \noalign{\smallskip}\hline
@@ -359,7 +359,7 @@ It is necessary to be mentioned that each of the experiments was implemented und
 \begin{table}
 	\small
 	\caption{characteristics of  resources and services in cloud Heroku.	}
-	\label{tab:heroku} 
+	\label{tab:heroku}
 	\centering
 	\small
 	\begin{tabular}{p{4cm} p{3cm} p{3cm} p{3cm}  }
@@ -381,8 +381,8 @@ It is necessary to be mentioned that each of the experiments was implemented und
 		\small{Redis To Go Nano} & \small{\checkmark} & \small{x} & \small{\checkmark}\\ \hline
 		\small{GrapheneDB Sandstone} & \small{x} & \small{x} & \small{\checkmark}\\ \hline
 		\small{Redis To Go Mini} & \small{x} & \small{x} & \small{\checkmark}\\ \hline
-		
-		
+
+
 		\noalign{\smallskip}\hline
 	\end{tabular}
 \end{table}
@@ -397,4 +397,3 @@ implemented with slight differences in the configuration characteristics of each
 application, which allowed to decide through the results obtained which of the
 case studies verify the hypothesis of this investigation. The results obtained
 are presented in the next chapter.
-
