@@ -1,76 +1,106 @@
-\chapter{Introduction} \label{introduction} 
+\chapter{Introduction} \label{introduction}
 
 
 \par It is a reality that the World Wide Web in recent years, is growing
 exponentially, which means the presence of millions of users on Web sites, Web
-applications, Web systems, etc. \cite{albert1999internet}. There is a wide variety of Web systems,
-where we have different users interacting with them. These users have different
-goals when using these Web systems. For example to serching  in Google
-\cite{google} for a particular topic, make a reservation for a room in a luxury
-resort, check their bank account or simply checking their Facebook account
-status \cite{cockburn2001web}.This variation of users represents a complex diversity as individuals
-[]. This diversity lies in the fact that users have different skills, interests,
-preferences, knowlage defferent  ways of thinking and learning.For this
-reason users most to interact with the information presented by existing Web
-systems. \par When we intend to customize any element in Web system,  it is
-necessary to some personal information about the user. This information is a
-collection of needs, characteristics, tastes, preferences among others.  This
-information allows designers to build a representation of knowledge about the
-users. This is what is known as user modeling (UM).    
-\par  In order to
-understand specific users a user model must be constructed, this can be simple
-as a profile where the basic knowledge recorded. Or it can be as complex as
-complete representation of it's characteristics, needs, interests and
-preferences. In order to understand specific users. The main goal of user
-modeling is to represent aspects of the real world of the user's in an autonomous
-way.
+applications, Web systems, etc. \cite{albert1999internet}. There is a wide
+variety of Web systems, where we have different users interacting with them.
+These users have different goals when using these Web systems. For example to
+serching  in Google \cite{google} for a particular topic, make a reservation for
+a room in a luxury resort, check their bank account or simply checking their
+Facebook account status \cite{cockburn2001web}.This variation of users
+represents a complex diversity as individuals \cite{}. This diversity lies in the
+fact that users have different skills, interests, preferences, knowlage
+defferent  ways of thinking and learning.For this reason users most to interact
+with the information presented by existing Web systems.
+
+\par When we intend to customize any element in Web system,  it is necessary to
+some personal information about the user. This information is a collection of
+needs, characteristics, tastes, preferences among others.  This information
+allows designers to build a representation of knowledge about the users. This is
+what is known as user modeling (UM) \cite{}.
+
+\par  In order to understand specific users a user model must be constructed,
+this can be simple as a profile where the basic knowledge recorded. Or it can be
+as complex as complete representation of it's characteristics, needs, interests
+and preferences. In order to understand specific users. The main goal of user
+modeling is to represent aspects of the real world of the user's in an
+autonomous way.
 
 \par On the other hand, interactive evolutionary computation (IEC)
 is a branch of evolutionary computation where users become a part of the
 evolutionary process by replacing the fitness function; evaluating individuals
-of a population based on their personal preferences[13]. These evaluations are
+of a population based on their personal preferences \cite{}. These evaluations are
 subjective according to the user point of view based on their perceptions,
-interests and desires.  
-\par Normally such systems require users to evaluate large amounts of individuals 
-actively, causing them to lose interest in participating by the fatigue that 
-is generated[13]. Nowadays some of these systems
-are migrating to  Web technologies looking for volunteer users to collaborate
-in the evaluation for distribute the load and lower the fatigue. Having Web-
-based interactive evolutionary systems opens the possibility of linking to social networks 
-platforms in order to involve a larger number of users to assist in
-the evaluation of individuals produced by these systems.
+interests and desires.
 
-\par This research presents a user-cetered framework that involves several techniques 
-such as graph-based user modeling, fuzzy logic and human-interaction in the context 
-of a Web-based interactive evolutionary computation. The purpose of this research 
-is to increase voluntary participation of the users  using the proposed framework.
+\par Normally such systems require users to evaluate large amounts of
+individuals actively, causing them to lose interest in participating by the
+fatigue that is generated \cite{}. Nowadays some of these systems are migrating to
+Web technologies looking for volunteer users to collaborate in the evaluation
+for distribute the load and lower the fatigue. Having Web-based interactive
+evolutionary systems opens the possibility of linking to social networks
+platforms in order to involve a larger number of users to assist in the
+evaluation of individuals produced by these systems.
+
+\par In this thesis we discuss that a graph model is a viable representation for
+relationships and interactions such as user and phenotype knows as individual in
+evoluationary algorithms, and also for user to user. The model ca used, within
+the evolutionary algorithm, action performed by every user, which is tag, rate,
+share or event delete the individual (phenotype). In this sense, this actions
+can be used to assign fitness to a given solution.
+
+\par Graph based models are currently used in social networks to keep track of
+user interaction with media objects, places, and other users. Users of social
+networks (for instance the Facebook graph) are accostumed to express these
+complex relationship in sentences such as: "Christopher and Samantha are eting
+lunch at Fryda's". Other example is the W3C activiy stream 2.0 specification
+used for representing activities common in social web aplications \ref{}
+
+\par This research presents a user-cetered framework that involves several
+techniques such as graph-based user modeling, fuzzy logic and human-interaction
+in the context of a Web-based interactive evolutionary computation. The purpose
+of this research is to increase voluntary participation of the users  using the
+proposed framework.
 
 \section{Outline}
 
+\begin{itemize}
+\item \textbf{Chapter 2}, describes an in-depth study of current and related
+works, presenting a general overview of Interactive evolutionary computation and
+their evolution in the pass and recent years, also user model approaches and
+finally gamification paradigm. This study includes Interactive evolutionary
+computations methods and techniques to understand how they work, as well as
+their problems of these systems. On the other hand this study also includes user
+modeling methods in order to understand how to create and apply them for certain
+necessities. Finally we discussed a gammification usability paradigm to
+understand how it work and subsequently apply this for the necessities of this
+work.
 
-
-\begin{itemize}  
-\item \textbf{Chapter 2}, describes an in-depth study
- of current and related works, presenting a general
-overview of Interactive evolutionary computation and their evolution in the pass and recent years, also user model approaches and finally gamification paradigm.
-This study includes Interactive evolutionary computations methods
-and techniques to understand how they work, as well as their problems
-of these systems. On the other hand this study also includes user modeling methods in order to understand how to create and apply them for certain necessities. Finally we discussed a gammification usability paradigm to understand how it work and subsequently apply this
-for the necessities of this work.  
 \item \textbf{Chapter 3}, describes the fundamental
 concepts that form the basis of the proposed user-cetered framework.
-\item \textbf{Chapter 4}, presents a user-centered framework for interactivity Web-based
-applications, this proposed framework involves different paradigms in order to increase
-user participation. This chapter also includes the
-overall explanation of how the functionality the proposed framework works.
-\item \textbf {Chapter 5}, the case study is presented along with the explanation
-of the experimentation for this work. The experiments were realized using several versions of
-the same application in order to see which of them have most user participation.
-\item \textbf {Chapter 6}, The results of the case study are presented. This chapter includes all the data obtained from the experiments, these data are presented to see which of the versions meets the best performance regarding the increase of participation of users.
-\item \textbf {Chapter 7}, finally the conclusions and future work of this research are exposed.
-\end{itemize}  
+
+\item \textbf{Chapter 4}, presents a user-centered framework for interactivity
+Web-based applications, this proposed framework involves different paradigms in
+order to increase user participation. This chapter also includes the overall
+explanation of how the functionality the proposed framework works.
+
+\item \textbf{Chapter 5}, the case study is presented along with the
+explanation of the experimentation for this work. The experiments were realized
+using several versions of the same application in order to see which of them
+have most user participation.
+
+\item \textbf{Chapter 6}, The results of the case study are presented. This
+chapter includes all the data obtained from the experiments, these data are
+presented to see which of the versions meets the best performance regarding the
+increase of participation of users.
+
+\item \textbf{Chapter 7}, finally the conclusions and future work of this
+research are exposed.
+\end{itemize}
+
 At the end, this thesis includes appendices that describe
 detailed technical aspects about installation EvoDrawings application on heruku
-  %\textit{(appendix \ref{appendixa})}, 
-The rules of the fuzzy inference system are presented in  %\textit{(appendix \ref{appendixb})}, 
+  %\textit{(appendix \ref{appendixa})},
+The rules of the fuzzy inference system are presented in  %\textit{(appendix \ref{appendixb})},
 %and experiment study materials used to obtain the test results are in  %\textit{(appendix \ref{apendixc})}.
