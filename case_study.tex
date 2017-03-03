@@ -9,11 +9,12 @@ Our motivation begins from knowing if a user modeling in combination with
 techniques of usability and fuzzy logic increase the participation of users in a
 given interactive evolutionary system. It is well know that one of the main
 problems in these systems is fatigue, who is the cause of the decrease of user's
-participation [].
+participation.
 
 Our approach goes with the sense of increasing the participation of the users
 within these systems, providing to them very simple tasks to execute in order to
 capture their attention as well as to know their behavior.
+
 
 Since we have described that the main approach is to increase the participation
 of users, in order to measure these results and to be able to demonstrate a real
@@ -25,7 +26,7 @@ ED01, ED02, ED03. The objective is to extract data from each of the different
 versions and then quantify and compare which of these had the best result in the
 participation of the users.
 
-\section{EvoDrawings} EvoDrawings is based on the EvoSpace-i [] framework and
+\section{EvoDrawings} EvoDrawings is based on the EvoSpace-i framework and
 consequently uses the same architecture which is presented in figure
 \ref{fig:ESFramework}. In this architecture we have the individual block which
 contains different information, including the chromosome that represents the
@@ -49,7 +50,7 @@ strings and dictionaries.
 The individual has the following fields, shown in figure \ref{fig:individual_dic}.
 The field is represented by a single string for each object. The chromosome
 field represented by a string, which for EvoDrawing represents an array of 15
-numerical characters which define the behavior of the digital drawing ... The
+numerical characters which define the behavior of the digital drawing. The
 fitness field is defined by a dictionary, this field contains the information of
 users evaluations as well as the creation date as a timestamp. The field called
 views is determined by a string and represent the number of times they have seen
@@ -67,15 +68,17 @@ produced.
 \label{fig:individual_dic}
 \end{figure*}
 
-\subsection{Processing Script}  It is necessary to explain how the animation
+\subsection{Processing Script}
+It is necessary to explain how the animation
 that the users visualize works. EvoSpace-i uses processing script in order to do
 the rendering of the individuals which contain the behavior of the figures. This
 application can run in browsers that are compatible with HTML 5, this is due to
-the use of a javascript library called processingscriptjs that is in charge of
+the use of a JavaScript library called processingscriptjs that is in charge of
 communicating with the base script and thus perform the render on HTML 5 canvas
 in The EvoDrawings application.
 
-\subsection{Fitness} The fitness assignment for each individual is given by the
+\subsection{Fitness}
+The fitness assignment for each individual is given by the
 evaluations of the users. EvoDrawings has positive reviews when users give their
 rating as a star rating. We can see this rate of stars on the figure x of the
 interface that EvoDrawings uses in all its variations. This rate ranges from 1
@@ -141,7 +144,7 @@ The fitness function is given by the following equation:
 \displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
 \end{equation}
 
-$i$ represents the individual's. x is the range that users gave to individuals..
+$i$ represents the individual's. x is the range that users give to individuals..
 $f(y_i)$ represents a fuzzy function composed of a fuzzy inference system and is
 represented by the equation \ref{eq:fuzzyFunc}.
 
@@ -150,11 +153,11 @@ represented by the equation \ref{eq:fuzzyFunc}.
 \end{equation}
 
 
-$fr$ represents the fuzzy rate.
-$x$ it remains the range that users give according to their preferences to individuals.
-$e$  is the experience that is defined by the
-activity that the user is doing within the application. The fuzzy inference system of it is a Mamdani type composed of two inputs that are  $x,e$ and a fuzzy rate output as shown in figure \ref{fig:fis_01}.
-
+$fr$ represents the fuzzy rate. $x$ it remains the range that users give
+according to their preferences to individuals. $e$  is the experience that is
+defined by the activity that the user is doing within the application. The fuzzy
+inference system of it is a Mamdani type composed of two inputs that are  $x,e$
+and a fuzzy rate output as shown in figure \ref{fig:fis_01}.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -166,7 +169,11 @@ activity that the user is doing within the application. The fuzzy inference syst
 \label{fig:fis_01}
 \end{figure*}
 
-For ED03 the fitness function is given by the same equation as ED02 the difference relies in the inputs of the fuzzy function, for this case a new input is added with the name of ranking. This new input is the given by the cardinality of the graph of the user model for each user. here is the fuzzy function for ED03.
+For ED03 the fitness function is given by the same equation as ED02 the
+difference relies in the inputs of the fuzzy function, for this case a new input
+is added with the name of ranking. This new input is the given by the
+cardinality of the graph of the user model for each user. here is the fuzzy
+function for ED03.
 
 \begin{equation}\label{eq:fuzzyFunc2}
 \displaystyle y=fr(x,e,r)
@@ -177,7 +184,8 @@ $x$ it remains the range that users give according to their preferences to indiv
 $e$  is the experience that is defined by the
 activity that the user is doing within the application.
 $r$ is the ranking the user within the graph model.
- The fuzzy inference system it is a Mamdani type composed of three inputs that are  $x,e, r$ and a fuzzy rate output as shown in figure \ref{fig:fis_02}.
+ The fuzzy inference system it is a Mamdani type composed of three inputs that
+are  $x,e, r$ and a fuzzy rate output as shown in figure \ref{fig:fis_02}.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -235,7 +243,8 @@ the star range we have a button that provides the functionality of being able to
 add this individual to a collection that we have already created previously. At
 the top of the star rank is a league with the legend that says 'Click here to
 see my DNA History' this takes us to a detail about the individual that is about
-to be evaluated and thus to be able to observe the detail of the individual shows in image \ref{fig:dna}.
+to be evaluated and thus to be able to observe the detail of the individual shows
+in image \ref{fig:dna}.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -250,8 +259,9 @@ to be evaluated and thus to be able to observe the detail of the individual show
 This detail presents important information about the individual's DNA history,
 such as the number of evaluations he has received in the form of likes, the
 number of views as well as the ancestry, his genetic crossing operator, the
-numerical representation of his Chromosome and its identifier within the
+numerical representation of his chromosome and its identifier within the
 population.
+
 
 
 \begin{figure*}
@@ -264,7 +274,8 @@ population.
 \label{fig:dna}
 \end{figure*}
 
-For ED02 there is an initial configuration of the interactive evolution algorithm as follows:
+For ED02 there is an initial configuration of the interactive evolution
+algorithm as follows:
 
 \begin{enumerate}
 	\item  \textbf{We have an initial population of 80 individuals.}
@@ -277,10 +288,11 @@ For ED02 there is an initial configuration of the interactive evolution algorith
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
 \end{enumerate}
 
-The user interface of this version is the same as the previous version. The difference between versions lies in how the inference is made internally.
+The user interface of this version is the same as the previous version. The
+difference between versions lies in how the inference is made internally.
 
-For ED03 there is an initial configuration of the interactive evolution algorithm as follows:
-
+For ED03 there is an initial configuration of the interactive evolution
+algorithm as follows:
 \begin{enumerate}
 	\item  \textbf{We have an initial population of 80 individuals.}
 
@@ -292,12 +304,12 @@ For ED03 there is an initial configuration of the interactive evolution algorith
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
 \end{enumerate}
 
-This version has a new intput on the fuzzy fuctionality named ranking and this
+This version has a new input on the fuzzy functionality named ranking and this
 value is given by the cardinality of the graph by each user within the graph-
-based user model. Also the fuzzy inferance system has a 27 if-then rules which
-can visualise in apandix b. The second difference is the usability elements
+based user model. Also the fuzzy inference system has a 27 if-then rules which
+can visualize in appendix b. The second difference is the usability elements
 where the gamification paradigm is apply. Figure \ref{fig:intarface03} shows this
-usability elements that are the score level, the eperience level and also the
+usability elements that are the score level, the experience level and also the
 leader board element.
 
 \begin{figure*}
@@ -310,11 +322,12 @@ leader board element.
 \label{fig:intarface03}
 \end{figure*}
 
-This elements in the navigation bar is for users to visualise their scores
+This elements in the navigation bar is for users to visualize their scores
 inside ED03 application. Likewise the level of experience that is acquiring
 through its participations. This version also has an option to see the table of
-leaders within the application as shows in figure \ref{fig:leaderBoard}. This table shows the
-10 best users and the number of entries that have been made so far.
+leaders within the application as shows in figure \ref{fig:leaderBoard}. This
+table shows the 10 best users and the number of entries that have been made so
+far.
 
 
 \begin{figure*}
@@ -354,8 +367,9 @@ voluntary basis. This short URL can be seen in table \ref{tab:PromoteUrl}.
 
 
 \subsection{Heroku dynos and ad-ons server configurations.}
-It is necessary to be mentioned that each of the experiments was implemented under the cloud service (Heroku), in the following figure \ref{tab:heroku} can visualize its characteristics by each of the experiments.
-
+It is necessary to be mentioned that each of the experiments was implemented
+under the cloud service (Heroku), in the following figure \ref{tab:heroku} can
+visualize its characteristics by each of the experiments.
 \begin{table}
 	\small
 	\caption{characteristics of  resources and services in cloud Heroku.	}
