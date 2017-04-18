@@ -1,67 +1,103 @@
 \chapter{Introduction} \label{introduction}
 
 
-\par It is a reality that the World Wide Web in recent years, is growing
-exponentially, which means the presence of millions of users on Web sites, Web
-applications, Web systems, etc. \cite{albert1999internet}. There is a wide
-variety of Web systems, where we have different users interacting with them.
-These users have different goals when using these Web systems. For example to
-serching  in Google \cite{google} for a particular topic, make a reservation for
-a room in a luxury resort, check their bank account or simply checking their
-Facebook account status \cite{cockburn2001web}.This variation of users
-represents a complex diversity as individuals \cite{zhao2006internet}. This
-diversity lies in the fact that users have different skills, interests,
-preferences, knowlage defferent  ways of thinking and learning. For this reason
-users most to interact with the information presented by existing Web systems.
-\par When we intend to customize any element in Web system,  it is necessary to
-some personal information about the user. This information is a collection of
-needs, characteristics, tastes, preferences among others.  This information
-allows designers to build a representation of knowledge about the users. This is
-what is known as user modeling (UM) \cite{razmerita2009user} \cite{fischer2001user}.
+\par Interactive evolutionary computation (IEC) are systems where users replace
+the fitness function in evolutionary methods with interactive systems. These
+systems usually apply to problems where the fitness function is unknown or does
+not exist, and the result of the optimization must be adjusted to particular
+needs, for example, the tastes or desires of the users \cite{}. In that sense,
+the case study includes evolving objects with individual characteristics, such
+as visual appeal as well as others where human behavior is considered, such as
+optimization of equipment \cite{} or creativity \cite{}. In cases where human
+interaction is   responsible for other aspects of the evolutionary process, some
+authors classify it as evolutionary computation based on human \cite{} or human-based
+computation \cite{}. Interactive evolutionary computing systems are an exciting field
+of research, as they have demonstrated their ability to produce art and designs
+effectively \cite{}.
 
-\par  In order to understand specific users a user model must be constructed,
-this can be simple as a profile where the basic knowledge recorded. Or it can be
-as complex as complete representation of it's characteristics, needs, interests
-and preferences. In order to understand specific users. The main goal of user
-modeling is to represent aspects of the real world of the user's in an
-autonomous way.
+\par However, the need for human intervention leads to several challenges for
+designers of such systems, for instance, the evaluations are slow, costly and
+scarce, there is also the fatigue of people caused by interactions \cite{}. The
+boredom that arises when users evaluate large numbers of phenotypes
+(individuals) as these are similar or not attractive. The performance of these
+systems depends on the amount of user participation, to reach more people, some
+of these systems are migrating to web-based applications depending on the help
+of their visitors about search with either anonymous users or with registered
+users. Some of these systems implement collaborative techniques, where some
+users participate in the evaluation of individuals, this method is called
+collaborative-IEC \cite{}.
 
-\par On the other hand, interactive evolutionary computation (IEC)
-is a branch of evolutionary computation where users become a part of the
-evolutionary process by replacing the fitness function; evaluating individuals
-of a population based on their personal preferences
-\cite{takagi2001interactive}. These evaluations are subjective according to the
-user point of view based on their perceptions, interests and desires.
+\par We believe that interactive evolutionary computing should follow a user-centered
+design \cite{}, giving particular attention to volunteer users, not only because of
+the explicit evaluations they perform and are essential but because the
+interaction context affects the system as a whole. Because users not only
+interact with the graphical interface, and with each phenotype presented in the
+system, but also users interact with other users, as well as the activities they
+perform for example storing a phenotype, see some phenotype of a given
+collection of another known user, and so on.
 
-\par Normally such systems require users to evaluate large amounts of
-individuals actively, causing them to lose interest in participating by the
-fatigue that is generated \cite{takagi2001interactive}. Nowadays some of these
-systems are migrating to Web technologies looking for volunteer users to
-collaborate in the evaluation for distribute the load and lower the fatigue.
-Having Web-based interactive evolutionary systems opens the possibility of
-linking to social networks platforms in order to involve a larger number of
-users to assist in the evaluation of individuals produced by these systems.
+\par Within these systems not all users are equal, because the human is a complex
+entit \cite{}. In this sense we could say that the evaluations do not have the
+same weight within these systems, since this entails that the users with greater
+participation influence others, this would produce a type of trend in the
+evolutions of the phenotype and is necessary to know who has the highest level
+of participation in these systems. This problem can be addressed in different
+ways, but we propose to use the fuzzy logic paradigm \cite{}\cite{}\cite{}in
+order to assign a weight to the users according to certain criteria that are
+within the interaction activities carried out by users such as activities,
+experiences, evaluations of phenotypes and rankings.
 
-\par In this research we discuss that a graph model is a viable representation for
-relationships and interactions such as user and phenotype knows as individual in
-evoluationary algorithms, and also for user to user. The model can used, within
-the evolutionary algorithm, action performed by every user, which is tag, rate,
-share or event delete the individual (phenotype). In this sense, this actions
-can be used to assign fitness to a given solution.
+\par Therefore this gives us the guideline to generate a fitness assignment
+strategy which weighted users according to the interaction activities mentioned
+above in these systems beyond just the number of evaluations performed and the
+number of views of the users. This makes users with more participations have
+greater value, and therefore other users see it as a leader user about their
+participations.
 
-\par Graph based models are currently used in social networks to keep track of
-user interaction with media objects, places, and other users. Users of social
-networks (for instance the Facebook graph) are accostumed to express these
-complex relationship in sentences such as: "Christopher and Samantha are eting
-lunch at Fryday's". Other example is the W3C activiy stream 2.0 specification
-used for representing activities common in social web aplications
-\cite{snell2014json}.
+\par This thesis argues that a graph based user model \cite{}is a viable
+representation to represent the interactions and relations of actions that exist
+between the users and the phenotypes of these systems, such as evaluate, share,
+possibly delete, store, visualize. Graph-based models are currently used in
+social networks to keep track of users' interactions with media objects, places,
+and other users. Users on social networks (e.g., Facebook Graph) are accustomed
+to expressing these complex relationships in statements such as: "Christian and
+Iliana are eating on Friday's." Another example is the W3C activity stream 2.0
+specification used to represent activities in social web applications.
 
-\par This research presents a user-cetered framework that involves several
-techniques such as graph-based user modeling, fuzzy logic and human-interaction
-in the context of a Web-based interactive evolutionary computation. The purpose
-of this research is to increase voluntary participation of the users  using the
-proposed framework.
+\par The knowledge generated by the graph-based user model is used to know how
+users behave in this type of system with respect to their participation, that
+is, we can observe the information generated by each user. In this sense, this
+information is used both as part of the fitness calculation of the phenotypes in
+one of the inputs in a fuzzy system and is also used as interface usability
+elements through the gamification technique \cite{}\cite{}\cite{}\cite{}. This
+technique implemented in this research works based on rewards \cite{}. Generally
+the rewards are generated according to the reputation that the users have in the
+system and are represented according to the scores, levels and leaderboards.
+Points or scores are rewards given to the accomplishments of activities that
+need to be done by users. The levels are acquired according to the points that
+are generated by the users. Finally the leaderboards where users are shown in
+what position they are in relation to other users. The above mentioned causes
+that the users in certain way get engage in these kind of systems, due to the
+competitiveness between them.
+
+\par In this work study case  was implemented, where a web application was
+developed based on digital art where the objective of the application is to
+evolve drawings. This study case has three different versions where each of them
+is presented for use to different groups of users. The first version uses simple
+interactive evolutionary computation techniques where users can only visualize
+and evaluate phenotypes as well as access the application and have the
+functionality to create collections of their creations, but there is no record
+of their activities. Also the second version is based on the aspects of the
+first one, but this generates information of the activities of the users such as
+registration to the application, evaluate phenotypes, create collections and so
+on, and the fuzzy logic paradigm is implemented.  The third version is also
+based on the aspects of the two previous ones but the difference lies in how we
+generate the information of interactivity with the application, since this
+generates the graph-based model and the rewards mechanism is implemented, which
+refers to usability aspects such as gamification, all this is implemented to be
+able to study the changes of participation that exists with respect to the other
+versions mentioned above. This study case is exposed in detail to the readers in
+order to understand the concepts and uses of the proposed framework.
 
 \section{Outline}
 
