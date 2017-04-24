@@ -1,40 +1,44 @@
 \chapter{Introduction} \label{introduction}
 
 
-\par Interactive evolutionary computation (IEC) are systems where users replace
-the fitness function in evolutionary methods with interactive systems. These
-systems usually apply to problems where the fitness function is unknown or does
-not exist, and the result of the optimization must be adjusted to particular
-needs, for example, the tastes or desires of the users \cite{}. In that sense,
-the case study includes evolving objects with individual characteristics, such
-as visual appeal as well as others where human behavior is considered, such as
-optimization of equipment \cite{} or creativity \cite{}. In cases where human
-interaction is   responsible for other aspects of the evolutionary process, some
-authors classify it as evolutionary computation based on human \cite{} or human-based
-computation \cite{}. Interactive evolutionary computing systems are an exciting field
-of research, as they have demonstrated their ability to produce art and designs
-effectively \cite{}.
+\par Interactive evolutionary computation (IEC) are systems where users replace the
+fitness function in evolutionary methods with interactive
+systems\cite{eiben2015introduction}. These systems usually apply to problems
+where the fitness function is unknown or does not exist, and the result of the
+optimization must be adjusted to particular needs, for example, the tastes or
+desires of the users . In that sense, the case study includes evolving objects
+with individual characteristics, such as visual appeal as well as others where
+human behavior is considered, such as optimization of teamwork
+\cite{kosorukoff2002evolutionary} or creativity \cite{yu2011cooks}. In cases
+where human interaction is   responsible for other aspects of the evolutionary
+process, some authors classify it as evolutionary computation based on human
+\cite{kosorukoff2001human} or human-based computation \cite{quinn2011human}.
+Interactive evolutionary computing systems are an exciting field of research, as
+they have demonstrated their ability to produce art and designs effectively
+\cite{bentley1999introduction, kowaliw2012promoting, sims1991artificial,
+todd1994evolutionary}.
 
 \par However, the need for human intervention leads to several challenges for
 designers of such systems, for instance, the evaluations are slow, costly and
-scarce, there is also the fatigue of people caused by interactions \cite{}. The
-boredom that arises when users evaluate large numbers of phenotypes
-(individuals) as these are similar or not attractive. The performance of these
-systems depends on the amount of user participation, to reach more people, some
-of these systems are migrating to web-based applications depending on the help
-of their visitors about search with either anonymous users or with registered
-users. Some of these systems implement collaborative techniques, where some
-users participate in the evaluation of individuals, this method is called
-collaborative-IEC \cite{}.
+scarce, there is also the fatigue of people caused by interactions
+\cite{takagi1998interactive}. The boredom that arises when users evaluate large
+numbers of phenotypes (individuals) as these are similar or not attractive. The
+performance of these systems depends on the amount of user participation, to
+reach more people, some of these systems are migrating to web-based applications
+depending on the help of their visitors about search with either anonymous users
+or with registered users. Some of these systems implement collaborative
+techniques, where some users participate in the evaluation of individuals, this
+method is called collaborative-IEC \cite{secretan2008picbreeder,
+seyama2016development, wagy2014collective}.
 
 \par We believe that interactive evolutionary computing should follow a user-centered
-design \cite{}, giving particular attention to volunteer users, not only because of
-the explicit evaluations they perform and are essential but because the
-interaction context affects the system as a whole. Because users not only
-interact with the graphical interface, and with each phenotype presented in the
-system, but also users interact with other users, as well as the activities they
-perform for example storing a phenotype, see some phenotype of a given
-collection of another known user, and so on.
+design \cite{greenhouse2012human}, giving particular attention to volunteer
+users, not only because of the explicit evaluations they perform and are
+essential but because the interaction context affects the system as a whole.
+Because users not only interact with the graphical interface, and with each
+phenotype presented in the system, but also users interact with other users, as
+well as the activities they perform for example storing a phenotype, see some
+phenotype of a given collection of another known user, and so on.
 
 \par Within these systems not all users are equal, because the human is a complex
 entit \cite{}. In this sense we could say that the evaluations do not have the
@@ -42,10 +46,11 @@ same weight within these systems, since this entails that the users with greater
 participation influence others, this would produce a type of trend in the
 evolutions of the phenotype and is necessary to know who has the highest level
 of participation in these systems. This problem can be addressed in different
-ways, but we propose to use the fuzzy logic paradigm \cite{}\cite{}\cite{}in
-order to assign a weight to the users according to certain criteria that are
-within the interaction activities carried out by users such as activities,
-experiences, evaluations of phenotypes and rankings.
+ways, but we propose to use the fuzzy logic paradigm
+\cite{Zadeh1973}\cite{TakagiSugeno1983}\cite{ohsaki1998input}in order to assign
+a weight to the users according to certain criteria that are within the
+interaction activities carried out by users such as activities, experiences,
+evaluations of phenotypes and rankings.
 
 \par Therefore this gives us the guideline to generate a fitness assignment
 strategy which weighted users according to the interaction activities mentioned
@@ -54,31 +59,33 @@ number of views of the users. This makes users with more participations have
 greater value, and therefore other users see it as a leader user about their
 participations.
 
-\par This thesis argues that a graph based user model \cite{}is a viable
-representation to represent the interactions and relations of actions that exist
-between the users and the phenotypes of these systems, such as evaluate, share,
-possibly delete, store, visualize. Graph-based models are currently used in
-social networks to keep track of users' interactions with media objects, places,
-and other users. Users on social networks (e.g., Facebook Graph) are accustomed
-to expressing these complex relationships in statements such as: "Christian and
-Iliana are eating on Friday's." Another example is the W3C activity stream 2.0
-specification used to represent activities in social web applications.
+\par This thesis argues that a graph based user model is a viable representation to
+represent the interactions and relations of actions that exist between the users
+and the phenotypes of these systems, such as evaluate, share, possibly delete,
+store, visualize. Graph-based models are currently used in social networks to
+keep track of users' interactions with media objects, places, and other users
+\cite{bondy1976graph, miller2013graph, holzschuher2013performance}. Users on
+social networks (e.g., Facebook Graph) are accustomed to expressing these
+complex relationships in statements such as: "Christian and Iliana are eating on
+Friday's." Another example is the W3C activity stream 2.0 specification used to
+represent activities in social web applications.
 
-\par The knowledge generated by the graph-based user model is used to know how
-users behave in this type of system with respect to their participation, that
-is, we can observe the information generated by each user. In this sense, this
+\par The knowledge generated by the graph-based user model is used to know how users
+behave in this type of system with respect to their participation, that is, we
+can observe the information generated by each user. In this sense, this
 information is used both as part of the fitness calculation of the phenotypes in
 one of the inputs in a fuzzy system and is also used as interface usability
-elements through the gamification technique \cite{}\cite{}\cite{}\cite{}. This
-technique implemented in this research works based on rewards \cite{}. Generally
-the rewards are generated according to the reputation that the users have in the
-system and are represented according to the scores, levels and leaderboards.
-Points or scores are rewards given to the accomplishments of activities that
-need to be done by users. The levels are acquired according to the points that
-are generated by the users. Finally the leaderboards where users are shown in
-what position they are in relation to other users. The above mentioned causes
-that the users in certain way get engage in these kind of systems, due to the
-competitiveness between them.
+elements through the gamification technique \cite{huotari2012defining,
+deterding2011game, hickman2010total, mcgonigal2011reality}. This technique
+implemented in this research works based on rewards \cite{sutter2010browse}.
+Generally the rewards are generated according to the reputation that the users
+have in the system and are represented according to the scores, levels and
+leaderboards. Points or scores are rewards given to the accomplishments of
+activities that need to be done by users. The levels are acquired according to
+the points that are generated by the users. Finally the leaderboards where users
+are shown in what position they are in relation to other users. The above
+mentioned causes that the users in certain way get engage in these kind of
+systems, due to the competitiveness between them.
 
 \par In this work study case  was implemented, where a web application was
 developed based on digital art where the objective of the application is to
