@@ -1,19 +1,18 @@
 \chapter{Fitness Estination}
 
-This chapter explains a proposed strategy to calculate the fitness of the
-individual in a web-based interactive evolutionary computation applications
+This chapter explains a proposed strategy to calculate the fitness of
+individuals in web-based IEC applications
 using fuzzy logic. Before showing our strategy, it is necessary to explain how
-the individual evaluation is made in the EvoDrawing application. The figure
-\ref{fig:UI_ED} shows the user interface where the user interacts with the
-application. The main goal of this interaction is the individuals evaluation,
-the first action of the user, in order to evaluate, is to login through a social
-platform account in this particular case Facebook \cite{facebook}, in order to have
-different futures as a collection creation, store individual in a collection,
-already explained in the previous chapter. The evaluation takes place through a
-five star rate selection by the user; this rate represents the degree of user
-preference for an individual. The application keeps the record of every user
-activity using the activities stream standard [14]. In these particular case the
-activities represents the user experience.
+the individual evaluation is made in the EvoDrawing application. Figure
+\ref{fig:UI_ED} shows the user interface. 
+The main goal of this interaction is the evaluation of individuals, but
+the first user action before starting to evaluate, is to login through the
+Facebook \cite{facebook} social
+platform account. The evaluation takes place through a
+five star rating selection; this rate represents the degree of user
+preference for an individual. The application keeps record of every user
+activity by using the activity stream standard [14]. %%%%% Fix reference - Mario
+In these particular case activities represent the user\'s experience.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -25,18 +24,20 @@ activities represents the user experience.
 \label{fig:UI_ED}
 \end{figure*}
 
-In this research we propose the using of fuzzy logic[10] in order to obtain a
+In this research we propose the use of fuzzy logic[10] in order to obtain a %% Fix references please - Mario
 difuzzify value to be used to calculate the individual fitness trough a fitness
 function expression. It is used by modeling a fuzzy Mamdani type inference
-system [5] [6] as figure \ref{fig:fis01} shown. This model was designed empirically.
+
+system [5] [6] as figure \ref{fig:fis01} shown. This model was designed empirically. %% Fix references please - Mario
 The model consists of two input variables, which are the preference and the
 experience of the user as well as an output that we called fuzzy rate. The first
-one has 3 linguistic variables, which are low, medium and high, representing the
+one has 3 linguistic variables, which are low, medium and high, representing the 
+% These are not variables. Low is a linguistic variable?? 
 preference with triangular membership functions over a range of 1 to 5. The
 second one also has three linguistic variables, which are low, medium and high
 representing the experience with triangular membership functions over a range of
 1 to 100. Finally we have the output consisting of three linguistic variables
-bad, normal and good represent-ing the fuzzy rate with triangular membership
+bad, normal and good representing the fuzzy rate with triangular membership
 functions in a range of 1-100.
 
 \begin{figure*}
@@ -73,21 +74,23 @@ Below we show the rules IF-THEN of the fuzzy system:
 
 \end{enumerate}
 
-These rules will give us a fuzzy rate value result, this is the value need it to
-be defuzzify by the centroid method in order to be used in our fitness
-expression, given by equation\ref{eq:fitfunc_02}. This expression is responsible
-to represent the individual fitness.
+These rules will give us a fuzzy rate value as a result, this value needs to
+be defuzzified by the centroid method in order to be used in our fitness
+expression, given by the equation\ref{eq:fitfunc_02}. This expression is responsible
+of representing the individual fitness.
 
 \begin{equation}\label{eq:fitfunc_02}
 \displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
 \end{equation}
 
-Where $n$ represents  the number of  users that  have given an evaluation of the
-individual, $x$ is the rate of preference for the  individual  given by  the user,
+Where $n$ represents  the number of  users that have evaluated the
+individual, $x$ is the rate of preference for the  individual  given by the user,
 $y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
-This function needs $x$ and the user experience level. The user experience level
-is given  by the  total activities that user have at the moment. In each
+This function has as a parameter the rate $x$ and the user experience level. 
+The user experience level
+is given  by the  total activities that user has at the moment. In each
 activity we assign the score, for example if the user log in (join) to the
 application we assign 5 points, if the user evaluates (likes) an individual we
 give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual.
+the individual. 
+
