@@ -1,7 +1,7 @@
 \chapter{Proposed user-centered framework}
 
 The fundamental goal of this research is to develop a user-centered framework
-for interactive evolutionary computation (IEC) in order to increase users’
+for interactive evolutionary computation (IEC) in order to increase users\'
 participation and also to minimize the amount of evaluations needed for the
 evolutionary process in given Web-based IEC application.
 
@@ -25,7 +25,8 @@ entities of this framework will be explained in detail in following sections.
 \section{Users}
 
 Users are a central part of this proposed framework as it aims to study their
-behavior when interacting with individuals within interactive evolutionary
+behavior when interacting 
+with individuals or phenotypes within interactive evolutionary
 algorithms and other tasks that may exist within IEC systems. Thus users in this
 proposal are entities interacting with an evolutionary computation that has the
 fundamental purpose of evaluating individuals of a population replacing the
@@ -38,11 +39,11 @@ increase their participation, currently there exist some basic actions that
 users can perform in a given system, going from to be able to access a system
 through login mechanism, once the user has logged-in in to the system the users
 can interact with different actions, for example the inviting action is when
-users can be invited through social networks or maybe of person to person.
+users can be invited through social networks or maybe from person to person.
 Another example is the sharing action that can occur when users want to share
 something of their interest through their social networks. In this sense the
-action of posting is when users want to put something on their wall who want
-others to know through their social networks. Likewise the storing action occurs
+action of posting is when users want to put something on their wall. 
+Likewise the storing action occurs
 when users want to retain permanently information that are of their interest.
 Finally the browsing action occurs when users are exploring content for their
 needs. All these actions go beyond only evaluating individuals.
@@ -71,13 +72,13 @@ store individuals in the system of users who know each other.
 Also the browsing action is proposed within IEC systems, this means that users
 can explore information that other active users in the system are generating.
 
-Finally activity participation is proposed. This can be divided into four
-different actions as fallows:
+Finally the participation activity is proposed. This can be divided into four
+different actions as follows:
 
 
 \begin{itemize}
 \item The Inviting action occurs when a user invites another to the system through social networks or from person to person.
-\item The sharing action occurs when users share their individual creations with others active user in the system.
+\item The sharing action occurs when users share their individual creations with others active users in the system.
 \item The posting action occurs when published what they are doing within the system.
 \item The storing action occurs when users keep individuals in a collection, the collections concept will be discussed later in this chapter.
 \end{itemize}
@@ -86,12 +87,13 @@ All the mention above is shown in figure \ref{fig:users}
 
 \section{Individual}
 
-Individuals are entities that form the population for the evolutionary
-algorithm. In particular for this work individuals are animated digital
-paintings, every individual in the population is defined by a chromosome.
+Individuals or phenotypes are entities that form the population for the evolutionary
+algorithm. In particular for this work the genotype of individuals 
+are animated digital
+paintings, every individual's phenotype in the population is defined by a chromosome.
 This chromosome defines the behavior of the individual, so that it consists of a
 vector of real numbers of fifteen genes, where each gen define a particular
-behavior in painting. This individuals combined each other to generated new
+behavior in the painting. This individuals combined each other to generated new
 individual in the population following the genetic operators such as selection,
 crossover and mutation. An example of a individual in this case it is
 illustrated in figure \ref{fig:individual}
@@ -114,13 +116,12 @@ Now that both, users an individuals have been defined we can
 model the users behavior have with respect to individuals in a graph-based user
 model.
 
-The reason for using a graph to model the user-individual is because it could
-can express in a simple way the behavior of this two entities having the
-necessary information  to represent the knowledge,  for example a vertex user
-and individual vertex connected through a edge that  represents the
-relationship. this relationship can be the semantic  between these two entities
-as figure \ref{fig:User-Individual} show. Each of these vertices contains
-properties as well as the edges; these properties will be explained as fallows.
+The reason for using a graph to model the user-individual is because it
+can express in a simple way the behavior of these two entities.  
+for example a vertex user and individual vertex connected through a edge 
+representing the semantics of the relationship 
+as Figure \ref{fig:User-Individual} shows. Each of these vertices contain
+properties as well as the edges do; these properties will be explained as follows.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -132,28 +133,33 @@ properties as well as the edges; these properties will be explained as fallows.
 \label{fig:User-Individual}
 \end{figure*}
 
-In this proposed graph-based user-individual model the vertices are represented by a set of nodes 
-of USERS, INDIVIDUALS, and COLLECTIONS. The edges are defined by a set of relationships as LIKES, 
-KNOWS, PARENT, HAS that represents the relationships between the vertices as seen in figure \ref{fig:User-Individual}.
+In this proposed graph-based user-individual model the vertices are represented 
+by a set of vertices or nodes of USERS, INDIVIDUALS, and COLLECTIONS. 
+The edges are defined by a set of relationships as LIKES, 
+KNOWS, PARENT, HAS that represents the relationships between the vertices 
+as seen in figure \ref{fig:User-Individual}.
 
-Already explained that represent USERS and INDIVIDUALS, now an explanation is
-given of what concerns for the concept of COLLECTIONS.
+%Where was this explained?
+We already explained the meaning of USERS and INDIVIDUALS, now an explanation is
+given for the concept of COLLECTIONS.
 
-In this proposal, a collection is defined as a container where users can store selected individuals 
-laid within the collection. A collection is created when the user wants permanently store individuals 
-within the IEC system.
+In this proposal, a collection is defined as a container where users can 
+store selected individuals (paintings) laid within the collection. A collection 
+is created when the user wants to permanently store individuals.
 
-
-Now for the edges in this proposal are explained as follows:
+Now the edges in this proposal are explained:
 
 \begin{itemize}
-\item The  LIKES edge represents a preference relationship that a user has with respect to an individual.
-\item Now the  PARENT edge represents an ancestor of the individual, in other words where the individual comes from.
-\item Likewise the  HAS edge represents that users have a collection where can contain individuals.
-\item Finally the KNOWS edge represents a relationship of friendship between users.
+\item The  LIKES edge represents a preference relationship that 
+a user has with respect to an individual.
+\item The  PARENT edge represents an ancestor of an individual,
+ in other words where the individual comes from.
+\item Likewise the HAS edge represents that certain user has a collection.
+\item Finally the KNOWS edge represents a relationship of friendship between users
+and is established by their social network.
 \end{itemize}
 
-In figure \ref{fig:Nodes_Edges} illustrated the above mentioned, about nodes and edges.
+The above mentioned is illustrated by Figure~\ref{fig:Nodes_Edges}.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -166,14 +172,14 @@ In figure \ref{fig:Nodes_Edges} illustrated the above mentioned, about nodes and
 \end{figure*}
 
 
-In each vertex is necessary to store knowledge about the users, individuals and
-also for the collections, this is what is known as property.
+In each vertex is necessary to store knowledge about users, individuals and
+also for the collections, this is known as a property.
 
 It is worth to mention that all vertices have a property called “element\_type”
 among others. This property is used to identify which type of vertex is, for
-example if vertex corresponds to a user then this property label the vertex as a
-“person”. Likewise if the vertex corresponds to an individual this property
-label it as an “individual” and is the same for any vertex we want to add to the
+example if vertex corresponds to a user then this property labels the vertex as a
+“person” type. Likewise if the vertex corresponds to an individual this property
+labels it as an “individual” and is the same for any vertex we want to add to the
 model. This property also has the purpose of being able to do operations on the
 graph according to the vertex type.
 
