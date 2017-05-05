@@ -165,29 +165,7 @@ fractal generation where the system allows the evolution of animations for the
 ones who were selected from the user, the application initially show only ten
 animations to rate.
 %% Why is important to know about music generation? Is not.
-There are several implementations of IEC in the field of music. We will start
-mentioning the pioneer application GENJAM, \cite{biles1994genjam},
-\cite{biles1996neural} or \cite{biles1999life} and
-\cite{biles2002genjam}. Some other attractive works are Sonomorph,
-\cite{nelson1993sonomorphs} and \cite{nelson1995further}, or SBEAT, \cite{unemi2003sbeat3},
-\cite{horowitz1994generating}, \cite{onisawa2000composition}, \cite{tokui2000music} and
-\cite{fels2002interactive}. It is possible to hear a part of the
-music songs of these previously mentioned works broadcasted in the radio station
-WDYN. (100.1, New York, USA, WEBPage:http://www.wdyn.net/).
 
-The IEC algorithms are the base for the functionality of the music generation
-systems, a visual representation of this is given in the below figure
-\ref{fig:GENJAM}:
-
-\begin{figure*}
-\captionsetup{justification=centering,margin=2cm}
-\centering
-\setlength\fboxsep{0pt}
-\setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/GENJAM.png}}
-\caption{GENJAM squeme.}
-\label{fig:GENJAM}
-\end{figure*}
 
 %%% This changes the direction of the text, first we are talking about
 % work after work of IEC and then we stop at this subject??
@@ -296,10 +274,10 @@ which are:
 \end{itemize}
 
 The individual is represented internally as a data dictionary stored in Redis
-[16] database management system; the individual contains main attributes as id,
+\cite{redis} database management system; the individual contains main attributes as id,
 chromosome, mom, dad, and views. This attributes represents the key information
 of the individual as the individual offspring, the number of times that the
-individual has been selected, etcetera, as shown in figure \ref{fig:individualRep} [3].
+individual has been selected, etcetera, as shown in figure \ref{fig:individualRep}.
 
 \begin{figure*}
 	\captionsetup{justification=centering,margin=2cm}
@@ -313,13 +291,13 @@ individual has been selected, etcetera, as shown in figure \ref{fig:individualRe
 
 As we can observe on figure \ref{fig:ESFramework}, this work uses database
 management systems to implement collaborative interactive evolutionary
-applications. One of the reasons that this framework is using Redis[15] is
+applications. One of the reasons that this framework is using Redis \cite{redis} is
 %Seriously what is wrong with all this hard coded references?
 because it provides a hash-based implementation of sets and queues, which are
 natural data structures for the EvoSpace model. On the other hand this framework
 uses a relational database to save basic information about the user extracted
 from the social platform (Facebook) through open graph API and OAuth2
-authentication.
+authentication \cite{facebook}.
 \begin{figure*}
 	\captionsetup{justification=centering,margin=2cm}
 	\centering
@@ -388,7 +366,7 @@ because many separate research projects are focusing on an exact task or
 subject, it is hard to make generalizations or to establish one delimited
 investigation topic. Commonly discussed research subjects are Decision Support
 Systems,  Adaptive Hypermedia, and Adaptive Ubiquitous Systems, each having his
-or her own specific domain and way of personalization. 
+or her own specific domain and way of personalization.
 \subsection{Decision support systems}
 
 Decision support systems are systems that support a user with making a decision
