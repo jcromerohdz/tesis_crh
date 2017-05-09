@@ -11,7 +11,7 @@ Facebook \cite{facebook} social
 platform account. The evaluation takes place through a
 five star rating selection; this rate represents the degree of user
 preference for an individual. The application keeps record of every user
-activity by using the activity stream standard \cite{snell2014json}. %%%%% Fix reference - Mario
+activity by using the activity stream standard \cite{snell2014json}.
 In these particular case activities represent the user\'s experience.
 
 \begin{figure*}
@@ -25,22 +25,20 @@ In these particular case activities represent the user\'s experience.
 \end{figure*}
 
 In this research we propose the use of fuzzy logic \cite{Zadeh1973} in order to
-obtain a %% Fix references please - Mario difuzzify value to be used to
-calculate the individual fitness trough a fitness function expression. It is
+obtain a calculate the individual fitness trough a fitness function expression. It is
 used by modeling a fuzzy Mamdani type inference
 
-system \cite{mamdani1975experiment} \cite{mamdani1974application} as figure
-\ref{fig:fis01} shown. This model was designed empirically. %% Fix references
-please - Mario The model consists of two input variables, which are the
-preference and the experience of the user as well as an output that we called
-fuzzy rate. The first one has 3 linguistic variables, which are low, medium and
-high, representing the % These are not variables. Low is a linguistic variable??
-preference with triangular membership functions over a range of 1 to 5. The
-second one also has three linguistic variables, which are low, medium and high
-representing the experience with triangular membership functions over a range of
-1 to 100. Finally we have the output consisting of three linguistic variables
-bad, normal and good representing the fuzzy rate with triangular membership
-functions in a range of 1-100.
+system \cite{mamdani1975experiment} \cite{mamdani1974application} as Figure
+\ref{fig:fis01} shown. This model was designed empirically. The model consists
+of two input variables, which are the preference and the experience of the user
+as well as an output that we called fuzzy rate. The first variable has three
+linguistic variables, which are low, medium and high, representing the
+preferences of the users with triangular membership functions over a range of 1
+to 5. The second variable also has three linguistic variables, which are low, medium
+and high representing the experience with triangular membership functions over a
+range of 1 to 100. Finally we have the output consisting of three consequent
+variables whuch are bad, normal and good representing the fuzzy rate with triangular
+membership functions in a range of 1-100.
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
 \centering
@@ -92,8 +90,19 @@ The user experience level
 is given  by the  total activities that user has at the moment. In each
 activity we assign the score, for example if the user log in (join) to the
 application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
+give 3 points, etc; in Figure \ref{fig:fitnessFlow} shows the flow for assigning fitness to
 the individual.
+
+\begin{figure*}
+\captionsetup{justification=centering,margin=2cm}
+\centering
+\setlength\fboxsep{0pt}
+\setlength\fboxrule{0.7pt}
+\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fitnessFlow.png}}
+\caption{Fitness Flow.}
+\label{fig:fitnessFlow}
+\end{figure*}
+
 
 
 Where $n$ represents  the number of  users that have evaluated the
@@ -104,50 +113,5 @@ The user experience level
 is given  by the  total activities that user has at the moment. In each
 activity we assign the score, for example if the user log in (join) to the
 application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual. Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
-$y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
-This function has as a parameter the rate $x$ and the user experience level.
-The user experience level
-is given  by the  total activities that user has at the moment. In each
-activity we assign the score, for example if the user log in (join) to the
-application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual. Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
-$y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
-This function has as a parameter the rate $x$ and the user experience level.
-The user experience level
-is given  by the  total activities that user has at the moment. In each
-activity we assign the score, for example if the user log in (join) to the
-application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual. Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
-$y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
-This function has as a parameter the rate $x$ and the user experience level.
-The user experience level
-is given  by the  total activities that user has at the moment. In each
-activity we assign the score, for example if the user log in (join) to the
-application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual. Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
-$y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
-This function has as a parameter the rate $x$ and the user experience level.
-The user experience level
-is given  by the  total activities that user has at the moment. In each
-activity we assign the score, for example if the user log in (join) to the
-application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual. Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
-$y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
-This function has as a parameter the rate $x$ and the user experience level.
-The user experience level
-is given  by the  total activities that user has at the moment. In each
-activity we assign the score, for example if the user log in (join) to the
-application we assign 5 points, if the user evaluates (likes) an individual we
-give 3 points, etc; in figure 5 shows the flow for assigning fitness to
+give 3 points, etc; in Figure \ref{fig:fitnessFlow} shows the flow for assigning fitness to
 the individual.
