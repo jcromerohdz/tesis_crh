@@ -11,7 +11,7 @@ Facebook \cite{facebook} social
 platform account. The evaluation takes place through a
 five star rating selection; this rate represents the degree of user
 preference for an individual. The application keeps record of every user
-activity by using the activity stream standard [14]. %%%%% Fix reference - Mario
+activity by using the activity stream standard \cite{snell2014json}. %%%%% Fix reference - Mario
 In these particular case activities represent the user\'s experience.
 
 \begin{figure*}
@@ -24,22 +24,23 @@ In these particular case activities represent the user\'s experience.
 \label{fig:UI_ED}
 \end{figure*}
 
-In this research we propose the use of fuzzy logic[10] in order to obtain a %% Fix references please - Mario
-difuzzify value to be used to calculate the individual fitness trough a fitness
-function expression. It is used by modeling a fuzzy Mamdani type inference
+In this research we propose the use of fuzzy logic \cite{Zadeh1973} in order to
+obtain a %% Fix references please - Mario difuzzify value to be used to
+calculate the individual fitness trough a fitness function expression. It is
+used by modeling a fuzzy Mamdani type inference
 
-system [5] [6] as figure \ref{fig:fis01} shown. This model was designed empirically. %% Fix references please - Mario
-The model consists of two input variables, which are the preference and the
-experience of the user as well as an output that we called fuzzy rate. The first
-one has 3 linguistic variables, which are low, medium and high, representing the
-% These are not variables. Low is a linguistic variable??
+system \cite{mamdani1975experiment} \cite{mamdani1974application} as figure
+\ref{fig:fis01} shown. This model was designed empirically. %% Fix references
+please - Mario The model consists of two input variables, which are the
+preference and the experience of the user as well as an output that we called
+fuzzy rate. The first one has 3 linguistic variables, which are low, medium and
+high, representing the % These are not variables. Low is a linguistic variable??
 preference with triangular membership functions over a range of 1 to 5. The
 second one also has three linguistic variables, which are low, medium and high
 representing the experience with triangular membership functions over a range of
 1 to 100. Finally we have the output consisting of three linguistic variables
 bad, normal and good representing the fuzzy rate with triangular membership
 functions in a range of 1-100.
-
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
 \centering
@@ -149,4 +150,4 @@ is given  by the  total activities that user has at the moment. In each
 activity we assign the score, for example if the user log in (join) to the
 application we assign 5 points, if the user evaluates (likes) an individual we
 give 3 points, etc; in figure 5 shows the flow for assigning fitness to
-the individual. 
+the individual.
