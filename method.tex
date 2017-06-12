@@ -1,7 +1,7 @@
 \chapter{Proposed human-centered framework}
 
 The fundamental goal of this research is to develop a human-centered framework
-for interactive evolutionary computation (IEC) in order to increase users\'
+for interactive evolutionary computation (IEC) in order to increase users
 participation and also to minimize the amount of evaluations needed for the
 evolutionary process in given Web-based IEC application.
 
@@ -31,7 +31,7 @@ algorithms and other tasks that may exist within IEC systems. Thus users in this
 proposal are entities interacting with an evolutionary computation that has the
 fundamental purpose of evaluating individuals of a population replacing the
 fitness function according to their preferences and mood, among others
-\cite{takagi1998interactive}. This form of evaluate individual is given a
+\cite{takagi1998interactive}. This form of evaluate individual is given in a
 subjectively way.
 
 On the other hand in order to capture the attention of users and possibly
@@ -83,7 +83,7 @@ different actions as follows:
 \item The storing action occurs when users keep individuals in a collection, the collections concept will be discussed later in this chapter.
 \end{itemize}
 
-All the mention above is shown in figure \ref{fig:users}
+Figure \ref{fig:users} shows all the mention above.
 
 \section{Individual}
 
@@ -95,8 +95,8 @@ This chromosome defines the behavior of the individual, so that it consists of a
 vector of real numbers of fifteen genes, where each gen define a particular
 behavior in the painting. This individuals combined each other to generated new
 individual in the population following the genetic operators such as selection,
-crossover and mutation. An example of a individual in this case it is
-illustrated in figure \ref{fig:individual}
+crossover and mutation. An example of a individual is
+illustrated in Figure \ref{fig:individual}
 
 
 
@@ -107,18 +107,18 @@ illustrated in figure \ref{fig:individual}
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/individual.png}}
 \caption{Individual representation.}
-\label{fig:graph}
+\label{fig:individual}
 \end{figure*}
 
 
 \section{User Model}
 Now that both, users an individuals have been defined we can
-model the users behavior have with respect to individuals in a graph-based user
+model the users behavior with respect to individuals in a graph-based user
 model.
 
 The reason for using a graph to model the user-individual is because it
 can express in a simple way the behavior of these two entities.
-for example a vertex user and individual vertex connected through a edge
+for example a vertex user and individual vertex connected through an edge
 representing the semantics of the relationship
 as Figure \ref{fig:User-Individual} shows. Each of these vertices contain
 properties as well as the edges do; these properties will be explained as follows.
@@ -150,16 +150,16 @@ is created when the user wants to permanently store individuals.
 Now the edges in this proposal are explained:
 
 \begin{itemize}
-\item The  LIKES edge represents a preference relationship that
+\item The LIKES edge represents a preference relationship that
 a user has with respect to an individual.
-\item The  PARENT edge represents an ancestor of an individual,
+\item The PARENT edge represents an ancestor of an individual,
  in other words where the individual comes from.
 \item Likewise the HAS edge represents that certain user has a collection.
 \item Finally the KNOWS edge represents a relationship of friendship between users
 and is established by their social network.
 \end{itemize}
 
-The above mentioned is illustrated by Figure~\ref{fig:Nodes_Edges}.
+The above mentioned is illustrated by Figure \ref{fig:Nodes_Edges}.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -198,7 +198,7 @@ of vertices, which means that there will not be duplicate vertices. The property
 defines the name of the vertex u. The property “element\_type” defines the
 element type that will be the vertex $u$.
 
-In figure \ref{fig:User_node} the vertex $u$ properties are shown.
+Figure \ref{fig:User_node} shows the vertex $u$ properties.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -255,7 +255,7 @@ of vertices, which means that there will not be duplicate vertices. The
 property “name” defines the name of the vertex $c$. The property “created”
 defines the creation date of the vertex $c$.
 
-In figure \ref{fig:Collection_node} the vertex $c$ properties are shown.
+Figure \ref{fig:Collection_node} shows the vertex $c$ properties.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -307,8 +307,7 @@ The “id” property defines that the edge “KNOWS” has a unique identifier 
 set of edges, which means that there will not be duplicate edges. The property
 “created” defines the date of creation of the edge.
 
-In figure \ref{fig:Knows_edge} the edge “KNOWS” properties and the relationships between vertex “u”
-are shown.
+Fifure \ref{fig:Knows_edge} shows the edge “KNOWS” properties and the relationships between vertex “u”.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -331,8 +330,8 @@ The “id” property defines that the edge “PARENT” has a unique identifier
 set of edges, which means that there will not be duplicate edges. The property
 “created” defines the date of creation of the edge.
 
-In figure \ref{fig:Parent_edge} the edge “PARENT” properties and the
-relationship between vertex $i$ are shown.
+~Figure \ref{fig:Parent_edge} shows the edge “PARENT” properties and the
+relationship between vertex $i$.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -354,8 +353,8 @@ The “id” property defines that the edge “HAS” has a unique identifier in
 of edges, which means that there will not be duplicate edges. The property
 “created” defines the date of creation of the edge.
 
-In figure \ref{fig:Has_edge} the edge “HAS” properties and the relationship
-between vertices $u$, $i$ and $c$ are shown.
+Figure \ref{fig:Has_edge} shows the edge “HAS” properties and the relationship
+between vertices $u$, $i$ and $c$.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
