@@ -5,14 +5,14 @@ evolution in the pass and recent years, also user model approaches, In the same
 way, some works were reviewed that contain the fuzzy logic concept and finally
 gamification paradigm is also reviewed.
 
-\section{Interactive Evolutionary Computation.}
+\section{Interactive Evolutionary Computation}
 
-This technology is a branch of Evolutionary Computation (EC).  Based on
+This technology is a branch of Evolutionary Computation (EC). Based on
 subjective human evaluation. This technique requires that the objective function
 is replaced by a person (user), Takagi defines it as "An optimization technology
 that uses human evaluation in the optimization system instead of a human
 evaluation model"\cite{takagi1998application}. Simply stated, an Interactive EC
-system is an EC whose fitness function is replaced by a human.   Figure
+system is an EC whose fitness function is replaced by a human.  Figure
 \ref{fig:IEC} shows a general IEC system.
 
 \begin{figure*}
@@ -51,7 +51,7 @@ engineering, education and so on., \cite{parmee1993concrete},
 
 The Biomorph of Dawkins was among the first IEC systems,
 this research motivated many works mostly about the Selfish Gene, examples
-of these works are:  \cite{ochoa1998genetic},
+of these works are: \cite{ochoa1998genetic},
 \cite{mccormack1993interactive}.
 
 In Dawkins work, a conventional recursive algorithm was used as a baseline
@@ -62,7 +62,7 @@ intuitively selected L-system output; the creation was called Biomorphs. These
 creations reach their target with the multiple selections of users based on
 their preferences; all these selections acted like a natural adaptation filter.
 
-There is plenty of works and applications,  for fractal generation
+There is plenty of works and applications, for fractal generation
 \cite{sims1992interactive}, \cite{baluja1993simulating} and
 \cite{baluja1994towards}, \cite{lund1995artistic}, or
 \cite{angeline1996evolving},\cite{raynal1999manipulation}
@@ -132,7 +132,7 @@ shows.
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.7pt}
 \fbox{\includegraphics[width=10cm,height=10cm,keepaspectratio]{img/Galapagos2.png}}
-\caption{Galapagos' output sample.}
+\caption{Galapagos output sample.}
 \label{fig:Galapagos2}
 \end{figure*}
 
@@ -164,11 +164,7 @@ There are many examples for this field such as
 fractal generation where the system allows the evolution of animations for the
 ones who were selected from the user, the application initially show only ten
 animations to rate.
-%% Why is important to know about music generation? Is not.
 
-
-%%% This changes the direction of the text, first we are talking about
-% work after work of IEC and then we stop at this subject??
 In 1998, a new input method for human operators of an interactive genetic
 algorithm to reduce the psychological weight was proposed. This method uses
 discrete fitness values to reduce the psychological stress involved in the input
@@ -189,7 +185,7 @@ calculated based on user evaluations and time. They also propose effective
 strategies for comparing different individuals of the same generation in
 uncertain fitness conditions of an individual. Where they obtain the probability
 of an individual dominance by use of the probability of the interval domain and
-translate to a fuzzy number in a range based on α-cut set \cite{gong2009impact}.
+translate to a fuzzy number in a range based on $\alpha-cut$ set \cite{gong2009impact}.
 They determine the dominant individual in tournament selection with size being
 two on base is given by the probability of a particular domain. This approach
 was applied to an interactive evolutionary system for fashion design. Based on this approach,
@@ -200,9 +196,8 @@ a cut set, and obtain the probability of interactive genetic algorithms with
 individual's fuzzy fitness. The contributions in this approach can improve the
 performance of existing income generating activities in alleviating user fatigue
 and finding optimal solutions to an optimization problem, so it is beneficial
-for solving complicated problems with implicit or fuzzy indices
-\cite{gong2011interactive} we can see the user interface in Figure
-\ref{fig:fashion}.
+for solving complicated problems with implicit or fuzzy indices\cite{gong2011interactive}, Figure \ref{fig:fashion}
+shows the user interface.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -214,10 +209,10 @@ for solving complicated problems with implicit or fuzzy indices
 \label{fig:fashion}
 \end{figure*}
 
-\subsection{Web-Based IEC aplications .}
+\subsection{Web-Based IEC aplications}
 
 
-\subsubsection{Picbreeder.}
+\subsubsection{Picbreeder}
 Picbreeder is a Web-based application that allows users to evolve images in a
 collaborative way maintaining a large catalog of user-created content allowing
 users collaboration by searching through extensive design spaces
@@ -226,7 +221,7 @@ experience levels to enjoy all the creative contributions produced by other
 users. In this way users experience a new form of recreation called creative
 social recreation through collaborative exploration. In this sense these systems
 helps their users to find interesting images through tagging, browsing and
-searching as Figure  \ref{fig:Picbreeder} show.
+searching as Figure \ref{fig:Picbreeder} shows.
 
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
@@ -238,7 +233,7 @@ searching as Figure  \ref{fig:Picbreeder} show.
 \label{fig:Picbreeder}
 \end{figure*}
 
-\subsubsection{EndlessForms.}
+\subsubsection{EndlessForms}
 EndlessForms is a Web application that explores object designs by choosing those
 the users like. These selected objects become the parents of the next generation
 of objects \cite{clune2011evolving}. EndLessForms proposes a new way to evolve
@@ -249,7 +244,7 @@ objects. They chose the interactive evolution, because that allows open-ended
 exploration of the design space of objects that can produce by their method.
 Additionally, the interactive evolution avoids the greedy nature of evolution by
 objectives, which potentially allows to access more interesting objects
-\cite{clune2011evolving}. In Figure \ref{fig:EndlessForms} we can see some of
+\cite{clune2011evolving}. Figure \ref{fig:EndlessForms} Shows some of
 this objects.
 
 \begin{figure*}
@@ -291,7 +286,6 @@ individual has been selected, etcetera, as shown in Figure \ref{fig:individualRe
 As we can observe on Figure \ref{fig:ESFramework}, this work uses database
 management systems to implement collaborative interactive evolutionary
 applications. One of the reasons that this framework is using Redis \cite{redis} is
-%Seriously what is wrong with all this hard coded references?
 because it provides a hash-based implementation of sets and queues, which are
 natural data structures for the EvoSpace model. On the other hand this framework
 uses a relational database to save basic information about the user extracted
@@ -309,14 +303,14 @@ authentication \cite{facebook}.
 
 \section{User Modeling}
 
-%%\subsection{Traditional Production Systems}
+
 
 User modeling can be represented as the technique of building a model of the
 user to personalize a system. The user model is commonly created as the user is
 working with the system. An example is an educational application that teaches
 students an individual skill: given the rules and knowledge in the user model,
 the difficulty level of the exercises in the form is altered as the user
-progresses.   Formally definition of user modeling according to McTear
+progresses.  Formally definition of user modeling according to McTear
 \cite{mctear1993user} : " User modeling is the process of gathering information
 about the users of a computer system and of using the information to provide
 services or information adapted to the specific requirements of individual users
@@ -329,7 +323,7 @@ this research work. Focus on the human user, user modeling is a very
 cross-disciplinary research topic, comprehending the domains of artificial
 intelligence, computer science, and social science. Ideas have been co‐opted
 from an extensive range of subdomains, such as human–computer interaction,
-e‐learning, information science, social computing, machine learning, data
+e\textendash learning, information science, social computing, machine learning, data
 mining, cognitive science, and so on \cite{kay2012coming}
 \cite{kobsa2001generic}. There is interest in user modeling from both a
 scientific and commercial perspective \cite{razmerita2009user}.
@@ -350,9 +344,9 @@ user model are discussed.
 
 \subsection{User models for providing task support}
 
-Task support systems are f systems that help a user during a task by either
+Task support systems are systems that help a user during a task by either
 supporting the user perform the task or by completely taking over this task
-\cite{brun2010compass}. For instance,  an application that
+\cite{brun2010compass}. For instance, an application that
 automatically categorizes the incoming emails of the user. The goal of the user
 model in these requests is to promote the efficiency of interactions with the
 user, to simplify these interactions and to make complex systems more usable
@@ -364,19 +358,19 @@ knowledge and background. Much research has been done in this domain, but
 because many separate research projects are focusing on an exact task or
 subject, it is hard to make generalizations or to establish one delimited
 investigation topic. Commonly discussed research subjects are Decision Support
-Systems,  Adaptive Hypermedia, and Adaptive Ubiquitous Systems, each having his
+Systems, Adaptive Hypermedia, and Adaptive Ubiquitous Systems, each having his
 or her own specific domain and way of personalization.
 \subsection{Decision support systems}
 
 Decision support systems are systems that support a user with making a decision
-in a complex, professional environment. For example,  a
+in a complex, professional environment. For example, a
 system used at a pharmacy for automatically checking valid combinations of
 medicine. The method can be used to help the pharmacist in prescribing the right
 combinations and to give information for making a decision when a problem
 occurs. The purpose of the user model in decision support systems is to present
 the user with the right and appropriate information, giving different feedback
 or applying various decision steps according to the characteristics of the
-user.The data that is used is often associated with the user’s task and
+user. The data that is used is often associated with the user’s task and
 background knowledge. The adaptation takes place by adapting the amount and
 the content of the feedback provided by the system.
 
@@ -390,7 +384,7 @@ way the rules and knowledge are represented.
 \subsection{Adaptive Hypermedia}
 
 Adaptive hypermedia system is a system that grant users to browse freely
-information network,  structured by nodes and links, to retrieve items of
+information network, structured by nodes and links, to retrieve items of
 information \cite{deepa2012adaptive}. For instance an internet website
 application. The goal of the user model is to make the interface and structure
 of the system dynamic. This enables the application to adapt to the user and to
@@ -402,15 +396,15 @@ enhancing web search: promoting pages that might better correspond to the user�
 characteristics, on the other hand by giving navigation support, through
 highlighting certain components of a page \cite{razmerita2012user}.
 
-\subsection{User models for providing a personal experience.}
+\subsection{User models for providing a personal experience}
 
 User models for providing the user with a personal experience have the goal to
-improve the user experience while using the system.  This kind of user modeling
+improve the user experience while using the system. This kind of user modeling
 is especially focused on more commercial fields, such as e-commerce, marketing,
-and computer games, and became popular with the rise of the Internet.  The
+and computer games, and became popular with the rise of the Internet. The
 information that is used by the user in this main domain is mostly focused on
 the information that defines the user, such as the user’s preferences and
-interests. Since this data is regularly delicate, privacy is a  big issue
+interests. Since this data is regularly delicate, privacy is a big issue
 \cite{toch2012personalization}. While in others domains the privacy of the user
 data is also important, in this area it is even a greater topic of discussion
 because the incentive of the application developers is frequently contradictory
@@ -418,11 +412,11 @@ to the incentive of the actual user, considering gaining and sharing the user´s
 personal information. For instance, user profiles are often shared among diverse
 components of the same application, or even with different applications
 \cite{brun2010compass} \cite{karam2012modeling}, which presents additional
-weaknesses and possible undesirable information sharing.  Ensuring personal data
+weaknesses and possible undesirable information sharing. Ensuring personal data
 is not open to all people, in addition to defining strict privacy policies, is
 thus essential in these user models. Some investigation in this domain are.
 
-\subsection{Recommender Systems and User Adaptive Computer Games.}
+\subsection{Recommender Systems and User Adaptive Computer Games}
 
 Recommender systems are concerned with presenting the user with relevant
 information and suggestions. They are commonly used on the Internet, for example
@@ -440,58 +434,58 @@ objects in other user profiles that are related to the user \cite{kobsa2001gener
 \cite{kay2012coming}. As a result of the predominantly commercial target of these
 systems, the adaptations often take place in a very invasive way, to make sure
 the user notices the change. Most recommender systems are based on the Internet,
-which means that some typical technical difficulties  are associated with these
+which means that some typical technical difficulties are associated with these
 kinds of user models. First, the user profile is often only stored while the
-user’s visit,  which means that fast and efficient adaption is important.
-Recommender systems usually become more precise  when the user spends more time
+user’s visit, which means that fast and efficient adaption is important.
+Recommender systems usually become more precise when the user spends more time
 with the system. Second, the system’s architecture is usually client-server,
 where the client side gathers user information and sends it to the server, where
-the  actual process takes place.
+the actual process takes place.
 
-\subsection{User Adaptive Computer Games.}
+\subsection{User Adaptive Computer Games}
 
 User Adaptive computer games are games that focus on increasing the perceived
-value by providing a strongly individualized experience (Brisson, 2012).  For
+value by providing a strongly individualized experience (Brisson, 2012). For
 example is a first‐person shooter that adapts the performance of the enemy
 according to the shooting accuracy of the player.
 
 The fundamental idea of the user model is to identify or classify the user, so
 the appropriate adjustment is made in the computer game. The information that is
 used addresses the preferences and progress of the user, such as the user´s
-current  difficulty level or even the employed strategy. This data is usually
-obtained through the interactions of  the user with the game, and therefor first
-should be translated and formalized  before it can be  used to interpret
+current difficulty level or even the employed strategy. This data is usually
+obtained through the interactions of the user with the game, and therefor first
+should be translated and formalized before it can be used to interpret
 conclusions on a higher level. The adaptation that takes place in the game
-concerns changing the content and role of the  game, such as the game
-difficulty, the behavior of non‐player characters  or even the background  music
+concerns changing the content and role of the game, such as the game
+difficulty, the behavior of non‐player characters or even the background music
 \cite{bakkes2012personalised}.
 
 Because of the emphasis on the user, user adaptive computer games have
-relatively a lot of processing power available  for personalization. In this
+relatively a lot of processing power available for personalization. In this
 sense the user adaptive computer games domain is a very interesting research
 domain.
 
-\subsection{Adaptive Educational Games.}
+\subsection{Adaptive Educational Games}
 
 Adaptive Educational Games (AEGs) are complicated educational games that combine
 ideas from several investigations areas, to increase the student’s learning
-experience \cite{peeters2012situated}. These are especially based on  serious
+experience \cite{peeters2012situated}. These are especially based on serious
 games: computer games with an educational approach, where things are taught to
-students by using a  playful idea \cite{korteling2011transfer} \cite{johnson2005serious}.
-For instance an AEG is a training application  for fire fighters, letting
+students by using a playful idea \cite{korteling2011transfer} \cite{johnson2005serious}.
+For instance an AEG is a training application for fire fighters, letting
 the fire fighters train their skills and knowledge in a safe on a virtual
 environment.
 
 The objective of the user model in an AEGs is to optimize the learning process
-and outcome.   The user information is considered with the advance and knowledge
-of the student, but also with the  student’s mental and cognitive
+and outcome.  The user information is considered with the advance and knowledge
+of the student, but also with the student’s mental and cognitive
 characteristics. The gained data can be used to adjust the content,
-presentation, and system behavior to the  student’s need, for example, by
+presentation, and system behavior to the student’s need, for example, by
 adjusting the content, tone, or amount of presented feedback. Adaptive computer
-games have a lot of processing power available for personalization,  making a
+games have a lot of processing power available for personalization, making a
 complex and interesting domain for user modeling.
 
-\subsection{Methods for user modeling.}
+\subsection{Methods for user modeling}
 
 In the user modeling topic, researchers have proposed more general design
 methods and frameworks to guide the developers in the process of user modeling.
@@ -519,25 +513,24 @@ technologies became a major subject in the early nineties, user modeling methods
 were also mostly focused on the application of stereotypes, knowledge bases, and
 logic to define a user model. With the rise of the Internet, the objectives of
 the user modeling field change to Web-oriented applications and all the specific
-problems that arise with this. Thus this connection,  also the general user
+problems that arise with this. Thus this connection, also the general user
 modeling methods that were developed, were focused on the popular research
 domains of their time \cite{kay2012coming}. The main approaches to user modeling
 did not change, but the specific filling‐in of the user model, such as which
 technology to apply, did change. In this sense development of user modeling as a
 whole, most researchers eventually agreed that one method to solve all problems
 is not possible \cite{mctear1993user} \cite{kobsa2001generic}. Instead, a broad
-range of  generic user modeling methods has been developed
+range of generic user modeling methods has been developed
 \cite{fischer2001user}; each of which supports only a few of the very different
 manifestations of personalization.
 
 
+\section{Gamification}
 
-\section{Gamification.}
-
-A definition given by Huotari  \cite{huotari2012defining} is  “Gamification is
+A definition given by Huotari \cite{huotari2012defining} is “Gamification is
 the process by which concepts are brought to the real world task associated with
 real people”. Also gamification handle game design elements which are commonly
-known as non-game context in the pursue to  enhance user engagement,
+known as non-game context in the pursue to enhance user engagement,
 organizational productivity, flow, learning, evaluations, among others.
 
 Games and game technologies increase exponentially the traditional boundaries of
@@ -556,9 +549,9 @@ rewards for users as players to perform desired tasks in a certain application
 or involving users to compete with each other. For instance some sort of
 rewards include points \cite{sutter2010browse}, achievement badges or levels
 \cite{hamari2011framework}, the filling of a progress bar \cite{o2010get}, or
-providing the user with virtual currency. By Making the rewards for  tasks
+providing the user with virtual currency. By Making the rewards for tasks
 achievements visible to other players or providing leader boards are ways of
-encouraging players to compete \cite{hickman2010total}. Because the  problematic
+encouraging players to compete \cite{hickman2010total}. Because the problematic
 consequences of competition, which can result in negative conduct, low
 cooperation and collaboration, or disadvantaging certain player demographics
 such as women \cite{kumar2013gamification}, best-practice gamification designs
