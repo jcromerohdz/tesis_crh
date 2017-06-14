@@ -1,4 +1,4 @@
-\chapter{Fitness Estination}
+\chapter{Fitness Estimation}
 
 This chapter explains a proposed strategy to calculate the fitness of
 individuals in web-based IEC applications
@@ -19,7 +19,7 @@ In these particular case activities represent the user\'s experience.
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/UI_ed01.png}}
+\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/UI_ed01.png}
 \caption{User interface ED01.}
 \label{fig:UI_ED}
 \end{figure*}
@@ -44,7 +44,7 @@ membership functions in a range of 1-100.
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fuzzy_system_2_1.png}}
+\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fuzzy_system_2_1.png}
 \caption{Fuzzy System Mamdani Type.}
 \label{fig:fis01}
 \end{figure*}
@@ -55,21 +55,21 @@ Below we show the rules IF-THEN of the fuzzy system:
 	\item \textit{If \textbf{preference} is low and
 		\textbf{experience} is low then \textbf{fuzzy\_rate} is bad.}
 	\item \textit{If \textbf{preference} is mid and
-		\textbf{experience} is low  then \textbf{fuzzy\_rate} is bad.}
+		\textbf{experience} is low then \textbf{fuzzy\_rate} is bad.}
 	\item \textit{If \textbf{preference} is high and
-		\textbf{experience} is low  then \textbf{fuzzy\_rate} is normal.}
+		\textbf{experience} is low then \textbf{fuzzy\_rate} is normal.}
 	\item \textit{If \textbf{preference} is low and
 		\textbf{experience} is mid then \textbf{fuzzy\_rate} is bad.}
 	\item \textit{If \textbf{preference} is mid and
-		\textbf{experience} is mid  then \textbf{fuzzy\_rate} is normal.}
+		\textbf{experience} is mid then \textbf{fuzzy\_rate} is normal.}
 	\item \textit{If \textbf{preference} is high and
-		\textbf{experience} is mid  then \textbf{fuzzy\_rate} is good.}
+		\textbf{experience} is mid then \textbf{fuzzy\_rate} is good.}
 	\item \textit{If \textbf{preference} is low and
 		\textbf{experience} is high then \textbf{fuzzy\_rate} is normal.}
 	\item \textit{If \textbf{preference} is mid and
-		\textbf{experience} is high  then \textbf{fuzzy\_rate} is good.}
+		\textbf{experience} is high then \textbf{fuzzy\_rate} is good.}
 	\item \textit{If \textbf{preference} is high and
-		\textbf{experience} is high  then \textbf{fuzzy\_rate} is good.}
+		\textbf{experience} is high then \textbf{fuzzy\_rate} is good.}
 
 \end{enumerate}
 
@@ -82,12 +82,12 @@ of representing the individual fitness.
 \displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
 \end{equation}
 
-Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
+Where $n$ represents the number of users that have evaluated the
+individual, $x$ is the rate of preference for the individual given by the user,
 $y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
 This function has as a parameter the rate $x$ and the user experience level.
 The user experience level
-is given  by the  total activities that user has at the moment. In each
+is given by the total activities that user has at the moment. In each
 activity we assign the score, for example if the user log in (join) to the
 application we assign 5 points, if the user evaluates (likes) an individual we
 give 3 points, etc; in Figure \ref{fig:fitnessFlow} shows the flow for assigning fitness to
@@ -98,19 +98,19 @@ the individual.
 \centering
 \setlength\fboxsep{0pt}
 \setlength\fboxrule{0.7pt}
-\fbox{\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fitnessFlow.png}}
+\includegraphics[width=12cm,height=10cm,keepaspectratio]{img/fitnessFlow.png}
 \caption{Fitness Flow.}
 \label{fig:fitnessFlow}
 \end{figure*}
 
 
 
-Where $n$ represents  the number of  users that have evaluated the
-individual, $x$ is the rate of preference for the  individual  given by the user,
+Where $n$ represents the number of users that have evaluated the
+individual, $x$ is the rate of preference for the individual given by the user,
 $y$ is a function that calls the fuzzy system in order to have the fuzzy rate.
 This function has as a parameter the rate $x$ and the user experience level.
 The user experience level
-is given  by the  total activities that user has at the moment. In each
+is given by the total activities that user has at the moment. In each
 activity we assign the score, for example if the user log in (join) to the
 application we assign 5 points, if the user evaluates (likes) an individual we
 give 3 points, etc; in Figure \ref{fig:fitnessFlow} shows the flow for assigning fitness to
