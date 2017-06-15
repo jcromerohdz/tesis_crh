@@ -25,18 +25,21 @@ In these particular case activities represent the user's experience.
 \end{figure*}
 
 In this thesis the usage of fuzzy logic is proposed \cite{Zadeh1973} in order to
-obtain the individual fitness trough a fitness function expression. It is
-used by modeling a fuzzy Mamdani type inference system \cite{mamdani1975experiment} \cite{mamdani1974application} as Figure
-\ref{fig:fis01} shows. This model was designed empirically. The model consists
-of two input variables, which are the preference and the experience of the user
-as well as an output that we called fuzzy rate. The first variable has three
-linguistic variables, which are low, medium and high, representing the
-preferences of the users with triangular membership functions over a range of 1
-to 5. The second variable also has three linguistic variables, which are low, medium
-and high representing the experience with triangular membership functions over a
-range of 1 to 100. Finally we have the output consisting of three consequent
-variables which are bad, normal and good representing the fuzzy rate with triangular
-membership functions in a range of 1-100.
+obtain the individual fitness trough a fitness function expression. It is used
+by modeling a fuzzy Mamdani type inference system \cite{mamdani1975experiment}
+\cite{mamdani1974application} that represents all the interaction of the
+user-individual in given IEC application as Figure \ref{fig:fis01} shows. This
+model was designed empirically. The model consists of two input variables, which
+are the preference and the experience of the user as well as an output that we
+called fuzzy rate. The first variable has three linguistic variables, which are
+low, medium and high, representing the preferences of the users with triangular
+membership functions over a range of 1 to 5. The second variable also has three
+linguistic variables, which are low, medium and high representing the experience
+with triangular membership functions over a range of 1 to 100. Finally we have
+the output consisting of three consequent variables which are bad, normal and
+good representing the fuzzy rate with triangular membership functions in a range
+of 1-100.
+
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
 \centering
@@ -71,10 +74,11 @@ Below we show the rules IF-THEN of the fuzzy system:
 
 \end{enumerate}
 
-These rules will give us a fuzzy rate value as a result, this value needs to
-be defuzzified by the centroid method in order to be used in our fitness
-expression, given by the equation\ref{eq:fitfunc_02}. This expression is responsible
-of representing the individual fitness.
+These rules will give us a fuzzy rate value as a result of the interaction with
+the users in given IEC application, this value needs to be defuzzified by the
+centroid method in order to be used in our fitness expression, given by the
+equation\ref{eq:fitfunc_02}. This expression is responsible of representing the
+individual fitness.
 
 \begin{equation}\label{eq:fitfunc_02}
 \displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
