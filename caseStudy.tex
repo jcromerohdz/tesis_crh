@@ -1,17 +1,16 @@
 \chapter{Case study}
 
-In this chapter, a study case is presented to understand the concepts proposed
-method.
+In this chapter, a study case is presented to understand the concepts of the
+proposed method.
 
 \section{Motivation and objectives}
 
-Our motivation begins to know if a user model in combination with
-other techniques such as usability or fuzzy logic increases the participation of users in a
-given Web-based IEC application. It is well know that one of the main
-problems in these systems is fatigue, who is the cause by the large
-amount of individual evaluations
-that the user need to preform and consequently their participation decreases.
-
+Our motivation begins to know if a user model in combination with other
+techniques such as usability or fuzzy logic increases the participation of users
+in a given Web-based IEC application. It is well know that one of the main
+problems in these systems is fatigue, who is the cause by the large amount of
+individual evaluations that the user need to preform and consequently their
+participation decreases.
 Our approach goes with the sense of increasing the participation of the users
 within these applications, providing to them very simple tasks to execute in order to
 capture their attention as well as to know their behavior.
@@ -36,7 +35,7 @@ including the chromosome that represents the digital painting. Technically the
 individual is an associative arrangement (dictionary) where an abstract
 collection of keys and values is stored with a one-to-one association. Where
 keys represent a specific property in each object and the values are different
-types of data, such as lists, tuples, numbers, strings and dictionaries. 
+types of data, such as lists, tuples, numbers, strings and dictionaries.
 \begin{figure*}
 \captionsetup{justification=centering,margin=2cm}
 \centering
@@ -70,13 +69,13 @@ produced.
 \end{figure*}
 
 \subsection{Processing Script}
-It is necessary to explain how the animation
-that the users visualize works. EvoSpace-i uses processing script in order to do
-the rendering of the individuals which contain the behavior of the figures. This
-application can run in browsers that are compatible with HTML 5, this is due to
-the use of a JavaScript library called processingscriptjs that is in charge of
-communicating with the base script and thus perform the render on HTML 5 canvas
-in The EvoDrawings application.
+It is necessary to explain how the animation that the users visualize works.
+EvoSpace-i uses processing script in order to do the rendering of the
+individuals which contain the behavior of the figures. This application can run
+in browsers that are compatible with HTML 5, this is due to the use of a
+JavaScript library called processingscriptjs that is in charge of communicating
+with the base script and thus perform the render on HTML 5 canvas in The
+EvoDrawings application.
 
 \subsection{Fitness}
 The fitness assignment for each individual is given by the
@@ -93,8 +92,8 @@ equation:
 \displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+ 1}{\sum_{i=0}^{n}v_{i} + 1}
 \end{equation}
 
-$i$ represents the individual's.
-$x$ is the range that individuals received when evaluated by users.
+where $i$ represents the individuals,
+$x$ is the range that individuals received when evaluated by users and finally
 $v$ are the views that users have viewed individuals.
 
 The above is used in version ED01. For the next two versions we use a different
@@ -145,7 +144,7 @@ The fitness function is given by the following equation:
 \displaystyle fitness=\frac{\sum_{i=0}^{n}x_{i}+f(y_{i})}{\sum_{i=0}^{n}f(y_{i})}
 \end{equation}
 
-$i$ represents the individual's. x is the range that users give to individuals..
+Where $i$ represents the individual's, x is the range that users give to individuals,
 $f(y_i)$ represents a fuzzy function composed of a fuzzy inference system and is
 represented by the equation \ref{eq:fuzzyFunc}.
 
@@ -154,10 +153,10 @@ represented by the equation \ref{eq:fuzzyFunc}.
 \end{equation}
 
 
-$fr$ represents the fuzzy rate. $x$ it remains the range that users give
-according to their preferences to individuals. $e$  is the experience that is
+$fr$ represents the fuzzy rate, $x$ it remains the range that users give
+according to their preferences to individuals, $e$  is the experience that is
 defined by the activity that the user is doing within the application. The fuzzy
-inference system of it is a Mamdani type composed of two inputs that are  $x,e$
+inference system of it is a Mamdani type composed of two inputs that are $x,e$
 and a fuzzy rate output as shown in Figure \ref{fig:fis_01}.
 
 \begin{figure*}
@@ -180,8 +179,8 @@ function for ED03.
 \displaystyle y=fr(x,e,r)
 \end{equation}
 
-$fr$ represents the fuzzy rate.
-$x$ it remains the range that users give according to their preferences to individuals.
+Where $fr$ represents the fuzzy rate,
+$x$ it remains the range that users give according to their preferences to individuals,
 $e$  is the experience that is defined by the
 activity that the user is doing within the application.
 $r$ is the ranking the user within the graph model.
@@ -216,7 +215,7 @@ is the following:
 
 	\item  \textbf{An evolution parameter is 8 evaluations.}
 
-	\item  \textbf{A mutation parameter of }
+	\item  \textbf{A mutation parameter of 0.5}
 	\item  \textbf{With random selection between competition.}
 	\item  \textbf{One horizontal genetic crossing Operator.}
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc01}.}
@@ -234,7 +233,7 @@ Continuing with the explanation of the interface we have the "Collection's" pane
 which shows a list of collections that users have created and saved, as well as
 the functionality to create new collections. Within this we have
 an "About this" section where users can read general information about the
-system. Users can evaluate individuals throu a
+system. Users can evaluate individuals through a
 visual canvas element that shows the behavior of the individual subject to
 evaluation (animation) and at the bottom is given the ability to evaluate the
 individual with a range of stars where one star means the user did not like it
@@ -282,7 +281,7 @@ algorithm as follows:
 
 	\item  \textbf{An evolution parameter is 8 evaluations.}
 
-	\item  \textbf{A mutation parameter of }
+	\item  \textbf{A mutation parameter of 0.5}
 	\item  \textbf{With random selection between competition.}
 	\item  \textbf{One horizontal genetic crossing Operator.}
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
@@ -298,7 +297,7 @@ algorithm as follows:
 
 	\item  \textbf{An evolution parameter is 8 evaluations.}
 
-	\item  \textbf{A mutation parameter of }
+	\item  \textbf{A mutation parameter of 0.5}
 	\item  \textbf{With random selection between competition.}
 	\item  \textbf{One horizontal genetic crossing Operator.}
 	\item  \textbf{The fitness is given by the equation \ref{eq:fitfunc02}.}
@@ -350,7 +349,7 @@ voluntary basis. This short URL can be seen in table \ref{tab:PromoteUrl}.
 
 \begin{table}
 \small
-\caption{Short URL for promoting the applicatins.}
+\caption{Short URL for promoting the applications.}
 \label{tab:PromoteUrl}
 \centering
 \small
@@ -391,7 +390,7 @@ visualize its characteristics by each of the experiments.
 		\small{RAM 512} & \small{\checkmark} & \small{\checkmark} & \small{\checkmark}\\ \hline
 		\small{Dedicated} & \small{x} & \small{x} & \small{x}\\ \hline
 		\small{Heroku Postgres ::DB Hobby Dev} & \small{\checkmark} & \small{\checkmark} & \small{\checkmark}\\ \hline
-		\small{GrapheneDB Chalk} & \small{\checkmark} & \small{x} & \small{\checkmark}\\ \hline
+		\small{GrapheneDB Chalk} & \small{x} & \small{x} & \small{\checkmark}\\ \hline
 		\small{Redis To Go Nano} & \small{\checkmark} & \small{x} & \small{\checkmark}\\ \hline
 		\small{GrapheneDB Sandstone} & \small{x} & \small{x} & \small{\checkmark}\\ \hline
 		\small{Redis To Go Mini} & \small{x} & \small{x} & \small{\checkmark}\\ \hline
